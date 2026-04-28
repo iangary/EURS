@@ -2,39 +2,31 @@
 
 Next.js 14 App Router + Prisma + PostgreSQL（Docker）。
 
-完整規格請見 [SPEC.md](./SPEC.md)。
+完整規格請見 [SPEC.md](./SPEC.md)（目前 v1.2）。
 
 ## 快速啟動
 
-### 一、本機開發（推薦）
+本專案開發、建置、跑遷移**一律走 Docker**（詳見 [CLAUDE.md](./CLAUDE.md)）。
 
 ```bash
-# 1. 啟動 PostgreSQL
-docker compose up -d db
-
-# 2. 安裝套件
-npm install
-
-# 3. 建立 .env
+# 1. 建立 .env
 cp .env.example .env
 
-# 4. 建立資料庫 schema 與種子資料
-npx prisma migrate dev --name init
-npx prisma db seed
+# 2. 啟動全部服務（db + web）
+docker compose up -d --build
 
-# 5. 啟動開發伺服器
-npm run dev
+# 3. 建立 / 套用資料庫 schema
+docker compose exec web npx prisma migrate deploy
+
+# 4. 種子資料（擇一）
+docker compose exec web npm run prisma:seed         # 最小必要帳號
+docker compose exec web npm run prisma:seed-demo    # demo 用：載入 prisma/data/employees.json 員工資料集 + 範例申請單
+
 # → http://localhost:3000
 ```
 
-### 二、全部容器化
-
-```bash
-docker compose up --build
-# → 第一次啟動後，請另開終端執行 migrate：
-docker compose exec web npx prisma migrate deploy
-docker compose exec web npx tsx prisma/seed.ts
-```
+> 後續看 log：`docker compose logs -f web`；停掉：`docker compose down`。
+> 例外：型別檢查（`npx tsc --noEmit`）、`prisma generate`、lint 可在主機直接跑，其餘走 docker compose。
 
 ## 預設帳號（種子資料）
 
@@ -50,7 +42,17 @@ docker compose exec web npx tsx prisma/seed.ts
 > 角色判定來自 `SystemSetting.ADMIN_EMPLOYEE_IDS`（預設 `["A001"]`）。
 > 後台 → 系統參數 即可調整。
 
+## 近期重點（v1.2）
+
+- 移除 `PROCESSING` 狀態（已透過 schema migration 收斂流程）
+- 後台申請單清單改為**表頭內嵌欄位篩選**
+- 匯出頁新增**預覽功能**並簡化篩選條件
+- 退件單可**重新填寫並再次送出**
+- 登入頁顯示管理員徽章；制服表單顯示匯款帳號
+
 ## 主要路徑
+
+> 使用者頁面位於 `src/app/(app)/` route group。
 
 | 路徑                     | 說明                                            |
 | ------------------------ | ----------------------------------------------- |
@@ -60,8 +62,8 @@ docker compose exec web npx tsx prisma/seed.ts
 | `/apply/shoes`           | 安全鞋申請（含批量匯入）                        |
 | `/apply/uniform`         | 制服申請（卡片化階層 + 批量匯入）               |
 | `/my-requests`           | 我的申請                                        |
-| `/admin/requests`        | 後台 · 申請單管理（分頁籤、批次出貨）           |
-| `/admin/export`          | 後台 · 匯出（萬年曆、Excel／CSV）              |
+| `/admin/requests`        | 後台 · 申請單管理（表頭內嵌篩選、批次出貨）     |
+| `/admin/export`          | 後台 · 匯出（萬年曆、預覽、Excel／CSV）         |
 | `/admin/dashboard`       | 後台 · 儀表板（部門／類型／狀態統計）           |
 | `/admin/settings`        | 後台 · 系統參數（匯款帳號、尺寸、白名單）       |
 | `/api/templates/[type]`  | 下載批量範本（helmet／shoes／uniform）          |
