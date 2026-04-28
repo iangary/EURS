@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { apiRequireAdmin } from "@/lib/auth-helpers";
-import { buildXlsx, buildCsv, exportFilename } from "@/lib/export-xlsx";
+import { buildXlsx, buildCsv, exportFilename, flattenRows, HEADER } from "@/lib/export-xlsx";
 import type { Prisma } from "@prisma/client";
 
 export async function GET(req: Request) {
@@ -46,6 +46,13 @@ export async function GET(req: Request) {
 
   const fromLabel = (submittedFrom || shippedFrom || "ALL").slice(0, 10);
   const toLabel = (submittedTo || shippedTo || "ALL").slice(0, 10);
+
+  if (fmt === "preview") {
+    const data = flattenRows(rows as any).map((row) =>
+      row.map((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v))
+    );
+    return NextResponse.json({ header: HEADER, rows: data, count: rows.length });
+  }
 
   if (fmt === "csv") {
     const buf = buildCsv(rows as any);

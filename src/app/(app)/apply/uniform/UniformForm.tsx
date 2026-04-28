@@ -49,6 +49,7 @@ export function UniformForm({
   defaultDept,
   requesterName,
   requesterId,
+  initial,
 }: {
   topOptions: string[];
   waistOptions: number[];
@@ -58,11 +59,16 @@ export function UniformForm({
   defaultDept: string;
   requesterName: string;
   requesterId: string;
+  initial?: { dept: string; remark: string; items: Omit<Item, "valid">[] };
 }) {
   const router = useRouter();
-  const [dept, setDept] = useState(defaultDept);
-  const [remark, setRemark] = useState("");
-  const [items, setItems] = useState<Item[]>([blankItem()]);
+  const [dept, setDept] = useState(initial?.dept ?? defaultDept);
+  const [remark, setRemark] = useState(initial?.remark ?? "");
+  const [items, setItems] = useState<Item[]>(
+    initial && initial.items.length > 0
+      ? initial.items.map((it) => ({ ...it, valid: !!it.wearerAcc }))
+      : [blankItem()]
+  );
   const [attachments, setAttachments] = useState<{ id: string; fileName: string }[]>([]);
   const [showPurchase, setShowPurchase] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -361,6 +367,11 @@ export function UniformForm({
         <div className="card-body">
           <textarea className="textarea min-h-24" value={remark} onChange={(e) => setRemark(e.target.value)} />
         </div>
+      </div>
+
+      <div className="notice">
+        <div>說明：選擇【更換】需上傳舊品照片附件；選擇【自購】請與總務聯繫取得購買金額。</div>
+        <div className="mt-1">匯款帳號：{bankBranch} {bankAccount}</div>
       </div>
 
       {error && <div className="text-sm text-rose-600">{error}</div>}

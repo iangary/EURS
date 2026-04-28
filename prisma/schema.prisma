@@ -18,7 +18,6 @@ enum RequestType {
 
 enum RequestStatus {
   SUBMITTED
-  PROCESSING
   SHIPPED
   REJECTED
 }

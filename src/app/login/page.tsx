@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-type Emp = { id: string; name: string; email: string; department: string };
+type Emp = { id: string; name: string; email: string; department: string; isAdmin?: boolean };
 
 export default function LoginPage() {
   return (
@@ -73,8 +73,14 @@ function LoginInner() {
                 {list.map((u) => (
                   <li key={u.id} className="flex items-center justify-between px-3 py-2 text-sm">
                     <div>
-                      <div className="font-medium">
-                        {u.name} <span className="text-slate-400 ml-1">{u.id}</span>
+                      <div className="font-medium flex items-center gap-1.5">
+                        <span>{u.name}</span>
+                        <span className="text-slate-400">{u.id}</span>
+                        {u.isAdmin && (
+                          <span className="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 px-2 py-0.5 text-[11px] font-medium">
+                            管理員
+                          </span>
+                        )}
                       </div>
                       <div className="text-xs text-slate-500">{u.department}</div>
                     </div>

@@ -4,7 +4,6 @@ import type { Request, RequestItem, User } from "@prisma/client";
 const TYPE_LABEL = { HELMET: "安全帽", SHOES: "安全鞋", UNIFORM: "制服" } as const;
 const STATUS_LABEL = {
   SUBMITTED: "已送出",
-  PROCESSING: "處理中",
   SHIPPED: "已出貨",
   REJECTED: "退件",
 } as const;
@@ -13,7 +12,7 @@ const GENDER_LABEL = { MALE: "男", FEMALE: "女" } as const;
 
 type Row = Request & { items: RequestItem[]; requester: User };
 
-const HEADER = [
+export const HEADER = [
   "申請單號",
   "申請日期",
   "申請人",

@@ -21,7 +21,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           {isAdmin && (
             <>
               <span className="mx-2 h-5 w-px bg-slate-200" />
-              <NavLink href="/admin/requests">後台</NavLink>
+              <NavLink href="/admin/requests">申請單管理</NavLink>
               <NavLink href="/admin/export">匯出</NavLink>
               <NavLink href="/admin/dashboard">儀表板</NavLink>
               <NavLink href="/admin/settings">參數</NavLink>

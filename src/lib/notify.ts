@@ -5,7 +5,6 @@ import { getSettingJson, SettingKeys } from "./settings";
 const TYPE_LABEL = { HELMET: "安全帽", SHOES: "安全鞋", UNIFORM: "制服" } as const;
 const STATUS_LABEL = {
   SUBMITTED: "已送出",
-  PROCESSING: "處理中",
   SHIPPED: "已出貨",
   REJECTED: "退件",
 } as const;

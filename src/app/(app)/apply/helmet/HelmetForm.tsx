@@ -12,18 +12,22 @@ export function HelmetForm({
   defaultDept,
   requesterName,
   requesterId,
+  initial,
 }: {
   bloodOptions: string[];
   defaultDept: string;
   requesterName: string;
   requesterId: string;
+  initial?: { dept: string; remark: string; items: { wearerAcc: string; userName: string; bloodType: string }[] };
 }) {
   const router = useRouter();
-  const [dept, setDept] = useState(defaultDept);
-  const [remark, setRemark] = useState("");
-  const [items, setItems] = useState<Item[]>([
-    { wearerAcc: "", userName: "", valid: false, bloodType: bloodOptions[0] ?? "A" },
-  ]);
+  const [dept, setDept] = useState(initial?.dept ?? defaultDept);
+  const [remark, setRemark] = useState(initial?.remark ?? "");
+  const [items, setItems] = useState<Item[]>(
+    initial && initial.items.length > 0
+      ? initial.items.map((it) => ({ ...it, valid: !!it.wearerAcc }))
+      : [{ wearerAcc: "", userName: "", valid: false, bloodType: bloodOptions[0] ?? "A" }]
+  );
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

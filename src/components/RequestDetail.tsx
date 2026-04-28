@@ -1,8 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TYPE_LABEL, STATUS_LABEL, STATUS_BADGE_CLASS, ACTION_LABEL, GENDER_LABEL } from "@/lib/labels";
+
+const TYPE_PATH: Record<string, string> = {
+  HELMET: "helmet",
+  SHOES: "shoes",
+  UNIFORM: "uniform",
+};
 
 type Item = any;
 type Log = any;
@@ -128,6 +135,14 @@ export function RequestDetail({ request: r, viewerRole }: { request: Req; viewer
           </ul>
         </div>
       </div>
+
+      {viewerRole === "REQUESTER" && r.status === "REJECTED" && (
+        <div className="flex justify-end">
+          <Link className="btn btn-primary" href={`/apply/${TYPE_PATH[r.type]}?from=${r.id}`}>
+            重新填寫並送出
+          </Link>
+        </div>
+      )}
 
       {viewerRole === "ADMIN" && (
         <div className="flex gap-2 justify-end">

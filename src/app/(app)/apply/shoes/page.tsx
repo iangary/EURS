@@ -1,20 +1,50 @@
 import { requireUser } from "@/lib/auth-helpers";
+import { db } from "@/lib/db";
 import { getSettingJson, SettingKeys } from "@/lib/settings";
 import { ShoesForm } from "./ShoesForm";
 
 export const dynamic = "force-dynamic";
 
-export default async function ShoesPage() {
+export default async function ShoesPage({ searchParams }: { searchParams: { from?: string } }) {
   const session = await requireUser();
   const sizes = await getSettingJson<number[]>(SettingKeys.SHOE_SIZES, [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]);
+
+  let initial:
+    | { dept: string; remark: string; items: { wearerAcc: string; userName: string; shoeSize: number; reason: string }[] }
+    | undefined;
+  if (searchParams.from) {
+    const src = await db.request.findUnique({
+      where: { id: searchParams.from },
+      include: { items: true },
+    });
+    if (src && src.requesterId === session.user.id && src.type === "SHOES" && src.status === "REJECTED") {
+      initial = {
+        dept: src.siteOrDept,
+        remark: src.remark ?? "",
+        items: src.items.map((it) => ({
+          wearerAcc: it.wearerAcc,
+          userName: it.userName,
+          shoeSize: it.shoeSize ?? 42,
+          reason: it.reason ?? "",
+        })),
+      };
+    }
+  }
+
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-bold">安全鞋申請</h1>
+      {initial && (
+        <div className="notice border-amber-300 bg-amber-50 text-amber-900">
+          已載入退件單資料，請修正後重新送出（將建立新申請單，原退件單保留稽核）。
+        </div>
+      )}
       <ShoesForm
         sizeOptions={sizes}
         defaultDept={session.user.department}
         requesterName={session.user.name}
         requesterId={session.user.id}
+        initial={initial}
       />
     </div>
   );

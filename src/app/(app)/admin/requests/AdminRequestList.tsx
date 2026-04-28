@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { TYPE_LABEL, STATUS_LABEL, STATUS_BADGE_CLASS } from "@/lib/labels";
-import { cn } from "@/lib/cn";
 
 type Req = {
   id: string;
@@ -17,32 +16,26 @@ type Req = {
   items: any[];
 };
 
-const TABS: { key: "ALL" | keyof typeof TYPE_LABEL; label: string }[] = [
-  { key: "ALL", label: "全部" },
-  { key: "HELMET", label: "安全帽" },
-  { key: "SHOES", label: "安全鞋" },
-  { key: "UNIFORM", label: "制服" },
-];
-
 export function AdminRequestList() {
-  const [tab, setTab] = useState<"ALL" | keyof typeof TYPE_LABEL>("ALL");
-  const [status, setStatus] = useState<string>("");
-  const [keyword, setKeyword] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [list, setList] = useState<Req[]>([]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [busy, setBusy] = useState(false);
 
+  const [fNo, setFNo] = useState("");
+  const [fType, setFType] = useState<string>("");
+  const [fRequester, setFRequester] = useState("");
+  const [fDept, setFDept] = useState("");
+  const [fUser, setFUser] = useState("");
+  const [fStatus, setFStatus] = useState<string>("");
+
   const params = useMemo(() => {
     const sp = new URLSearchParams();
-    if (tab !== "ALL") sp.set("type", tab);
-    if (status) sp.set("status", status);
-    if (keyword) sp.set("q", keyword);
     if (from) sp.set("from", from);
     if (to) sp.set("to", to);
     return sp.toString();
-  }, [tab, status, keyword, from, to]);
+  }, [from, to]);
 
   async function load() {
     setBusy(true);
@@ -81,36 +74,27 @@ export function AdminRequestList() {
     } else alert("失敗");
   }
 
+  const filtered = useMemo(() => {
+    const norm = (s: string) => s.toLowerCase().trim();
+    return list.filter((r) => {
+      if (fNo && !norm(r.requestNo).includes(norm(fNo))) return false;
+      if (fType && r.type !== fType) return false;
+      if (fRequester && !norm(r.requesterName).includes(norm(fRequester))) return false;
+      if (fDept && !norm(r.siteOrDept).includes(norm(fDept))) return false;
+      if (fStatus && r.status !== fStatus) return false;
+      if (fUser) {
+        const users = r.items.map((i: any) => i.userName || "").join("、");
+        if (!norm(users).includes(norm(fUser))) return false;
+      }
+      return true;
+    });
+  }, [list, fNo, fType, fRequester, fDept, fUser, fStatus]);
+
   return (
     <div className="space-y-3">
-      {/* 分頁籤 */}
-      <div className="flex border-b">
-        {TABS.map((t) => (
-          <button
-            key={t.key}
-            className={cn("tab", tab === t.key && "tab-active")}
-            onClick={() => setTab(t.key)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-
-      {/* 篩選列 */}
+      {/* 日期區間 + 批次動作 */}
       <div className="card">
         <div className="card-body grid grid-cols-2 md:grid-cols-5 gap-3 text-sm">
-          <div>
-            <label className="label">關鍵字</label>
-            <input className="input" placeholder="申請單號／姓名"
-              value={keyword} onChange={(e) => setKeyword(e.target.value)} />
-          </div>
-          <div>
-            <label className="label">狀態</label>
-            <select className="select" value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="">全部</option>
-              {Object.entries(STATUS_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
-            </select>
-          </div>
           <div>
             <label className="label">起日</label>
             <input type="date" className="input" value={from} onChange={(e) => setFrom(e.target.value)} />
@@ -119,7 +103,7 @@ export function AdminRequestList() {
             <label className="label">迄日</label>
             <input type="date" className="input" value={to} onChange={(e) => setTo(e.target.value)} />
           </div>
-          <div className="self-end">
+          <div className="md:col-start-5 self-end">
             <button className="btn btn-primary w-full" onClick={batchShip} disabled={selected.size === 0}>
               批次標記已出貨（{selected.size}）
             </button>
@@ -142,11 +126,44 @@ export function AdminRequestList() {
               <th className="p-2">狀態</th>
               <th className="p-2"></th>
             </tr>
+            <tr className="bg-white border-t">
+              <th className="p-1"></th>
+              <th className="p-1">
+                <input className="input !py-1 !px-2 text-xs" placeholder="搜尋…"
+                  value={fNo} onChange={(e) => setFNo(e.target.value)} />
+              </th>
+              <th className="p-1"></th>
+              <th className="p-1">
+                <select className="select !py-1 !px-2 text-xs" value={fType} onChange={(e) => setFType(e.target.value)}>
+                  <option value="">全部</option>
+                  {Object.entries(TYPE_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+                </select>
+              </th>
+              <th className="p-1">
+                <input className="input !py-1 !px-2 text-xs" placeholder="搜尋…"
+                  value={fRequester} onChange={(e) => setFRequester(e.target.value)} />
+              </th>
+              <th className="p-1">
+                <input className="input !py-1 !px-2 text-xs" placeholder="搜尋…"
+                  value={fDept} onChange={(e) => setFDept(e.target.value)} />
+              </th>
+              <th className="p-1">
+                <input className="input !py-1 !px-2 text-xs" placeholder="搜尋…"
+                  value={fUser} onChange={(e) => setFUser(e.target.value)} />
+              </th>
+              <th className="p-1">
+                <select className="select !py-1 !px-2 text-xs" value={fStatus} onChange={(e) => setFStatus(e.target.value)}>
+                  <option value="">全部</option>
+                  {Object.entries(STATUS_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+                </select>
+              </th>
+              <th className="p-1"></th>
+            </tr>
           </thead>
           <tbody className="divide-y">
             {busy && <tr><td colSpan={9} className="p-6 text-center text-slate-400">載入中…</td></tr>}
-            {!busy && list.length === 0 && <tr><td colSpan={9} className="p-6 text-center text-slate-400">無資料</td></tr>}
-            {list.map((r) => (
+            {!busy && filtered.length === 0 && <tr><td colSpan={9} className="p-6 text-center text-slate-400">無資料</td></tr>}
+            {filtered.map((r) => (
               <tr key={r.id} className="hover:bg-slate-50">
                 <td className="p-2">
                   <input type="checkbox" checked={selected.has(r.id)} onChange={() => toggle(r.id)} />

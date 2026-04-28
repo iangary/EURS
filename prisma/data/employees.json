@@ -1,0 +1,7280 @@
+{
+  "result": true,
+  "data": {
+    "RT020205": {
+      "employee_no": "RT020205",
+      "employee_name": "葉慶宇",
+      "dept_name": "T高雄4廠"
+    },
+    "RT019574": {
+      "employee_no": "RT019574",
+      "employee_name": "蔡榮煌",
+      "dept_name": "製造課"
+    },
+    "RT018710": {
+      "employee_no": "RT018710",
+      "employee_name": "廖家麟",
+      "dept_name": "美特耐業務部"
+    },
+    "RT016185": {
+      "employee_no": "RT016185",
+      "employee_name": "謝東益",
+      "dept_name": "南港之星"
+    },
+    "RT020465": {
+      "employee_no": "RT020465",
+      "employee_name": "梁得義",
+      "dept_name": "M專案AATT2"
+    },
+    "RT016125": {
+      "employee_no": "RT016125",
+      "employee_name": "張紘文",
+      "dept_name": "創新環翠段"
+    },
+    "RT016126": {
+      "employee_no": "RT016126",
+      "employee_name": "劉牧宇",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT020466": {
+      "employee_no": "RT020466",
+      "employee_name": "沈文翊",
+      "dept_name": "M專案AATT2"
+    },
+    "RT018378": {
+      "employee_no": "RT018378",
+      "employee_name": "賴允瀚",
+      "dept_name": "生產二組"
+    },
+    "RT020374": {
+      "employee_no": "RT020374",
+      "employee_name": "李佩珊",
+      "dept_name": "會計部"
+    },
+    "RT020375": {
+      "employee_no": "RT020375",
+      "employee_name": "盧彥倫",
+      "dept_name": "生產部"
+    },
+    "RT019966": {
+      "employee_no": "RT019966",
+      "employee_name": "林明潔",
+      "dept_name": "工程規劃部"
+    },
+    "RT020062": {
+      "employee_no": "RT020062",
+      "employee_name": "李思柔",
+      "dept_name": "美特耐業務部"
+    },
+    "RT020564": {
+      "employee_no": "RT020564",
+      "employee_name": "楊秦榮",
+      "dept_name": "工程處"
+    },
+    "RT023355": {
+      "employee_no": "RT023355",
+      "employee_name": "辛佩蓉",
+      "dept_name": "事務所二部"
+    },
+    "RT017734": {
+      "employee_no": "RT017734",
+      "employee_name": "廖韻睿",
+      "dept_name": "美特耐業務部"
+    },
+    "RT020111": {
+      "employee_no": "RT020111",
+      "employee_name": "練思賢",
+      "dept_name": "工務一部"
+    },
+    "RT020073": {
+      "employee_no": "RT020073",
+      "employee_name": "王星詠",
+      "dept_name": "M專案台南200K"
+    },
+    "RT016171": {
+      "employee_no": "RT016171",
+      "employee_name": "陳冠龍",
+      "dept_name": "製造課"
+    },
+    "RT020251": {
+      "employee_no": "RT020251",
+      "employee_name": "歐陽家瑩",
+      "dept_name": "會計部"
+    },
+    "RT020252": {
+      "employee_no": "RT020252",
+      "employee_name": "方偉安",
+      "dept_name": "美特耐業務部"
+    },
+    "RT019661": {
+      "employee_no": "RT019661",
+      "employee_name": "莊凱文",
+      "dept_name": "總務部"
+    },
+    "RT018373": {
+      "employee_no": "RT018373",
+      "employee_name": "管軍彥",
+      "dept_name": "預鑄設計部"
+    },
+    "RT018374": {
+      "employee_no": "RT018374",
+      "employee_name": "謝佩真",
+      "dept_name": "預鑄設計部"
+    },
+    "RT016738": {
+      "employee_no": "RT016738",
+      "employee_name": "陳智軒",
+      "dept_name": "研發中心"
+    },
+    "RT019624": {
+      "employee_no": "RT019624",
+      "employee_name": "鍾詠桐",
+      "dept_name": "製造課"
+    },
+    "RT019992": {
+      "employee_no": "RT019992",
+      "employee_name": "黃子銘",
+      "dept_name": "製造課"
+    },
+    "RT019235": {
+      "employee_no": "RT019235",
+      "employee_name": "謝澄緯",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT019238": {
+      "employee_no": "RT019238",
+      "employee_name": "廖本雄",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT019239": {
+      "employee_no": "RT019239",
+      "employee_name": "姚長宇",
+      "dept_name": "資訊部"
+    },
+    "RT020711": {
+      "employee_no": "RT020711",
+      "employee_name": "陳冠廷",
+      "dept_name": "南海段都更案"
+    },
+    "RT019251": {
+      "employee_no": "RT019251",
+      "employee_name": "許育萱",
+      "dept_name": "機電規劃設計"
+    },
+    "RT019253": {
+      "employee_no": "RT019253",
+      "employee_name": "蔡旻桓",
+      "dept_name": "製造課"
+    },
+    "RT018850": {
+      "employee_no": "RT018850",
+      "employee_name": "闕旭淇",
+      "dept_name": "總經理室"
+    },
+    "RT017095": {
+      "employee_no": "RT017095",
+      "employee_name": "周書瑋",
+      "dept_name": "事務所一部"
+    },
+    "RT019051": {
+      "employee_no": "RT019051",
+      "employee_name": "黃柏誠",
+      "dept_name": "松江路都更案"
+    },
+    "RT019053": {
+      "employee_no": "RT019053",
+      "employee_name": "蔡碧芳",
+      "dept_name": "室內設計一部"
+    },
+    "RT019145": {
+      "employee_no": "RT019145",
+      "employee_name": "劉正義",
+      "dept_name": "南海段都更案"
+    },
+    "RT019150": {
+      "employee_no": "RT019150",
+      "employee_name": "彭元清",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT019151": {
+      "employee_no": "RT019151",
+      "employee_name": "葉淑萍",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT019152": {
+      "employee_no": "RT019152",
+      "employee_name": "李承洺",
+      "dept_name": "M專案台南200K"
+    },
+    "RT019156": {
+      "employee_no": "RT019156",
+      "employee_name": "潘佳琪",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT009427": {
+      "employee_no": "RT009427",
+      "employee_name": "顏朝興",
+      "dept_name": "機電規劃設計"
+    },
+    "RT008647": {
+      "employee_no": "RT008647",
+      "employee_name": "林家年",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT016431": {
+      "employee_no": "RT016431",
+      "employee_name": "吳宗祐",
+      "dept_name": "全球人壽總部"
+    },
+    "RT008922": {
+      "employee_no": "RT008922",
+      "employee_name": "劉乃華",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT020348": {
+      "employee_no": "RT020348",
+      "employee_name": "洪琬茜",
+      "dept_name": "M專案AATT2"
+    },
+    "RT009169": {
+      "employee_no": "RT009169",
+      "employee_name": "黃于珊",
+      "dept_name": "事務所一部"
+    },
+    "RT019469": {
+      "employee_no": "RT019469",
+      "employee_name": "張雅婷",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT007050": {
+      "employee_no": "RT007050",
+      "employee_name": "陳明芳",
+      "dept_name": "會計部"
+    },
+    "RT007051": {
+      "employee_no": "RT007051",
+      "employee_name": "徐蔓青",
+      "dept_name": "會計部"
+    },
+    "RT019647": {
+      "employee_no": "RT019647",
+      "employee_name": "鄭漢伯",
+      "dept_name": "T台南9廠"
+    },
+    "RT009170": {
+      "employee_no": "RT009170",
+      "employee_name": "高道淵",
+      "dept_name": "業務部"
+    },
+    "RT009171": {
+      "employee_no": "RT009171",
+      "employee_name": "梁嘉洲",
+      "dept_name": "估算部"
+    },
+    "RT009439": {
+      "employee_no": "RT009439",
+      "employee_name": "陳麗如",
+      "dept_name": "稽核現金組"
+    },
+    "RT008934": {
+      "employee_no": "RT008934",
+      "employee_name": "楊兆群",
+      "dept_name": "估算部"
+    },
+    "RT006762": {
+      "employee_no": "RT006762",
+      "employee_name": "賴建祥",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT006763": {
+      "employee_no": "RT006763",
+      "employee_name": "邱慶林",
+      "dept_name": "美特耐業務部"
+    },
+    "RT002136": {
+      "employee_no": "RT002136",
+      "employee_name": "蔡順吉",
+      "dept_name": "業務部"
+    },
+    "RT002064": {
+      "employee_no": "RT002064",
+      "employee_name": "劉進成",
+      "dept_name": "創新環翠段"
+    },
+    "RT002070": {
+      "employee_no": "RT002070",
+      "employee_name": "何慧娟",
+      "dept_name": "專案部"
+    },
+    "RT007016": {
+      "employee_no": "RT007016",
+      "employee_name": "李天蕙",
+      "dept_name": "總稽核室"
+    },
+    "RT009447": {
+      "employee_no": "RT009447",
+      "employee_name": "張孝禮",
+      "dept_name": "新吉美碩案"
+    },
+    "RT008689": {
+      "employee_no": "RT008689",
+      "employee_name": "莫惟瀚",
+      "dept_name": "總經理室"
+    },
+    "RT008956": {
+      "employee_no": "RT008956",
+      "employee_name": "沈建平",
+      "dept_name": "土城社宅新建"
+    },
+    "RT009191": {
+      "employee_no": "RT009191",
+      "employee_name": "吳冠漢",
+      "dept_name": "生管課"
+    },
+    "RT002068": {
+      "employee_no": "RT002068",
+      "employee_name": "葉宗翰",
+      "dept_name": "機電工務部"
+    },
+    "RT001970": {
+      "employee_no": "RT001970",
+      "employee_name": "王志明",
+      "dept_name": "全球人壽總部"
+    },
+    "RT001938": {
+      "employee_no": "RT001938",
+      "employee_name": "劉彥廷",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT006740": {
+      "employee_no": "RT006740",
+      "employee_name": "黃偉熙",
+      "dept_name": "工程規劃部"
+    },
+    "RT007033": {
+      "employee_no": "RT007033",
+      "employee_name": "張偉鈞",
+      "dept_name": "稽核營運組"
+    },
+    "RT007038": {
+      "employee_no": "RT007038",
+      "employee_name": "謝祥杰",
+      "dept_name": "材料課"
+    },
+    "RT007892": {
+      "employee_no": "RT007892",
+      "employee_name": "施俊明",
+      "dept_name": "發包中心"
+    },
+    "RT009198": {
+      "employee_no": "RT009198",
+      "employee_name": "劉金泉",
+      "dept_name": "工務二部"
+    },
+    "RT007084": {
+      "employee_no": "RT007084",
+      "employee_name": "趙俊宏",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT006809": {
+      "employee_no": "RT006809",
+      "employee_name": "謝宜庭",
+      "dept_name": "會計部"
+    },
+    "RT001924": {
+      "employee_no": "RT001924",
+      "employee_name": "馮一道",
+      "dept_name": "工程規劃部"
+    },
+    "RT002153": {
+      "employee_no": "RT002153",
+      "employee_name": "王明怡",
+      "dept_name": "集團人資處"
+    },
+    "RT001902": {
+      "employee_no": "RT001902",
+      "employee_name": "晏光華",
+      "dept_name": "資訊部"
+    },
+    "RT001874": {
+      "employee_no": "RT001874",
+      "employee_name": "張柏超",
+      "dept_name": "業務部"
+    },
+    "RT020408": {
+      "employee_no": "RT020408",
+      "employee_name": "張清全",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT008422": {
+      "employee_no": "RT008422",
+      "employee_name": "陳康?",
+      "dept_name": "工程規劃部"
+    },
+    "RT009204": {
+      "employee_no": "RT009204",
+      "employee_name": "林昭男",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT007124": {
+      "employee_no": "RT007124",
+      "employee_name": "洪智貴",
+      "dept_name": "創新軟橋案"
+    },
+    "RT007148": {
+      "employee_no": "RT007148",
+      "employee_name": "曹昌盛",
+      "dept_name": "預鑄設計部"
+    },
+    "RT001312": {
+      "employee_no": "RT001312",
+      "employee_name": "蔡蕥奾",
+      "dept_name": "會計部"
+    },
+    "RT001635": {
+      "employee_no": "RT001635",
+      "employee_name": "陳盟德",
+      "dept_name": "修繕部"
+    },
+    "RT001626": {
+      "employee_no": "RT001626",
+      "employee_name": "楊紹良",
+      "dept_name": "製造課"
+    },
+    "RT008426": {
+      "employee_no": "RT008426",
+      "employee_name": "許倍源",
+      "dept_name": "機電規劃設計"
+    },
+    "RT008195": {
+      "employee_no": "RT008195",
+      "employee_name": "周國龍",
+      "dept_name": "機電規劃設計"
+    },
+    "RT006855": {
+      "employee_no": "RT006855",
+      "employee_name": "楊承晉",
+      "dept_name": "修繕部"
+    },
+    "RT007170": {
+      "employee_no": "RT007170",
+      "employee_name": "鄭鴻勳",
+      "dept_name": "發包中心"
+    },
+    "RT007174": {
+      "employee_no": "RT007174",
+      "employee_name": "林依潔",
+      "dept_name": "總經理室"
+    },
+    "RT001582": {
+      "employee_no": "RT001582",
+      "employee_name": "黃連興",
+      "dept_name": "發包中心"
+    },
+    "RT001544": {
+      "employee_no": "RT001544",
+      "employee_name": "王明仁",
+      "dept_name": "修繕部"
+    },
+    "RT004202": {
+      "employee_no": "RT004202",
+      "employee_name": "葛春光",
+      "dept_name": "修繕部"
+    },
+    "RT007713": {
+      "employee_no": "RT007713",
+      "employee_name": "李達人",
+      "dept_name": "機電規劃設計"
+    },
+    "RT009083": {
+      "employee_no": "RT009083",
+      "employee_name": "鄧彬斌",
+      "dept_name": "工程規劃部"
+    },
+    "RT006571": {
+      "employee_no": "RT006571",
+      "employee_name": "陳國興",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT006882": {
+      "employee_no": "RT006882",
+      "employee_name": "洪瑞菁",
+      "dept_name": "預鑄設計部"
+    },
+    "RT002445": {
+      "employee_no": "RT002445",
+      "employee_name": "洪榮林",
+      "dept_name": "機電工務部"
+    },
+    "RT002441": {
+      "employee_no": "RT002441",
+      "employee_name": "張瓏瀚",
+      "dept_name": "創新環翠段"
+    },
+    "RT001524": {
+      "employee_no": "RT001524",
+      "employee_name": "商育境",
+      "dept_name": "發包中心"
+    },
+    "RT001507": {
+      "employee_no": "RT001507",
+      "employee_name": "許呂江",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT002431": {
+      "employee_no": "RT002431",
+      "employee_name": "劉士祺",
+      "dept_name": "資訊部"
+    },
+    "RT005443": {
+      "employee_no": "RT005443",
+      "employee_name": "王薇琇",
+      "dept_name": "人力資源部"
+    },
+    "RT008601": {
+      "employee_no": "RT008601",
+      "employee_name": "彭志偉",
+      "dept_name": "南港之星"
+    },
+    "RT008604": {
+      "employee_no": "RT008604",
+      "employee_name": "鍾弦峰",
+      "dept_name": "M專案AATT2"
+    },
+    "RT008550": {
+      "employee_no": "RT008550",
+      "employee_name": "徐盟凱",
+      "dept_name": "預鑄設計部"
+    },
+    "RT009264": {
+      "employee_no": "RT009264",
+      "employee_name": "林俊光",
+      "dept_name": "美特耐業務部"
+    },
+    "RT019975": {
+      "employee_no": "RT019975",
+      "employee_name": "黃鈺晴",
+      "dept_name": "水泥業務部"
+    },
+    "RT009265": {
+      "employee_no": "RT009265",
+      "employee_name": "廖君宜",
+      "dept_name": "機電規劃設計"
+    },
+    "RT009030": {
+      "employee_no": "RT009030",
+      "employee_name": "吳浩仁",
+      "dept_name": "專業施工部"
+    },
+    "RT009276": {
+      "employee_no": "RT009276",
+      "employee_name": "林榮華",
+      "dept_name": "室內設計三部"
+    },
+    "RT006622": {
+      "employee_no": "RT006622",
+      "employee_name": "魏彰延",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT007196": {
+      "employee_no": "RT007196",
+      "employee_name": "張書銘",
+      "dept_name": "專案部"
+    },
+    "RT006603": {
+      "employee_no": "RT006603",
+      "employee_name": "張秀娟",
+      "dept_name": "發包中心"
+    },
+    "RT008501": {
+      "employee_no": "RT008501",
+      "employee_name": "林惠琦",
+      "dept_name": "稽核現金組"
+    },
+    "RT007733": {
+      "employee_no": "RT007733",
+      "employee_name": "李進裕",
+      "dept_name": "修繕部"
+    },
+    "RT007735": {
+      "employee_no": "RT007735",
+      "employee_name": "張國揚",
+      "dept_name": "修繕部"
+    },
+    "RT007737": {
+      "employee_no": "RT007737",
+      "employee_name": "謝協倫",
+      "dept_name": "製造課"
+    },
+    "RT004279": {
+      "employee_no": "RT004279",
+      "employee_name": "周佩玲",
+      "dept_name": "稽核營運組"
+    },
+    "RT004793": {
+      "employee_no": "RT004793",
+      "employee_name": "雷若蘭",
+      "dept_name": "專業施工部"
+    },
+    "RT005171": {
+      "employee_no": "RT005171",
+      "employee_name": "李桂英",
+      "dept_name": "會計部"
+    },
+    "RT007302": {
+      "employee_no": "RT007302",
+      "employee_name": "吳仁寶",
+      "dept_name": "T台南9廠"
+    },
+    "RT005202": {
+      "employee_no": "RT005202",
+      "employee_name": "呂榮峰",
+      "dept_name": "松江路都更案"
+    },
+    "RT007296": {
+      "employee_no": "RT007296",
+      "employee_name": "戴孟芳",
+      "dept_name": "稽核營運組"
+    },
+    "RT008615": {
+      "employee_no": "RT008615",
+      "employee_name": "馮文雄",
+      "dept_name": "T寶山3廠"
+    },
+    "RT008618": {
+      "employee_no": "RT008618",
+      "employee_name": "蔡國章",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT008620": {
+      "employee_no": "RT008620",
+      "employee_name": "游士賢",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT008747": {
+      "employee_no": "RT008747",
+      "employee_name": "蒲宏璋",
+      "dept_name": "機電工務部"
+    },
+    "RT009246": {
+      "employee_no": "RT009246",
+      "employee_name": "蔡明智",
+      "dept_name": "製造課"
+    },
+    "RT005580": {
+      "employee_no": "RT005580",
+      "employee_name": "蘇怡先",
+      "dept_name": "業務部"
+    },
+    "RT005235": {
+      "employee_no": "RT005235",
+      "employee_name": "劉志宏",
+      "dept_name": "工務二部"
+    },
+    "RT004904": {
+      "employee_no": "RT004904",
+      "employee_name": "葉佳登",
+      "dept_name": "工務一部"
+    },
+    "RT005257": {
+      "employee_no": "RT005257",
+      "employee_name": "廖精松",
+      "dept_name": "生產事業處"
+    },
+    "RT008287": {
+      "employee_no": "RT008287",
+      "employee_name": "白季可",
+      "dept_name": "預鑄設計部"
+    },
+    "RT007745": {
+      "employee_no": "RT007745",
+      "employee_name": "王瑞禎",
+      "dept_name": "研發中心"
+    },
+    "RT008850": {
+      "employee_no": "RT008850",
+      "employee_name": "張年成",
+      "dept_name": "工程處"
+    },
+    "RT007465": {
+      "employee_no": "RT007465",
+      "employee_name": "林銘煇",
+      "dept_name": "生管課"
+    },
+    "RT002087": {
+      "employee_no": "RT002087",
+      "employee_name": "楊瑞國",
+      "dept_name": "南港之星"
+    },
+    "RT007929": {
+      "employee_no": "RT007929",
+      "employee_name": "林彥孝",
+      "dept_name": "估算部"
+    },
+    "RT004863": {
+      "employee_no": "RT004863",
+      "employee_name": "吳正凱",
+      "dept_name": "資訊部"
+    },
+    "RT009330": {
+      "employee_no": "RT009330",
+      "employee_name": "王玉玲",
+      "dept_name": "機電規劃設計"
+    },
+    "RT007228": {
+      "employee_no": "RT007228",
+      "employee_name": "許時瑞",
+      "dept_name": "機電工務部"
+    },
+    "RT006974": {
+      "employee_no": "RT006974",
+      "employee_name": "陳昭月",
+      "dept_name": "會計部"
+    },
+    "RT007246": {
+      "employee_no": "RT007246",
+      "employee_name": "余俊良",
+      "dept_name": "材料課"
+    },
+    "RT004507": {
+      "employee_no": "RT004507",
+      "employee_name": "黃誌騏",
+      "dept_name": "工程處"
+    },
+    "RT005713": {
+      "employee_no": "RT005713",
+      "employee_name": "羅建鴻",
+      "dept_name": "發包中心"
+    },
+    "RT004575": {
+      "employee_no": "RT004575",
+      "employee_name": "李乾耀",
+      "dept_name": "工程處"
+    },
+    "RT005725": {
+      "employee_no": "RT005725",
+      "employee_name": "唐爾生",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT008288": {
+      "employee_no": "RT008288",
+      "employee_name": "蔡家葳",
+      "dept_name": "人力資源部"
+    },
+    "RT008556": {
+      "employee_no": "RT008556",
+      "employee_name": "賴鈺雯",
+      "dept_name": "預鑄設計部"
+    },
+    "RT007260": {
+      "employee_no": "RT007260",
+      "employee_name": "謝易勳",
+      "dept_name": "資訊部"
+    },
+    "RT006691": {
+      "employee_no": "RT006691",
+      "employee_name": "吳定在",
+      "dept_name": "維護課"
+    },
+    "RT004617": {
+      "employee_no": "RT004617",
+      "employee_name": "邱靜萍",
+      "dept_name": "會計部"
+    },
+    "RT004933": {
+      "employee_no": "RT004933",
+      "employee_name": "蘇春輝",
+      "dept_name": "業務部"
+    },
+    "RT008508": {
+      "employee_no": "RT008508",
+      "employee_name": "簡世宇",
+      "dept_name": "生產部"
+    },
+    "RT009508": {
+      "employee_no": "RT009508",
+      "employee_name": "劉凱文",
+      "dept_name": "發包中心"
+    },
+    "RT008763": {
+      "employee_no": "RT008763",
+      "employee_name": "趙存國",
+      "dept_name": "會計部"
+    },
+    "RT002415": {
+      "employee_no": "RT002415",
+      "employee_name": "李威熲",
+      "dept_name": "修繕部"
+    },
+    "RT002404": {
+      "employee_no": "RT002404",
+      "employee_name": "陳容笛",
+      "dept_name": "會計部"
+    },
+    "RT001457": {
+      "employee_no": "RT001457",
+      "employee_name": "劉彬彬",
+      "dept_name": "修繕部"
+    },
+    "RT001459": {
+      "employee_no": "RT001459",
+      "employee_name": "張佳惠",
+      "dept_name": "發包中心"
+    },
+    "RT002398": {
+      "employee_no": "RT002398",
+      "employee_name": "莊傳業",
+      "dept_name": "工程處"
+    },
+    "RT009334": {
+      "employee_no": "RT009334",
+      "employee_name": "羅智威",
+      "dept_name": "專案部"
+    },
+    "RT009335": {
+      "employee_no": "RT009335",
+      "employee_name": "陳秋梅",
+      "dept_name": "工程規劃部"
+    },
+    "RT008866": {
+      "employee_no": "RT008866",
+      "employee_name": "劉莉安",
+      "dept_name": "T台南9廠"
+    },
+    "RT009095": {
+      "employee_no": "RT009095",
+      "employee_name": "許茲榮",
+      "dept_name": "總經理室"
+    },
+    "RT001432": {
+      "employee_no": "RT001432",
+      "employee_name": "何沿昌",
+      "dept_name": "修繕部"
+    },
+    "RT001437": {
+      "employee_no": "RT001437",
+      "employee_name": "吳世中",
+      "dept_name": "估算部"
+    },
+    "RT001431": {
+      "employee_no": "RT001431",
+      "employee_name": "林明毅",
+      "dept_name": "資訊安全室"
+    },
+    "RT007308": {
+      "employee_no": "RT007308",
+      "employee_name": "鄭炯志",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT006281": {
+      "employee_no": "RT006281",
+      "employee_name": "張正邦",
+      "dept_name": "南港之星"
+    },
+    "RT008364": {
+      "employee_no": "RT008364",
+      "employee_name": "劉英芝",
+      "dept_name": "事務所一部"
+    },
+    "RT008371": {
+      "employee_no": "RT008371",
+      "employee_name": "許龍君",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT008373": {
+      "employee_no": "RT008373",
+      "employee_name": "陳明和",
+      "dept_name": "南港之星"
+    },
+    "RT005889": {
+      "employee_no": "RT005889",
+      "employee_name": "張國慶",
+      "dept_name": "南港之星"
+    },
+    "RT005893": {
+      "employee_no": "RT005893",
+      "employee_name": "邱俊欽",
+      "dept_name": "鋼筋加工課"
+    },
+    "RT001361": {
+      "employee_no": "RT001361",
+      "employee_name": "林明煌",
+      "dept_name": "工程規劃部"
+    },
+    "RT001362": {
+      "employee_no": "RT001362",
+      "employee_name": "吳樹棻",
+      "dept_name": "丹棠青島改建"
+    },
+    "RT006386": {
+      "employee_no": "RT006386",
+      "employee_name": "簡秋雪",
+      "dept_name": "機電規劃設計"
+    },
+    "RT009153": {
+      "employee_no": "RT009153",
+      "employee_name": "林靜雯",
+      "dept_name": "預鑄設計部"
+    },
+    "RT009159": {
+      "employee_no": "RT009159",
+      "employee_name": "黃金源",
+      "dept_name": "美特耐業務部"
+    },
+    "RT006248": {
+      "employee_no": "RT006248",
+      "employee_name": "陳朝成",
+      "dept_name": "工程規劃部"
+    },
+    "RT011448": {
+      "employee_no": "RT011448",
+      "employee_name": "陳武松",
+      "dept_name": "機電規劃設計"
+    },
+    "RT011449": {
+      "employee_no": "RT011449",
+      "employee_name": "黃明杰",
+      "dept_name": "機電規劃設計"
+    },
+    "RT010721": {
+      "employee_no": "RT010721",
+      "employee_name": "羅美真",
+      "dept_name": "機電規劃設計"
+    },
+    "RT010722": {
+      "employee_no": "RT010722",
+      "employee_name": "林群洲",
+      "dept_name": "工程規劃部"
+    },
+    "RT012502": {
+      "employee_no": "RT012502",
+      "employee_name": "陳文亮",
+      "dept_name": "機務組"
+    },
+    "RT012507": {
+      "employee_no": "RT012507",
+      "employee_name": "張志浩",
+      "dept_name": "機務組"
+    },
+    "RT010621": {
+      "employee_no": "RT010621",
+      "employee_name": "鄭？婷",
+      "dept_name": "會計部"
+    },
+    "RT010626": {
+      "employee_no": "RT010626",
+      "employee_name": "林韋辰",
+      "dept_name": "全球人壽總部"
+    },
+    "RT010796": {
+      "employee_no": "RT010796",
+      "employee_name": "鍾欣怡",
+      "dept_name": "預鑄設計部"
+    },
+    "RT011065": {
+      "employee_no": "RT011065",
+      "employee_name": "鄭淑芬",
+      "dept_name": "生產二組"
+    },
+    "RT011704": {
+      "employee_no": "RT011704",
+      "employee_name": "廖譽勝",
+      "dept_name": "松江路都更案"
+    },
+    "RT011988": {
+      "employee_no": "RT011988",
+      "employee_name": "游志明",
+      "dept_name": "生產一組"
+    },
+    "RT011989": {
+      "employee_no": "RT011989",
+      "employee_name": "林明洲",
+      "dept_name": "生產一組"
+    },
+    "RT012235": {
+      "employee_no": "RT012235",
+      "employee_name": "林鴻毅",
+      "dept_name": "生產一組"
+    },
+    "RT011247": {
+      "employee_no": "RT011247",
+      "employee_name": "林修逸",
+      "dept_name": "五谷王A"
+    },
+    "RT010581": {
+      "employee_no": "RT010581",
+      "employee_name": "王振宋",
+      "dept_name": "製造課"
+    },
+    "RT010010": {
+      "employee_no": "RT010010",
+      "employee_name": "劉安棋",
+      "dept_name": "專案部"
+    },
+    "RT011323": {
+      "employee_no": "RT011323",
+      "employee_name": "郭久禎",
+      "dept_name": "室內設計一部"
+    },
+    "RT012237": {
+      "employee_no": "RT012237",
+      "employee_name": "邱文政",
+      "dept_name": "品保組"
+    },
+    "RT019776": {
+      "employee_no": "RT019776",
+      "employee_name": "施宜勛",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT019777": {
+      "employee_no": "RT019777",
+      "employee_name": "古筳榮",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT011002": {
+      "employee_no": "RT011002",
+      "employee_name": "黃暉閔",
+      "dept_name": "全球人壽總部"
+    },
+    "RT011003": {
+      "employee_no": "RT011003",
+      "employee_name": "楊承叡",
+      "dept_name": "M專案AATT2"
+    },
+    "RT011006": {
+      "employee_no": "RT011006",
+      "employee_name": "黃利忠",
+      "dept_name": "T高雄4廠"
+    },
+    "RT011007": {
+      "employee_no": "RT011007",
+      "employee_name": "謝曜鴻",
+      "dept_name": "南港之星"
+    },
+    "RT011249": {
+      "employee_no": "RT011249",
+      "employee_name": "廖偵伶",
+      "dept_name": "工程規劃部"
+    },
+    "RT011600": {
+      "employee_no": "RT011600",
+      "employee_name": "謝怡欣",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT010827": {
+      "employee_no": "RT010827",
+      "employee_name": "楊台生",
+      "dept_name": "機料部"
+    },
+    "RT011083": {
+      "employee_no": "RT011083",
+      "employee_name": "卓文鵬",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT011961": {
+      "employee_no": "RT011961",
+      "employee_name": "林坤生",
+      "dept_name": "生產一組"
+    },
+    "RT011522": {
+      "employee_no": "RT011522",
+      "employee_name": "曾世明",
+      "dept_name": "重慶北路案"
+    },
+    "RT010638": {
+      "employee_no": "RT010638",
+      "employee_name": "林岳龍",
+      "dept_name": "發包部"
+    },
+    "RT020002": {
+      "employee_no": "RT020002",
+      "employee_name": "劉豐睿",
+      "dept_name": "創新新都段"
+    },
+    "RT011348": {
+      "employee_no": "RT011348",
+      "employee_name": "林憶璋",
+      "dept_name": "台南群聯館"
+    },
+    "RT011352": {
+      "employee_no": "RT011352",
+      "employee_name": "張筱莉",
+      "dept_name": "工程規劃部"
+    },
+    "RT012023": {
+      "employee_no": "RT012023",
+      "employee_name": "劉國貞",
+      "dept_name": "生產一組"
+    },
+    "RT011265": {
+      "employee_no": "RT011265",
+      "employee_name": "丁志行",
+      "dept_name": "南海段都更案"
+    },
+    "RT011540": {
+      "employee_no": "RT011540",
+      "employee_name": "陳俊嘉",
+      "dept_name": "機電規劃設計"
+    },
+    "RT010776": {
+      "employee_no": "RT010776",
+      "employee_name": "陳俊穎",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT010782": {
+      "employee_no": "RT010782",
+      "employee_name": "周書寬",
+      "dept_name": "南港之星"
+    },
+    "RT010299": {
+      "employee_no": "RT010299",
+      "employee_name": "陳茂霖",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT010837": {
+      "employee_no": "RT010837",
+      "employee_name": "彭正杰",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT010844": {
+      "employee_no": "RT010844",
+      "employee_name": "洪偉哲",
+      "dept_name": "創新新都段"
+    },
+    "RT011100": {
+      "employee_no": "RT011100",
+      "employee_name": "陳家福",
+      "dept_name": "美特耐生管部"
+    },
+    "RT011354": {
+      "employee_no": "RT011354",
+      "employee_name": "邱惠萍",
+      "dept_name": "會計部"
+    },
+    "RT020220": {
+      "employee_no": "RT020220",
+      "employee_name": "林奇",
+      "dept_name": "事務所一部"
+    },
+    "RT012264": {
+      "employee_no": "RT012264",
+      "employee_name": "林劉豪",
+      "dept_name": "物料組"
+    },
+    "RT011036": {
+      "employee_no": "RT011036",
+      "employee_name": "施柏村",
+      "dept_name": "M專案台南200K"
+    },
+    "RT011281": {
+      "employee_no": "RT011281",
+      "employee_name": "林家如",
+      "dept_name": "美特耐生管部"
+    },
+    "RT011282": {
+      "employee_no": "RT011282",
+      "employee_name": "唐志堅",
+      "dept_name": "南港之星"
+    },
+    "RT011635": {
+      "employee_no": "RT011635",
+      "employee_name": "陳堂健",
+      "dept_name": "工務一部"
+    },
+    "RT012015": {
+      "employee_no": "RT012015",
+      "employee_name": "林弘翔",
+      "dept_name": "生產二組"
+    },
+    "RT012019": {
+      "employee_no": "RT012019",
+      "employee_name": "林志和",
+      "dept_name": "機務組"
+    },
+    "RT010320": {
+      "employee_no": "RT010320",
+      "employee_name": "范佳琪",
+      "dept_name": "美特耐生管部"
+    },
+    "RT011349": {
+      "employee_no": "RT011349",
+      "employee_name": "呂詩瑤",
+      "dept_name": "工程規劃部"
+    },
+    "RT011383": {
+      "employee_no": "RT011383",
+      "employee_name": "楊宜蓁",
+      "dept_name": "生管課"
+    },
+    "RT010865": {
+      "employee_no": "RT010865",
+      "employee_name": "陳益鴻",
+      "dept_name": "專案開發"
+    },
+    "RT009813": {
+      "employee_no": "RT009813",
+      "employee_name": "張經宇",
+      "dept_name": "儲運課"
+    },
+    "RT010076": {
+      "employee_no": "RT010076",
+      "employee_name": "滿福堂",
+      "dept_name": "工程處"
+    },
+    "RT010338": {
+      "employee_no": "RT010338",
+      "employee_name": "郭思吟",
+      "dept_name": "資訊部"
+    },
+    "RT010880": {
+      "employee_no": "RT010880",
+      "employee_name": "宋子能",
+      "dept_name": "製造課"
+    },
+    "RT011125": {
+      "employee_no": "RT011125",
+      "employee_name": "張翔",
+      "dept_name": "機電規劃設計"
+    },
+    "RT008901": {
+      "employee_no": "RT008901",
+      "employee_name": "陳上祐",
+      "dept_name": "生管課"
+    },
+    "RT009136": {
+      "employee_no": "RT009136",
+      "employee_name": "李欣潔",
+      "dept_name": "估算部"
+    },
+    "RT009385": {
+      "employee_no": "RT009385",
+      "employee_name": "羅俊麟",
+      "dept_name": "機電規劃設計"
+    },
+    "RT010549": {
+      "employee_no": "RT010549",
+      "employee_name": "賴文君",
+      "dept_name": "會計部"
+    },
+    "RT010553": {
+      "employee_no": "RT010553",
+      "employee_name": "洪以昇",
+      "dept_name": "資訊部"
+    },
+    "RT009841": {
+      "employee_no": "RT009841",
+      "employee_name": "莊政衛",
+      "dept_name": "創新材料"
+    },
+    "RT011124": {
+      "employee_no": "RT011124",
+      "employee_name": "鄭巧芸",
+      "dept_name": "機電規劃設計"
+    },
+    "RT011401": {
+      "employee_no": "RT011401",
+      "employee_name": "盧建君",
+      "dept_name": "T高雄4廠"
+    },
+    "RT009565": {
+      "employee_no": "RT009565",
+      "employee_name": "許清林",
+      "dept_name": "估算部"
+    },
+    "RT012280": {
+      "employee_no": "RT012280",
+      "employee_name": "林文祥",
+      "dept_name": "生產一組"
+    },
+    "RT010358": {
+      "employee_no": "RT010358",
+      "employee_name": "李鴻基",
+      "dept_name": "估算部"
+    },
+    "RT019888": {
+      "employee_no": "RT019888",
+      "employee_name": "李育葳",
+      "dept_name": "T高雄5廠"
+    },
+    "RT019890": {
+      "employee_no": "RT019890",
+      "employee_name": "杜元輔",
+      "dept_name": "發包中心"
+    },
+    "RT011173": {
+      "employee_no": "RT011173",
+      "employee_name": "陳建昕",
+      "dept_name": "資訊部"
+    },
+    "RT011455": {
+      "employee_no": "RT011455",
+      "employee_name": "陳松右",
+      "dept_name": "台南群聯館"
+    },
+    "RT011456": {
+      "employee_no": "RT011456",
+      "employee_name": "王斯本",
+      "dept_name": "M專案AATT2"
+    },
+    "RT010361": {
+      "employee_no": "RT010361",
+      "employee_name": "莊惠婷",
+      "dept_name": "機電規劃設計"
+    },
+    "RT018485": {
+      "employee_no": "RT018485",
+      "employee_name": "楊宗翰",
+      "dept_name": "發包中心"
+    },
+    "RT011147": {
+      "employee_no": "RT011147",
+      "employee_name": "張皓博",
+      "dept_name": "生管課"
+    },
+    "RT018486": {
+      "employee_no": "RT018486",
+      "employee_name": "卓顯庭",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT010445": {
+      "employee_no": "RT010445",
+      "employee_name": "周翰均",
+      "dept_name": "南海段都更案"
+    },
+    "RT010379": {
+      "employee_no": "RT010379",
+      "employee_name": "趙岱偉",
+      "dept_name": "M專案台南200K"
+    },
+    "RT010900": {
+      "employee_no": "RT010900",
+      "employee_name": "曾曉嵐",
+      "dept_name": "丹棠青島改建"
+    },
+    "RT010912": {
+      "employee_no": "RT010912",
+      "employee_name": "周淑萍",
+      "dept_name": "會計部"
+    },
+    "RT011189": {
+      "employee_no": "RT011189",
+      "employee_name": "陳麗如",
+      "dept_name": "機電規劃設計"
+    },
+    "RT011201": {
+      "employee_no": "RT011201",
+      "employee_name": "鍾榮家",
+      "dept_name": "T高雄4廠"
+    },
+    "RT010186": {
+      "employee_no": "RT010186",
+      "employee_name": "莊嘉興",
+      "dept_name": "修繕部"
+    },
+    "RT010395": {
+      "employee_no": "RT010395",
+      "employee_name": "簡明智",
+      "dept_name": "工程規劃部"
+    },
+    "RT010700": {
+      "employee_no": "RT010700",
+      "employee_name": "韓仕彥",
+      "dept_name": "製造課"
+    },
+    "RT010949": {
+      "employee_no": "RT010949",
+      "employee_name": "洪若庭",
+      "dept_name": "T寶山3廠"
+    },
+    "RT009954": {
+      "employee_no": "RT009954",
+      "employee_name": "李浦民",
+      "dept_name": "美特耐生管部"
+    },
+    "RT010483": {
+      "employee_no": "RT010483",
+      "employee_name": "簡怡芬",
+      "dept_name": "工程規劃部"
+    },
+    "RT010559": {
+      "employee_no": "RT010559",
+      "employee_name": "陳奕帆",
+      "dept_name": "美特耐業務部"
+    },
+    "RT009882": {
+      "employee_no": "RT009882",
+      "employee_name": "蔡期昌",
+      "dept_name": "南港之星"
+    },
+    "RT010156": {
+      "employee_no": "RT010156",
+      "employee_name": "高逢正",
+      "dept_name": "機電規劃設計"
+    },
+    "RT012491": {
+      "employee_no": "RT012491",
+      "employee_name": "蔡佳位",
+      "dept_name": "機電規劃設計"
+    },
+    "RT011215": {
+      "employee_no": "RT011215",
+      "employee_name": "張恩晉",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT011484": {
+      "employee_no": "RT011484",
+      "employee_name": "張威民",
+      "dept_name": "創新軟橋案"
+    },
+    "RT009967": {
+      "employee_no": "RT009967",
+      "employee_name": "許雪真",
+      "dept_name": "南港之星"
+    },
+    "RT010398": {
+      "employee_no": "RT010398",
+      "employee_name": "韓家駿",
+      "dept_name": "機電規劃設計"
+    },
+    "RT009902": {
+      "employee_no": "RT009902",
+      "employee_name": "唐盛傑",
+      "dept_name": "三重捷六"
+    },
+    "RT009903": {
+      "employee_no": "RT009903",
+      "employee_name": "俞軒賀",
+      "dept_name": "估算部"
+    },
+    "RT014332": {
+      "employee_no": "RT014332",
+      "employee_name": "張建泰",
+      "dept_name": "南港之星"
+    },
+    "RT014341": {
+      "employee_no": "RT014341",
+      "employee_name": "姜琪齡",
+      "dept_name": "會計部"
+    },
+    "RT013040": {
+      "employee_no": "RT013040",
+      "employee_name": "張玄毅",
+      "dept_name": "品保安衛部"
+    },
+    "RT013286": {
+      "employee_no": "RT013286",
+      "employee_name": "黃琳喬",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT013287": {
+      "employee_no": "RT013287",
+      "employee_name": "張宴菁",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT013288": {
+      "employee_no": "RT013288",
+      "employee_name": "吳書維",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT011889": {
+      "employee_no": "RT011889",
+      "employee_name": "張吟南",
+      "dept_name": "電務組"
+    },
+    "RT012006": {
+      "employee_no": "RT012006",
+      "employee_name": "李宜潔",
+      "dept_name": "美特耐業務部"
+    },
+    "RT013297": {
+      "employee_no": "RT013297",
+      "employee_name": "唐正銓",
+      "dept_name": "預鑄設計部"
+    },
+    "RT013298": {
+      "employee_no": "RT013298",
+      "employee_name": "郭明鏡",
+      "dept_name": "南港之星"
+    },
+    "RT014589": {
+      "employee_no": "RT014589",
+      "employee_name": "金彥成",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT014592": {
+      "employee_no": "RT014592",
+      "employee_name": "蘇耿賢",
+      "dept_name": "工程規劃部"
+    },
+    "RT014754": {
+      "employee_no": "RT014754",
+      "employee_name": "游宗軒",
+      "dept_name": "創新軟橋案"
+    },
+    "RT014759": {
+      "employee_no": "RT014759",
+      "employee_name": "曾育欽",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT014760": {
+      "employee_no": "RT014760",
+      "employee_name": "黃德元",
+      "dept_name": "創新軟橋案"
+    },
+    "RT013332": {
+      "employee_no": "RT013332",
+      "employee_name": "李信毅",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT014648": {
+      "employee_no": "RT014648",
+      "employee_name": "張俊聰",
+      "dept_name": "T高雄4廠"
+    },
+    "RT013701": {
+      "employee_no": "RT013701",
+      "employee_name": "許婷喻",
+      "dept_name": "工程規劃部"
+    },
+    "RT012887": {
+      "employee_no": "RT012887",
+      "employee_name": "吳佳豪",
+      "dept_name": "M專案AATT2"
+    },
+    "RT014240": {
+      "employee_no": "RT014240",
+      "employee_name": "蔡佳遠",
+      "dept_name": "全球人壽總部"
+    },
+    "RT014243": {
+      "employee_no": "RT014243",
+      "employee_name": "張鴻斌",
+      "dept_name": "五谷王A"
+    },
+    "RT014086": {
+      "employee_no": "RT014086",
+      "employee_name": "林冠宏",
+      "dept_name": "品保組"
+    },
+    "RT014157": {
+      "employee_no": "RT014157",
+      "employee_name": "吳明全",
+      "dept_name": "M專案台南200K"
+    },
+    "RT013438": {
+      "employee_no": "RT013438",
+      "employee_name": "李文章",
+      "dept_name": "物料組"
+    },
+    "RT014599": {
+      "employee_no": "RT014599",
+      "employee_name": "陳春正",
+      "dept_name": "製造課"
+    },
+    "RT014600": {
+      "employee_no": "RT014600",
+      "employee_name": "葉俊宏",
+      "dept_name": "製造課"
+    },
+    "RT014855": {
+      "employee_no": "RT014855",
+      "employee_name": "彭首銘",
+      "dept_name": "製造課"
+    },
+    "RT014159": {
+      "employee_no": "RT014159",
+      "employee_name": "陳正宜",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT014401": {
+      "employee_no": "RT014401",
+      "employee_name": "陳冠廷",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT018270": {
+      "employee_no": "RT018270",
+      "employee_name": "林鳳美",
+      "dept_name": "機電規劃設計"
+    },
+    "RT018271": {
+      "employee_no": "RT018271",
+      "employee_name": "黃韋嘉",
+      "dept_name": "T寶山3廠"
+    },
+    "RT014676": {
+      "employee_no": "RT014676",
+      "employee_name": "賴佳鼎",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT012905": {
+      "employee_no": "RT012905",
+      "employee_name": "呂紹國",
+      "dept_name": "研發中心"
+    },
+    "RT012915": {
+      "employee_no": "RT012915",
+      "employee_name": "曾國峰",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT013993": {
+      "employee_no": "RT013993",
+      "employee_name": "吳佳如",
+      "dept_name": "人力資源部"
+    },
+    "RT014251": {
+      "employee_no": "RT014251",
+      "employee_name": "郭芸安",
+      "dept_name": "估算部"
+    },
+    "RT015210": {
+      "employee_no": "RT015210",
+      "employee_name": "陳玫燕",
+      "dept_name": "工程規劃部"
+    },
+    "RT014181": {
+      "employee_no": "RT014181",
+      "employee_name": "廖素珠",
+      "dept_name": "機電規劃設計"
+    },
+    "RT014420": {
+      "employee_no": "RT014420",
+      "employee_name": "張驄騰",
+      "dept_name": "五谷王A"
+    },
+    "RT014692": {
+      "employee_no": "RT014692",
+      "employee_name": "陳禮濡",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT014503": {
+      "employee_no": "RT014503",
+      "employee_name": "鄒佳寰",
+      "dept_name": "玉成裝修機電"
+    },
+    "RT014504": {
+      "employee_no": "RT014504",
+      "employee_name": "李宗翰",
+      "dept_name": "三重捷六"
+    },
+    "RT015433": {
+      "employee_no": "RT015433",
+      "employee_name": "黃沛元",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT015470": {
+      "employee_no": "RT015470",
+      "employee_name": "紀昀",
+      "dept_name": "T寶山3廠"
+    },
+    "RT014193": {
+      "employee_no": "RT014193",
+      "employee_name": "許立正",
+      "dept_name": "南海段都更案"
+    },
+    "RT012938": {
+      "employee_no": "RT012938",
+      "employee_name": "張慶銘",
+      "dept_name": "生產一組"
+    },
+    "RT014778": {
+      "employee_no": "RT014778",
+      "employee_name": "汪駿華",
+      "dept_name": "機電規劃設計"
+    },
+    "RT014012": {
+      "employee_no": "RT014012",
+      "employee_name": "陳昭雄",
+      "dept_name": "修繕部"
+    },
+    "RT014014": {
+      "employee_no": "RT014014",
+      "employee_name": "林憲忠",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT016772": {
+      "employee_no": "RT016772",
+      "employee_name": "花晟豪",
+      "dept_name": "工程規劃部"
+    },
+    "RT020539": {
+      "employee_no": "RT020539",
+      "employee_name": "孫莉菱",
+      "dept_name": "會計部"
+    },
+    "RT014141": {
+      "employee_no": "RT014141",
+      "employee_name": "吳一中",
+      "dept_name": "電務組"
+    },
+    "RT020541": {
+      "employee_no": "RT020541",
+      "employee_name": "施志傑",
+      "dept_name": "美特耐業務部"
+    },
+    "RT014194": {
+      "employee_no": "RT014194",
+      "employee_name": "顏上為",
+      "dept_name": "全球人壽總部"
+    },
+    "RT013486": {
+      "employee_no": "RT013486",
+      "employee_name": "江世哲",
+      "dept_name": "能資研發"
+    },
+    "RT013752": {
+      "employee_no": "RT013752",
+      "employee_name": "陳冠宇",
+      "dept_name": "美特耐技術部"
+    },
+    "RT013760": {
+      "employee_no": "RT013760",
+      "employee_name": "聶久美",
+      "dept_name": "機電規劃設計"
+    },
+    "RT014270": {
+      "employee_no": "RT014270",
+      "employee_name": "李明仁",
+      "dept_name": "南港之星"
+    },
+    "RT016773": {
+      "employee_no": "RT016773",
+      "employee_name": "陳彥彤",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT014519": {
+      "employee_no": "RT014519",
+      "employee_name": "郭嵩杰",
+      "dept_name": "創新環翠段"
+    },
+    "RT014520": {
+      "employee_no": "RT014520",
+      "employee_name": "劉佳倫",
+      "dept_name": "創新軟橋案"
+    },
+    "RT015721": {
+      "employee_no": "RT015721",
+      "employee_name": "陳怡宏",
+      "dept_name": "發包部"
+    },
+    "RT013935": {
+      "employee_no": "RT013935",
+      "employee_name": "陳柏儒",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT014207": {
+      "employee_no": "RT014207",
+      "employee_name": "林耀強",
+      "dept_name": "發包採購"
+    },
+    "RT017205": {
+      "employee_no": "RT017205",
+      "employee_name": "陳英豪",
+      "dept_name": "生產二組"
+    },
+    "RT020867": {
+      "employee_no": "RT020867",
+      "employee_name": "林志豪",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT014451": {
+      "employee_no": "RT014451",
+      "employee_name": "時孝忱",
+      "dept_name": "南港之星"
+    },
+    "RT017489": {
+      "employee_no": "RT017489",
+      "employee_name": "林嘉信",
+      "dept_name": "電務組"
+    },
+    "RT020870": {
+      "employee_no": "RT020870",
+      "employee_name": "李蘇倫",
+      "dept_name": "預鑄設計部"
+    },
+    "RT007380": {
+      "employee_no": "RT007380",
+      "employee_name": "廖志宏",
+      "dept_name": "總務課"
+    },
+    "RT013771": {
+      "employee_no": "RT013771",
+      "employee_name": "鄭曉君",
+      "dept_name": "五谷王A"
+    },
+    "RT020835": {
+      "employee_no": "RT020835",
+      "employee_name": "王玄婷",
+      "dept_name": "南海段都更案"
+    },
+    "RT020836": {
+      "employee_no": "RT020836",
+      "employee_name": "駱澤瑋",
+      "dept_name": "南海段都更案"
+    },
+    "RT015190": {
+      "employee_no": "RT015190",
+      "employee_name": "吳冠平",
+      "dept_name": "生產一組"
+    },
+    "RT014839": {
+      "employee_no": "RT014839",
+      "employee_name": "李峴禕",
+      "dept_name": "M專案AATT2"
+    },
+    "RT014639": {
+      "employee_no": "RT014639",
+      "employee_name": "曾盈耀",
+      "dept_name": "機電規劃設計"
+    },
+    "RT020837": {
+      "employee_no": "RT020837",
+      "employee_name": "唐靖崴",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT020838": {
+      "employee_no": "RT020838",
+      "employee_name": "李易葦",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT020839": {
+      "employee_no": "RT020839",
+      "employee_name": "何亞哲",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT020840": {
+      "employee_no": "RT020840",
+      "employee_name": "吳劭崎",
+      "dept_name": "江陵央一PC版"
+    },
+    "RT020708": {
+      "employee_no": "RT020708",
+      "employee_name": "朱柏旭",
+      "dept_name": "丹棠青島改建"
+    },
+    "RT012986": {
+      "employee_no": "RT012986",
+      "employee_name": "陳柏勳",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT013536": {
+      "employee_no": "RT013536",
+      "employee_name": "陳易亨",
+      "dept_name": "機電規劃設計"
+    },
+    "RT013547": {
+      "employee_no": "RT013547",
+      "employee_name": "林信鐘",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT014851": {
+      "employee_no": "RT014851",
+      "employee_name": "傅貽明",
+      "dept_name": "工程規劃部"
+    },
+    "RT014314": {
+      "employee_no": "RT014314",
+      "employee_name": "吳聖亹",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT014315": {
+      "employee_no": "RT014315",
+      "employee_name": "張瑞娜",
+      "dept_name": "工程規劃部"
+    },
+    "RT020841": {
+      "employee_no": "RT020841",
+      "employee_name": "陳怡樺",
+      "dept_name": "預鑄設計部"
+    },
+    "RT020842": {
+      "employee_no": "RT020842",
+      "employee_name": "鄭中立",
+      "dept_name": "製造課"
+    },
+    "RT015430": {
+      "employee_no": "RT015430",
+      "employee_name": "張嬌?",
+      "dept_name": "會計部"
+    },
+    "RT013563": {
+      "employee_no": "RT013563",
+      "employee_name": "陳玉芬",
+      "dept_name": "製造課"
+    },
+    "RT013564": {
+      "employee_no": "RT013564",
+      "employee_name": "林建宏",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT013565": {
+      "employee_no": "RT013565",
+      "employee_name": "陳佑瑋",
+      "dept_name": "T高雄4廠"
+    },
+    "RT020845": {
+      "employee_no": "RT020845",
+      "employee_name": "孫若寧",
+      "dept_name": "機電規劃設計"
+    },
+    "RT017040": {
+      "employee_no": "RT017040",
+      "employee_name": "高雯榮",
+      "dept_name": "管制組"
+    },
+    "RT013690": {
+      "employee_no": "RT013690",
+      "employee_name": "張詩瑜",
+      "dept_name": "創新新都段"
+    },
+    "RT012861": {
+      "employee_no": "RT012861",
+      "employee_name": "吳欣紋",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT012863": {
+      "employee_no": "RT012863",
+      "employee_name": "陳鈺",
+      "dept_name": "發包部"
+    },
+    "RT012995": {
+      "employee_no": "RT012995",
+      "employee_name": "黃雅玲",
+      "dept_name": "美特耐技術部"
+    },
+    "RT014072": {
+      "employee_no": "RT014072",
+      "employee_name": "邱美芳",
+      "dept_name": "機電規劃設計"
+    },
+    "RT020236": {
+      "employee_no": "RT020236",
+      "employee_name": "何君",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT014464": {
+      "employee_no": "RT014464",
+      "employee_name": "張倫端",
+      "dept_name": "事務所一部"
+    },
+    "RT015164": {
+      "employee_no": "RT015164",
+      "employee_name": "朱國賓",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT018506": {
+      "employee_no": "RT018506",
+      "employee_name": "朱萱菱",
+      "dept_name": "機電設計部"
+    },
+    "RT019837": {
+      "employee_no": "RT019837",
+      "employee_name": "林明漢",
+      "dept_name": "專案開發"
+    },
+    "RT020302": {
+      "employee_no": "RT020302",
+      "employee_name": "郭子千",
+      "dept_name": "事務所二部"
+    },
+    "RT020752": {
+      "employee_no": "RT020752",
+      "employee_name": "鍾岱芮",
+      "dept_name": "事務所一部"
+    },
+    "RT020753": {
+      "employee_no": "RT020753",
+      "employee_name": "袁皓",
+      "dept_name": "事務所二部"
+    },
+    "RT015447": {
+      "employee_no": "RT015447",
+      "employee_name": "廖文寧",
+      "dept_name": "美特耐業務部"
+    },
+    "RT015109": {
+      "employee_no": "RT015109",
+      "employee_name": "林育麒",
+      "dept_name": "新吉美碩案"
+    },
+    "RT020242": {
+      "employee_no": "RT020242",
+      "employee_name": "周家銘",
+      "dept_name": "生產二組"
+    },
+    "RT015364": {
+      "employee_no": "RT015364",
+      "employee_name": "楊婉詩",
+      "dept_name": "室內設計一部"
+    },
+    "RT019649": {
+      "employee_no": "RT019649",
+      "employee_name": "方柏翔",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT001351": {
+      "employee_no": "RT001351",
+      "employee_name": "李志宏",
+      "dept_name": "總經理室"
+    },
+    "RT015956": {
+      "employee_no": "RT015956",
+      "employee_name": "羅鴻義",
+      "dept_name": "事務所二部"
+    },
+    "RT019281": {
+      "employee_no": "RT019281",
+      "employee_name": "歐陽于媜",
+      "dept_name": "發包中心"
+    },
+    "RT020496": {
+      "employee_no": "RT020496",
+      "employee_name": "吳博翀",
+      "dept_name": "會計部"
+    },
+    "RT020654": {
+      "employee_no": "RT020654",
+      "employee_name": "葛林憲",
+      "dept_name": "機電工務部"
+    },
+    "RT020563": {
+      "employee_no": "RT020563",
+      "employee_name": "黃建儒",
+      "dept_name": "M專案AATT2"
+    },
+    "RT015214": {
+      "employee_no": "RT015214",
+      "employee_name": "王斐仕",
+      "dept_name": "發包採購"
+    },
+    "RT015222": {
+      "employee_no": "RT015222",
+      "employee_name": "張紫琳",
+      "dept_name": "機電規劃設計"
+    },
+    "RT015520": {
+      "employee_no": "RT015520",
+      "employee_name": "魏尚宏",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT015759": {
+      "employee_no": "RT015759",
+      "employee_name": "彭祺瑛",
+      "dept_name": "估算部"
+    },
+    "RT015388": {
+      "employee_no": "RT015388",
+      "employee_name": "郭曉婷",
+      "dept_name": "會計部"
+    },
+    "RT015390": {
+      "employee_no": "RT015390",
+      "employee_name": "高楚惟",
+      "dept_name": "機電規劃設計"
+    },
+    "RT015605": {
+      "employee_no": "RT015605",
+      "employee_name": "劉昶彥",
+      "dept_name": "美特耐生管部"
+    },
+    "RT015775": {
+      "employee_no": "RT015775",
+      "employee_name": "林柏宏",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT015779": {
+      "employee_no": "RT015779",
+      "employee_name": "李佳錫",
+      "dept_name": "機電設計部"
+    },
+    "RT020139": {
+      "employee_no": "RT020139",
+      "employee_name": "許之凡",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT019128": {
+      "employee_no": "RT019128",
+      "employee_name": "陳明廷",
+      "dept_name": "T寶山3廠"
+    },
+    "RT019134": {
+      "employee_no": "RT019134",
+      "employee_name": "林靜君",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT015154": {
+      "employee_no": "RT015154",
+      "employee_name": "郭滄淵",
+      "dept_name": "台南群聯館"
+    },
+    "RT019135": {
+      "employee_no": "RT019135",
+      "employee_name": "蔡欣沄",
+      "dept_name": "創新軟橋案"
+    },
+    "RT019279": {
+      "employee_no": "RT019279",
+      "employee_name": "陳文政",
+      "dept_name": "生產一組"
+    },
+    "RT020636": {
+      "employee_no": "RT020636",
+      "employee_name": "闕志豪",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT015933": {
+      "employee_no": "RT015933",
+      "employee_name": "高翔",
+      "dept_name": "業務部"
+    },
+    "RT015396": {
+      "employee_no": "RT015396",
+      "employee_name": "賴傳迪",
+      "dept_name": "生產二組"
+    },
+    "RT019490": {
+      "employee_no": "RT019490",
+      "employee_name": "鄧采瑜",
+      "dept_name": "預鑄設計部"
+    },
+    "RT019511": {
+      "employee_no": "RT019511",
+      "employee_name": "鄧佳怡",
+      "dept_name": "工程規劃部"
+    },
+    "RT019514": {
+      "employee_no": "RT019514",
+      "employee_name": "廖元又",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT001714": {
+      "employee_no": "RT001714",
+      "employee_name": "陳立群",
+      "dept_name": "品保安衛部"
+    },
+    "RT016713": {
+      "employee_no": "RT016713",
+      "employee_name": "李宜哲",
+      "dept_name": "總經理室"
+    },
+    "RT018715": {
+      "employee_no": "RT018715",
+      "employee_name": "蕭淑萍",
+      "dept_name": "人力資源部"
+    },
+    "RT019265": {
+      "employee_no": "RT019265",
+      "employee_name": "韓良弘",
+      "dept_name": "機電工務部"
+    },
+    "RT002161": {
+      "employee_no": "RT002161",
+      "employee_name": "王文彬",
+      "dept_name": "美特耐生管部"
+    },
+    "RT016255": {
+      "employee_no": "RT016255",
+      "employee_name": "李繼祖",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT016299": {
+      "employee_no": "RT016299",
+      "employee_name": "梁均達",
+      "dept_name": "機電規劃設計"
+    },
+    "RT001905": {
+      "employee_no": "RT001905",
+      "employee_name": "吳秀琴",
+      "dept_name": "預鑄設計部"
+    },
+    "RT001906": {
+      "employee_no": "RT001906",
+      "employee_name": "賴順源",
+      "dept_name": "維護課"
+    },
+    "RT002238": {
+      "employee_no": "RT002238",
+      "employee_name": "黃俊中",
+      "dept_name": "專案部"
+    },
+    "RT018812": {
+      "employee_no": "RT018812",
+      "employee_name": "張譯仁",
+      "dept_name": "創新新都段"
+    },
+    "RT018814": {
+      "employee_no": "RT018814",
+      "employee_name": "洪瑜呈",
+      "dept_name": "資訊部"
+    },
+    "RT001900": {
+      "employee_no": "RT001900",
+      "employee_name": "陳淑梅",
+      "dept_name": "事務所一部"
+    },
+    "RT020286": {
+      "employee_no": "RT020286",
+      "employee_name": "曾火來",
+      "dept_name": "維護課"
+    },
+    "RT017149": {
+      "employee_no": "RT017149",
+      "employee_name": "張鶴馨",
+      "dept_name": "人力資源部"
+    },
+    "RT016415": {
+      "employee_no": "RT016415",
+      "employee_name": "黃瑛琪",
+      "dept_name": "機電設計部"
+    },
+    "RT002081": {
+      "employee_no": "RT002081",
+      "employee_name": "邱金秀",
+      "dept_name": "南海段都更案"
+    },
+    "RT017947": {
+      "employee_no": "RT017947",
+      "employee_name": "鄧小強",
+      "dept_name": "生產一組"
+    },
+    "RT019876": {
+      "employee_no": "RT019876",
+      "employee_name": "陳泓林",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT001335": {
+      "employee_no": "RT001335",
+      "employee_name": "許良才",
+      "dept_name": "製造課"
+    },
+    "RT001300": {
+      "employee_no": "RT001300",
+      "employee_name": "張坤隆",
+      "dept_name": "品保安衛部"
+    },
+    "RT001318": {
+      "employee_no": "RT001318",
+      "employee_name": "徐坤榮",
+      "dept_name": "工程處"
+    },
+    "RT007357": {
+      "employee_no": "RT007357",
+      "employee_name": "王志強",
+      "dept_name": "機電規劃設計"
+    },
+    "RT001461": {
+      "employee_no": "RT001461",
+      "employee_name": "卓秀珠",
+      "dept_name": "事務所一部"
+    },
+    "RT019581": {
+      "employee_no": "RT019581",
+      "employee_name": "謝易勳",
+      "dept_name": "新吉美碩案"
+    },
+    "RT002158": {
+      "employee_no": "RT002158",
+      "employee_name": "宋海財",
+      "dept_name": "維護課"
+    },
+    "RT002144": {
+      "employee_no": "RT002144",
+      "employee_name": "黃沛琦",
+      "dept_name": "工程規劃部"
+    },
+    "RT019613": {
+      "employee_no": "RT019613",
+      "employee_name": "賴偉德",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT019614": {
+      "employee_no": "RT019614",
+      "employee_name": "曹峰",
+      "dept_name": "M專案台南200K"
+    },
+    "RT019737": {
+      "employee_no": "RT019737",
+      "employee_name": "張淵捷",
+      "dept_name": "美特耐生管部"
+    },
+    "RT001417": {
+      "employee_no": "RT001417",
+      "employee_name": "裴美雲",
+      "dept_name": "工程規劃部"
+    },
+    "RT001379": {
+      "employee_no": "RT001379",
+      "employee_name": "廖正仁",
+      "dept_name": "工程規劃部"
+    },
+    "RT020684": {
+      "employee_no": "RT020684",
+      "employee_name": "湯昊軒",
+      "dept_name": "創新軟橋案"
+    },
+    "RT020565": {
+      "employee_no": "RT020565",
+      "employee_name": "葉蓁庭",
+      "dept_name": "機電規劃設計"
+    },
+    "RT001531": {
+      "employee_no": "RT001531",
+      "employee_name": "吳子良",
+      "dept_name": "品保安衛部"
+    },
+    "RT001497": {
+      "employee_no": "RT001497",
+      "employee_name": "蔡嘉玲",
+      "dept_name": "工程規劃部"
+    },
+    "RT020096": {
+      "employee_no": "RT020096",
+      "employee_name": "林？廷",
+      "dept_name": "美特耐業務部"
+    },
+    "RT007491": {
+      "employee_no": "RT007491",
+      "employee_name": "蘇章鈞",
+      "dept_name": "創新軟橋案"
+    },
+    "RT007481": {
+      "employee_no": "RT007481",
+      "employee_name": "黃莉惠",
+      "dept_name": "品保安衛部"
+    },
+    "RT002032": {
+      "employee_no": "RT002032",
+      "employee_name": "許志榮",
+      "dept_name": "T高雄4廠"
+    },
+    "RT007452": {
+      "employee_no": "RT007452",
+      "employee_name": "戴浩軒",
+      "dept_name": "儲運課"
+    },
+    "RT019738": {
+      "employee_no": "RT019738",
+      "employee_name": "張芳誌",
+      "dept_name": "專案開發"
+    },
+    "RT001799": {
+      "employee_no": "RT001799",
+      "employee_name": "林家慶",
+      "dept_name": "品保安衛部"
+    },
+    "RT020478": {
+      "employee_no": "RT020478",
+      "employee_name": "楊雅婷",
+      "dept_name": "美特耐技術部"
+    },
+    "RT020567": {
+      "employee_no": "RT020567",
+      "employee_name": "賴建嘉",
+      "dept_name": "工務三部"
+    },
+    "RT019557": {
+      "employee_no": "RT019557",
+      "employee_name": "吳世豪",
+      "dept_name": "製造課"
+    },
+    "RT007442": {
+      "employee_no": "RT007442",
+      "employee_name": "鄭順元",
+      "dept_name": "製造課"
+    },
+    "RT020569": {
+      "employee_no": "RT020569",
+      "employee_name": "林聲仁",
+      "dept_name": "創新材料"
+    },
+    "RT001780": {
+      "employee_no": "RT001780",
+      "employee_name": "唐僑憶",
+      "dept_name": "室內設計一部"
+    },
+    "RT017322": {
+      "employee_no": "RT017322",
+      "employee_name": "羅淑珍",
+      "dept_name": "總稽核室"
+    },
+    "RT020754": {
+      "employee_no": "RT020754",
+      "employee_name": "王沛渝",
+      "dept_name": "總務部"
+    },
+    "RT020755": {
+      "employee_no": "RT020755",
+      "employee_name": "王政立",
+      "dept_name": "景觀設計部"
+    },
+    "RT002244": {
+      "employee_no": "RT002244",
+      "employee_name": "李佳玲",
+      "dept_name": "總稽核室"
+    },
+    "RT002203": {
+      "employee_no": "RT002203",
+      "employee_name": "李恩傑",
+      "dept_name": "製造課"
+    },
+    "RT001889": {
+      "employee_no": "RT001889",
+      "employee_name": "王靜菁",
+      "dept_name": "財務部"
+    },
+    "RT001763": {
+      "employee_no": "RT001763",
+      "employee_name": "林小楓",
+      "dept_name": "會計部"
+    },
+    "RT017731": {
+      "employee_no": "RT017731",
+      "employee_name": "羅兆峰",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT018424": {
+      "employee_no": "RT018424",
+      "employee_name": "郭懷萱",
+      "dept_name": "管理組"
+    },
+    "RT001764": {
+      "employee_no": "RT001764",
+      "employee_name": "張拱辰",
+      "dept_name": "機電規劃設計"
+    },
+    "RT020411": {
+      "employee_no": "RT020411",
+      "employee_name": "葉哲瑋",
+      "dept_name": "T寶山3廠"
+    },
+    "RT007535": {
+      "employee_no": "RT007535",
+      "employee_name": "鄭傑",
+      "dept_name": "預鑄事業處"
+    },
+    "RT007525": {
+      "employee_no": "RT007525",
+      "employee_name": "李榮哲",
+      "dept_name": "工程規劃部"
+    },
+    "RT020425": {
+      "employee_no": "RT020425",
+      "employee_name": "郭宗榮",
+      "dept_name": "M專案台南200K"
+    },
+    "RT019516": {
+      "employee_no": "RT019516",
+      "employee_name": "古絲綺",
+      "dept_name": "美特耐業務部"
+    },
+    "RT019780": {
+      "employee_no": "RT019780",
+      "employee_name": "陳鈺樺",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT020500": {
+      "employee_no": "RT020500",
+      "employee_name": "林正良",
+      "dept_name": "美特耐生管部"
+    },
+    "RT020190": {
+      "employee_no": "RT020190",
+      "employee_name": "黃貞毓",
+      "dept_name": "發包中心"
+    },
+    "RT019259": {
+      "employee_no": "RT019259",
+      "employee_name": "廖婉均",
+      "dept_name": "機電規劃設計"
+    },
+    "RT016646": {
+      "employee_no": "RT016646",
+      "employee_name": "鄭世耀",
+      "dept_name": "物料組"
+    },
+    "RT007540": {
+      "employee_no": "RT007540",
+      "employee_name": "楊宇文",
+      "dept_name": "預鑄設計部"
+    },
+    "RT015276": {
+      "employee_no": "RT015276",
+      "employee_name": "羅雅蘭",
+      "dept_name": "機電規劃設計"
+    },
+    "RT020716": {
+      "employee_no": "RT020716",
+      "employee_name": "王天瑤",
+      "dept_name": "M專案AATT2"
+    },
+    "RT015047": {
+      "employee_no": "RT015047",
+      "employee_name": "蔡哲男",
+      "dept_name": "玉成裝修機電"
+    },
+    "RT015712": {
+      "employee_no": "RT015712",
+      "employee_name": "陳文章",
+      "dept_name": "工務一部"
+    },
+    "RT019188": {
+      "employee_no": "RT019188",
+      "employee_name": "龍沿達",
+      "dept_name": "南海段都更案"
+    },
+    "RT019191": {
+      "employee_no": "RT019191",
+      "employee_name": "陳勇志",
+      "dept_name": "品保安衛部"
+    },
+    "RT015234": {
+      "employee_no": "RT015234",
+      "employee_name": "翁睿言",
+      "dept_name": "事務所一部"
+    },
+    "RT015238": {
+      "employee_no": "RT015238",
+      "employee_name": "廖學一",
+      "dept_name": "南港之星"
+    },
+    "RT015713": {
+      "employee_no": "RT015713",
+      "employee_name": "詹大立",
+      "dept_name": "工務一部"
+    },
+    "RT015521": {
+      "employee_no": "RT015521",
+      "employee_name": "陳嘉偉",
+      "dept_name": "機務組"
+    },
+    "RT020238": {
+      "employee_no": "RT020238",
+      "employee_name": "莊岳軒",
+      "dept_name": "M專案台南200K"
+    },
+    "RT015891": {
+      "employee_no": "RT015891",
+      "employee_name": "張真瑀",
+      "dept_name": "機電規劃設計"
+    },
+    "RT015801": {
+      "employee_no": "RT015801",
+      "employee_name": "趙彥琅",
+      "dept_name": "新吉美碩案"
+    },
+    "RT015802": {
+      "employee_no": "RT015802",
+      "employee_name": "陳逸軒",
+      "dept_name": "南港之星"
+    },
+    "RT015893": {
+      "employee_no": "RT015893",
+      "employee_name": "劉曜華",
+      "dept_name": "工程規劃部"
+    },
+    "RT015031": {
+      "employee_no": "RT015031",
+      "employee_name": "周冠羽",
+      "dept_name": "美特耐技術部"
+    },
+    "RT018763": {
+      "employee_no": "RT018763",
+      "employee_name": "姚金昇",
+      "dept_name": "南港之星"
+    },
+    "RT015256": {
+      "employee_no": "RT015256",
+      "employee_name": "高翊庭",
+      "dept_name": "機電規劃設計"
+    },
+    "RT015258": {
+      "employee_no": "RT015258",
+      "employee_name": "許嘉雄",
+      "dept_name": "修繕部"
+    },
+    "RT015588": {
+      "employee_no": "RT015588",
+      "employee_name": "潘正善",
+      "dept_name": "品保安衛部"
+    },
+    "RT015589": {
+      "employee_no": "RT015589",
+      "employee_name": "張鄭隆",
+      "dept_name": "創新新都段"
+    },
+    "RT018869": {
+      "employee_no": "RT018869",
+      "employee_name": "陳婷娟",
+      "dept_name": "室內設計一部"
+    },
+    "RT015922": {
+      "employee_no": "RT015922",
+      "employee_name": "金昆翰",
+      "dept_name": "全球人壽總部"
+    },
+    "RT015056": {
+      "employee_no": "RT015056",
+      "employee_name": "陳承佑",
+      "dept_name": "電務組"
+    },
+    "RT015067": {
+      "employee_no": "RT015067",
+      "employee_name": "高偉銘",
+      "dept_name": "美特耐生管部"
+    },
+    "RT015064": {
+      "employee_no": "RT015064",
+      "employee_name": "陳勉成",
+      "dept_name": "南港之星"
+    },
+    "RT019122": {
+      "employee_no": "RT019122",
+      "employee_name": "蘇旆嫻",
+      "dept_name": "機電規劃設計"
+    },
+    "RT019123": {
+      "employee_no": "RT019123",
+      "employee_name": "劉勝維",
+      "dept_name": "機電規劃設計"
+    },
+    "RT018864": {
+      "employee_no": "RT018864",
+      "employee_name": "游智群",
+      "dept_name": "美特耐業務部"
+    },
+    "RT015075": {
+      "employee_no": "RT015075",
+      "employee_name": "蕭裕益",
+      "dept_name": "生產一組"
+    },
+    "RT015706": {
+      "employee_no": "RT015706",
+      "employee_name": "陳冠鳳",
+      "dept_name": "美特耐技術部"
+    },
+    "RT018422": {
+      "employee_no": "RT018422",
+      "employee_name": "陳建仁",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT018423": {
+      "employee_no": "RT018423",
+      "employee_name": "陳培榮",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT019345": {
+      "employee_no": "RT019345",
+      "employee_name": "李英睿",
+      "dept_name": "富邦承德預鑄"
+    },
+    "RT011832": {
+      "employee_no": "RT011832",
+      "employee_name": "楊銘池",
+      "dept_name": "品保安衛部"
+    },
+    "RT013333": {
+      "employee_no": "RT013333",
+      "employee_name": "莊穎銘",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT012631": {
+      "employee_no": "RT012631",
+      "employee_name": "蔡巧俐",
+      "dept_name": "美特耐業務部"
+    },
+    "RT012632": {
+      "employee_no": "RT012632",
+      "employee_name": "李元凱",
+      "dept_name": "美特耐業務部"
+    },
+    "RT011807": {
+      "employee_no": "RT011807",
+      "employee_name": "林昆平",
+      "dept_name": "機電工務部"
+    },
+    "RT012071": {
+      "employee_no": "RT012071",
+      "employee_name": "廖國良",
+      "dept_name": "管理組"
+    },
+    "RT012072": {
+      "employee_no": "RT012072",
+      "employee_name": "張靖良",
+      "dept_name": "生產二組"
+    },
+    "RT020773": {
+      "employee_no": "RT020773",
+      "employee_name": "周品丞",
+      "dept_name": "台南群聯館"
+    },
+    "RT020775": {
+      "employee_no": "RT020775",
+      "employee_name": "陳品秀",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT011879": {
+      "employee_no": "RT011879",
+      "employee_name": "謝俊仁",
+      "dept_name": "全球人壽總部"
+    },
+    "RT012046": {
+      "employee_no": "RT012046",
+      "employee_name": "游明軒",
+      "dept_name": "生產二組"
+    },
+    "RT019815": {
+      "employee_no": "RT019815",
+      "employee_name": "李浩瑀",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT012316": {
+      "employee_no": "RT012316",
+      "employee_name": "邱弘平",
+      "dept_name": "美特耐業務部"
+    },
+    "RT020776": {
+      "employee_no": "RT020776",
+      "employee_name": "林明瑜",
+      "dept_name": "創新環翠段"
+    },
+    "RT020778": {
+      "employee_no": "RT020778",
+      "employee_name": "黃尹珊",
+      "dept_name": "南港之星"
+    },
+    "RT012708": {
+      "employee_no": "RT012708",
+      "employee_name": "鄭瑞濱",
+      "dept_name": "總經理室"
+    },
+    "RT018991": {
+      "employee_no": "RT018991",
+      "employee_name": "張雅涵",
+      "dept_name": "事務所一部"
+    },
+    "RT019819": {
+      "employee_no": "RT019819",
+      "employee_name": "林欣怡",
+      "dept_name": "美特耐業務部"
+    },
+    "RT020650": {
+      "employee_no": "RT020650",
+      "employee_name": "石秦安",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT020651": {
+      "employee_no": "RT020651",
+      "employee_name": "陳奕穎",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT011917": {
+      "employee_no": "RT011917",
+      "employee_name": "張志強",
+      "dept_name": "電務組"
+    },
+    "RT011920": {
+      "employee_no": "RT011920",
+      "employee_name": "黃啟城",
+      "dept_name": "安全衛生室"
+    },
+    "RT012830": {
+      "employee_no": "RT012830",
+      "employee_name": "謝芳君",
+      "dept_name": "南港之星"
+    },
+    "RT013091": {
+      "employee_no": "RT013091",
+      "employee_name": "張景勝",
+      "dept_name": "機務組"
+    },
+    "RT013092": {
+      "employee_no": "RT013092",
+      "employee_name": "張致中",
+      "dept_name": "製造課"
+    },
+    "RT020405": {
+      "employee_no": "RT020405",
+      "employee_name": "力明月",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT013094": {
+      "employee_no": "RT013094",
+      "employee_name": "羅淑萍",
+      "dept_name": "估算部"
+    },
+    "RT020406": {
+      "employee_no": "RT020406",
+      "employee_name": "阮翊宸",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT012159": {
+      "employee_no": "RT012159",
+      "employee_name": "李明東",
+      "dept_name": "機務組"
+    },
+    "RT012162": {
+      "employee_no": "RT012162",
+      "employee_name": "黃偉哲",
+      "dept_name": "管理組"
+    },
+    "RT019016": {
+      "employee_no": "RT019016",
+      "employee_name": "李翰明",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT011923": {
+      "employee_no": "RT011923",
+      "employee_name": "游長祺",
+      "dept_name": "電務組"
+    },
+    "RT011928": {
+      "employee_no": "RT011928",
+      "employee_name": "陳錦泉",
+      "dept_name": "生產部"
+    },
+    "RT011930": {
+      "employee_no": "RT011930",
+      "employee_name": "游文豐",
+      "dept_name": "電務組"
+    },
+    "RT012163": {
+      "employee_no": "RT012163",
+      "employee_name": "黃偉倫",
+      "dept_name": "美特耐生管部"
+    },
+    "RT012170": {
+      "employee_no": "RT012170",
+      "employee_name": "呂紘騰",
+      "dept_name": "機務組"
+    },
+    "RT012081": {
+      "employee_no": "RT012081",
+      "employee_name": "許明哲",
+      "dept_name": "生產一組"
+    },
+    "RT012082": {
+      "employee_no": "RT012082",
+      "employee_name": "林朕豪",
+      "dept_name": "生產一組"
+    },
+    "RT012083": {
+      "employee_no": "RT012083",
+      "employee_name": "李仁輔",
+      "dept_name": "生產二組"
+    },
+    "RT012021": {
+      "employee_no": "RT012021",
+      "employee_name": "簡汶全",
+      "dept_name": "生產一組"
+    },
+    "RT012025": {
+      "employee_no": "RT012025",
+      "employee_name": "陳郭鴻",
+      "dept_name": "生產二組"
+    },
+    "RT012187": {
+      "employee_no": "RT012187",
+      "employee_name": "游國義",
+      "dept_name": "生產一組"
+    },
+    "RT011525": {
+      "employee_no": "RT011525",
+      "employee_name": "楊勝斐",
+      "dept_name": "發包中心"
+    },
+    "RT012192": {
+      "employee_no": "RT012192",
+      "employee_name": "楊詠婷",
+      "dept_name": "管理組"
+    },
+    "RT012194": {
+      "employee_no": "RT012194",
+      "employee_name": "陳乾龍",
+      "dept_name": "生產一組"
+    },
+    "RT018557": {
+      "employee_no": "RT018557",
+      "employee_name": "詹子慶",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT011897": {
+      "employee_no": "RT011897",
+      "employee_name": "王凱平",
+      "dept_name": "總經理室"
+    },
+    "RT018954": {
+      "employee_no": "RT018954",
+      "employee_name": "倪信",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT011898": {
+      "employee_no": "RT011898",
+      "employee_name": "李日灶",
+      "dept_name": "總經理室"
+    },
+    "RT012076": {
+      "employee_no": "RT012076",
+      "employee_name": "李偉志",
+      "dept_name": "生產二組"
+    },
+    "RT012652": {
+      "employee_no": "RT012652",
+      "employee_name": "姚姵岑",
+      "dept_name": "室內設計三部"
+    },
+    "RT012844": {
+      "employee_no": "RT012844",
+      "employee_name": "羅志鴻",
+      "dept_name": "製造課"
+    },
+    "RT012199": {
+      "employee_no": "RT012199",
+      "employee_name": "官志緯",
+      "dept_name": "電務組"
+    },
+    "RT012200": {
+      "employee_no": "RT012200",
+      "employee_name": "何嘉豐",
+      "dept_name": "生產一組"
+    },
+    "RT012167": {
+      "employee_no": "RT012167",
+      "employee_name": "陳裕鴻",
+      "dept_name": "水泥業務部"
+    },
+    "RT012174": {
+      "employee_no": "RT012174",
+      "employee_name": "游為舜",
+      "dept_name": "生產一組"
+    },
+    "RT012338": {
+      "employee_no": "RT012338",
+      "employee_name": "林若瑄",
+      "dept_name": "發包採購"
+    },
+    "RT019086": {
+      "employee_no": "RT019086",
+      "employee_name": "黃耀寬",
+      "dept_name": "丹棠青島改建"
+    },
+    "RT012833": {
+      "employee_no": "RT012833",
+      "employee_name": "林政緯",
+      "dept_name": "工程規劃部"
+    },
+    "RT019561": {
+      "employee_no": "RT019561",
+      "employee_name": "周雅儒",
+      "dept_name": "預鑄設計部"
+    },
+    "RT012210": {
+      "employee_no": "RT012210",
+      "employee_name": "羅宇鈞",
+      "dept_name": "生產二組"
+    },
+    "RT011777": {
+      "employee_no": "RT011777",
+      "employee_name": "傅籌瑩",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT012047": {
+      "employee_no": "RT012047",
+      "employee_name": "陳嘉偉",
+      "dept_name": "物料組"
+    },
+    "RT012048": {
+      "employee_no": "RT012048",
+      "employee_name": "林弘偉",
+      "dept_name": "管理組"
+    },
+    "RT011860": {
+      "employee_no": "RT011860",
+      "employee_name": "沈明珊",
+      "dept_name": "人力資源部"
+    },
+    "RT012462": {
+      "employee_no": "RT012462",
+      "employee_name": "何宏仁",
+      "dept_name": "機電規劃設計"
+    },
+    "RT012464": {
+      "employee_no": "RT012464",
+      "employee_name": "李奇勳",
+      "dept_name": "機電規劃設計"
+    },
+    "RT012465": {
+      "employee_no": "RT012465",
+      "employee_name": "陳林杰",
+      "dept_name": "機務組"
+    },
+    "RT012059": {
+      "employee_no": "RT012059",
+      "employee_name": "潘景修",
+      "dept_name": "生產二組"
+    },
+    "RT012062": {
+      "employee_no": "RT012062",
+      "employee_name": "邱平吉",
+      "dept_name": "生產一組"
+    },
+    "RT012104": {
+      "employee_no": "RT012104",
+      "employee_name": "連安舜",
+      "dept_name": "電務組"
+    },
+    "RT020063": {
+      "employee_no": "RT020063",
+      "employee_name": "郭石林",
+      "dept_name": "T台南9廠"
+    },
+    "RT020064": {
+      "employee_no": "RT020064",
+      "employee_name": "李建璿",
+      "dept_name": "資訊部"
+    },
+    "RT012107": {
+      "employee_no": "RT012107",
+      "employee_name": "林啟健",
+      "dept_name": "生產一組"
+    },
+    "RT012109": {
+      "employee_no": "RT012109",
+      "employee_name": "黃茂山",
+      "dept_name": "機務組"
+    },
+    "RT011955": {
+      "employee_no": "RT011955",
+      "employee_name": "劉金蓮",
+      "dept_name": "會計部"
+    },
+    "RT012666": {
+      "employee_no": "RT012666",
+      "employee_name": "林應寶",
+      "dept_name": "品保安衛部"
+    },
+    "RT020363": {
+      "employee_no": "RT020363",
+      "employee_name": "林松根",
+      "dept_name": "三重捷六"
+    },
+    "RT012785": {
+      "employee_no": "RT012785",
+      "employee_name": "吳維謙",
+      "dept_name": "儲運課"
+    },
+    "RT012790": {
+      "employee_no": "RT012790",
+      "employee_name": "莊才俊",
+      "dept_name": "生產二組"
+    },
+    "RT012136": {
+      "employee_no": "RT012136",
+      "employee_name": "林順哲",
+      "dept_name": "水泥業務部"
+    },
+    "RT020582": {
+      "employee_no": "RT020582",
+      "employee_name": "廖崇凱",
+      "dept_name": "T高雄4廠"
+    },
+    "RT020584": {
+      "employee_no": "RT020584",
+      "employee_name": "殷暐訓",
+      "dept_name": "製造課"
+    },
+    "RT012140": {
+      "employee_no": "RT012140",
+      "employee_name": "劉志聖",
+      "dept_name": "品保組"
+    },
+    "RT012144": {
+      "employee_no": "RT012144",
+      "employee_name": "黃進華",
+      "dept_name": "水泥業務部"
+    },
+    "RT012146": {
+      "employee_no": "RT012146",
+      "employee_name": "許應騰",
+      "dept_name": "水泥業務部"
+    },
+    "RT020724": {
+      "employee_no": "RT020724",
+      "employee_name": "陳品勛",
+      "dept_name": "M專案AATT2"
+    },
+    "RT020728": {
+      "employee_no": "RT020728",
+      "employee_name": "簡顯權",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT019947": {
+      "employee_no": "RT019947",
+      "employee_name": "彭奕璁",
+      "dept_name": "生產一組"
+    },
+    "RT019949": {
+      "employee_no": "RT019949",
+      "employee_name": "黃義隆",
+      "dept_name": "生產一組"
+    },
+    "RT018595": {
+      "employee_no": "RT018595",
+      "employee_name": "黃俊儒",
+      "dept_name": "研發中心"
+    },
+    "RT019379": {
+      "employee_no": "RT019379",
+      "employee_name": "涂郁安",
+      "dept_name": "發包中心"
+    },
+    "RT017464": {
+      "employee_no": "RT017464",
+      "employee_name": "吳湧貴",
+      "dept_name": "生產二組"
+    },
+    "RT017466": {
+      "employee_no": "RT017466",
+      "employee_name": "陳國勝",
+      "dept_name": "機務組"
+    },
+    "RT019383": {
+      "employee_no": "RT019383",
+      "employee_name": "劉瑜真",
+      "dept_name": "工程規劃部"
+    },
+    "RT019385": {
+      "employee_no": "RT019385",
+      "employee_name": "郭文樺",
+      "dept_name": "總務部"
+    },
+    "RT017739": {
+      "employee_no": "RT017739",
+      "employee_name": "林琦珍",
+      "dept_name": "估算部"
+    },
+    "RT016908": {
+      "employee_no": "RT016908",
+      "employee_name": "陳宏彰",
+      "dept_name": "製造課"
+    },
+    "RT020086": {
+      "employee_no": "RT020086",
+      "employee_name": "徐福昇",
+      "dept_name": "室內設計三部"
+    },
+    "RT019703": {
+      "employee_no": "RT019703",
+      "employee_name": "陳松柏",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT016480": {
+      "employee_no": "RT016480",
+      "employee_name": "黃澤涵",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT020606": {
+      "employee_no": "RT020606",
+      "employee_name": "王證喬",
+      "dept_name": "研發中心"
+    },
+    "RT020682": {
+      "employee_no": "RT020682",
+      "employee_name": "廖育志",
+      "dept_name": "機料部"
+    },
+    "RT019399": {
+      "employee_no": "RT019399",
+      "employee_name": "陳碧慧",
+      "dept_name": "專業施工部"
+    },
+    "RT018802": {
+      "employee_no": "RT018802",
+      "employee_name": "張珈綺",
+      "dept_name": "會計部"
+    },
+    "RT018446": {
+      "employee_no": "RT018446",
+      "employee_name": "李祐任",
+      "dept_name": "五谷王A"
+    },
+    "RT017887": {
+      "employee_no": "RT017887",
+      "employee_name": "蕭光倫",
+      "dept_name": "總務部"
+    },
+    "RT017945": {
+      "employee_no": "RT017945",
+      "employee_name": "吳大維",
+      "dept_name": "工程規劃部"
+    },
+    "RT016367": {
+      "employee_no": "RT016367",
+      "employee_name": "陳佑香",
+      "dept_name": "工程規劃部"
+    },
+    "RT019008": {
+      "employee_no": "RT019008",
+      "employee_name": "黃昱淮",
+      "dept_name": "工程規劃部"
+    },
+    "RT020006": {
+      "employee_no": "RT020006",
+      "employee_name": "吳衍慶",
+      "dept_name": "T高雄4廠"
+    },
+    "RT016442": {
+      "employee_no": "RT016442",
+      "employee_name": "林巖",
+      "dept_name": "生產一組"
+    },
+    "RT016443": {
+      "employee_no": "RT016443",
+      "employee_name": "張祐麟",
+      "dept_name": "物料組"
+    },
+    "RT018242": {
+      "employee_no": "RT018242",
+      "employee_name": "蔡昀臻",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT020163": {
+      "employee_no": "RT020163",
+      "employee_name": "蔡俊裕",
+      "dept_name": "五谷王A"
+    },
+    "RT020360": {
+      "employee_no": "RT020360",
+      "employee_name": "李彥霓",
+      "dept_name": "T高雄4廠"
+    },
+    "RT019754": {
+      "employee_no": "RT019754",
+      "employee_name": "楊高明",
+      "dept_name": "工程處"
+    },
+    "RT019190": {
+      "employee_no": "RT019190",
+      "employee_name": "丁兆國",
+      "dept_name": "創新環翠段"
+    },
+    "RT020272": {
+      "employee_no": "RT020272",
+      "employee_name": "黃怡蓁",
+      "dept_name": "人力資源部"
+    },
+    "RT019194": {
+      "employee_no": "RT019194",
+      "employee_name": "林品萱",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT019196": {
+      "employee_no": "RT019196",
+      "employee_name": "吳邦維",
+      "dept_name": "美特耐業務部"
+    },
+    "RT019329": {
+      "employee_no": "RT019329",
+      "employee_name": "李家榮",
+      "dept_name": "機務組"
+    },
+    "RT016648": {
+      "employee_no": "RT016648",
+      "employee_name": "李佳靜",
+      "dept_name": "室內設計一部"
+    },
+    "RT018372": {
+      "employee_no": "RT018372",
+      "employee_name": "黃郁仁",
+      "dept_name": "T台南9廠"
+    },
+    "RT018860": {
+      "employee_no": "RT018860",
+      "employee_name": "邱志豐",
+      "dept_name": "機務組"
+    },
+    "RT018866": {
+      "employee_no": "RT018866",
+      "employee_name": "梁暉宏",
+      "dept_name": "工務一部"
+    },
+    "RT019068": {
+      "employee_no": "RT019068",
+      "employee_name": "林宗民",
+      "dept_name": "生產二組"
+    },
+    "RT019338": {
+      "employee_no": "RT019338",
+      "employee_name": "陳奕銘",
+      "dept_name": "事務所一部"
+    },
+    "RT019414": {
+      "employee_no": "RT019414",
+      "employee_name": "劉竑沅",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT019487": {
+      "employee_no": "RT019487",
+      "employee_name": "王建偉",
+      "dept_name": "工務二部"
+    },
+    "RT016616": {
+      "employee_no": "RT016616",
+      "employee_name": "余東霖",
+      "dept_name": "總務部"
+    },
+    "RT019540": {
+      "employee_no": "RT019540",
+      "employee_name": "彭康豪",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT019543": {
+      "employee_no": "RT019543",
+      "employee_name": "歐慧玲",
+      "dept_name": "機電規劃設計"
+    },
+    "RT016168": {
+      "employee_no": "RT016168",
+      "employee_name": "胡福中",
+      "dept_name": "估算部"
+    },
+    "RT001366": {
+      "employee_no": "RT001366",
+      "employee_name": "陳學賢",
+      "dept_name": "工程處"
+    },
+    "RT017373": {
+      "employee_no": "RT017373",
+      "employee_name": "陳建宏",
+      "dept_name": "研發中心"
+    },
+    "RT003017": {
+      "employee_no": "RT003017",
+      "employee_name": "施沛今",
+      "dept_name": "稽核營運組"
+    },
+    "RT016776": {
+      "employee_no": "RT016776",
+      "employee_name": "易湘南",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT016529": {
+      "employee_no": "RT016529",
+      "employee_name": "廖健閔",
+      "dept_name": "T寶山3廠"
+    },
+    "RT016479": {
+      "employee_no": "RT016479",
+      "employee_name": "陳信宏",
+      "dept_name": "生產一組"
+    },
+    "RT016482": {
+      "employee_no": "RT016482",
+      "employee_name": "王柏鈞",
+      "dept_name": "美特耐業務部"
+    },
+    "RT016484": {
+      "employee_no": "RT016484",
+      "employee_name": "李振安",
+      "dept_name": "專案開發"
+    },
+    "RT019375": {
+      "employee_no": "RT019375",
+      "employee_name": "蔡明煌",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT019377": {
+      "employee_no": "RT019377",
+      "employee_name": "曾采葳",
+      "dept_name": "資訊部"
+    },
+    "RT020829": {
+      "employee_no": "RT020829",
+      "employee_name": "許哲銘",
+      "dept_name": "資訊部"
+    },
+    "RT019303": {
+      "employee_no": "RT019303",
+      "employee_name": "吳書順",
+      "dept_name": "製造課"
+    },
+    "RT019304": {
+      "employee_no": "RT019304",
+      "employee_name": "何恭彬",
+      "dept_name": "維護課"
+    },
+    "RT019305": {
+      "employee_no": "RT019305",
+      "employee_name": "邵月裡",
+      "dept_name": "生管課"
+    },
+    "RT019306": {
+      "employee_no": "RT019306",
+      "employee_name": "陳均庭",
+      "dept_name": "總務課"
+    },
+    "RT019307": {
+      "employee_no": "RT019307",
+      "employee_name": "彭寶燦",
+      "dept_name": "M專案AATT2"
+    },
+    "RT020739": {
+      "employee_no": "RT020739",
+      "employee_name": "謝乙佑",
+      "dept_name": "T高雄4廠"
+    },
+    "RT020003": {
+      "employee_no": "RT020003",
+      "employee_name": "夏楷",
+      "dept_name": "南海段都更案"
+    },
+    "RT017330": {
+      "employee_no": "RT017330",
+      "employee_name": "李嘉健",
+      "dept_name": "工程規劃部"
+    },
+    "RT019087": {
+      "employee_no": "RT019087",
+      "employee_name": "龔麒",
+      "dept_name": "工程規劃部"
+    },
+    "RT020011": {
+      "employee_no": "RT020011",
+      "employee_name": "黃嘉元",
+      "dept_name": "能資研發"
+    },
+    "RT020012": {
+      "employee_no": "RT020012",
+      "employee_name": "李冠慧",
+      "dept_name": "美特耐技術部"
+    },
+    "RT018970": {
+      "employee_no": "RT018970",
+      "employee_name": "郭志揚",
+      "dept_name": "事務所一部"
+    },
+    "RT020191": {
+      "employee_no": "RT020191",
+      "employee_name": "陳秉宏",
+      "dept_name": "全球人壽總部"
+    },
+    "RT020192": {
+      "employee_no": "RT020192",
+      "employee_name": "吳孟聰",
+      "dept_name": "製造課"
+    },
+    "RT020194": {
+      "employee_no": "RT020194",
+      "employee_name": "王瑋珈",
+      "dept_name": "水泥業務部"
+    },
+    "RT019255": {
+      "employee_no": "RT019255",
+      "employee_name": "李明潔",
+      "dept_name": "事務所一部"
+    },
+    "RT019094": {
+      "employee_no": "RT019094",
+      "employee_name": "潘建升",
+      "dept_name": "T高雄4廠"
+    },
+    "RT020760": {
+      "employee_no": "RT020760",
+      "employee_name": "呂松美",
+      "dept_name": "估算部"
+    },
+    "RT016116": {
+      "employee_no": "RT016116",
+      "employee_name": "王耀緯",
+      "dept_name": "製造課"
+    },
+    "RT016114": {
+      "employee_no": "RT016114",
+      "employee_name": "林建成",
+      "dept_name": "製造課"
+    },
+    "RT018540": {
+      "employee_no": "RT018540",
+      "employee_name": "李濟元",
+      "dept_name": "修繕部"
+    },
+    "RT018952": {
+      "employee_no": "RT018952",
+      "employee_name": "游士欣",
+      "dept_name": "能資研發"
+    },
+    "RT016165": {
+      "employee_no": "RT016165",
+      "employee_name": "游俊明",
+      "dept_name": "安全衛生室"
+    },
+    "RT019318": {
+      "employee_no": "RT019318",
+      "employee_name": "李岳蒲",
+      "dept_name": "南港之星"
+    },
+    "RT019428": {
+      "employee_no": "RT019428",
+      "employee_name": "王立岑",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT018434": {
+      "employee_no": "RT018434",
+      "employee_name": "許有智",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT020279": {
+      "employee_no": "RT020279",
+      "employee_name": "賴立偉",
+      "dept_name": "三重捷六"
+    },
+    "RT018592": {
+      "employee_no": "RT018592",
+      "employee_name": "林力衡",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT018762": {
+      "employee_no": "RT018762",
+      "employee_name": "劉聖德",
+      "dept_name": "管理組"
+    },
+    "RT018781": {
+      "employee_no": "RT018781",
+      "employee_name": "陳建益",
+      "dept_name": "工程規劃部"
+    },
+    "RT017525": {
+      "employee_no": "RT017525",
+      "employee_name": "蔡清偉",
+      "dept_name": "生產一組"
+    },
+    "RT019935": {
+      "employee_no": "RT019935",
+      "employee_name": "曾芷涵",
+      "dept_name": "台南群聯館"
+    },
+    "RT017277": {
+      "employee_no": "RT017277",
+      "employee_name": "陳家慶",
+      "dept_name": "生產一組"
+    },
+    "RT019938": {
+      "employee_no": "RT019938",
+      "employee_name": "陳泰宏",
+      "dept_name": "修繕部"
+    },
+    "RT019993": {
+      "employee_no": "RT019993",
+      "employee_name": "張振育",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT020025": {
+      "employee_no": "RT020025",
+      "employee_name": "潘俊瑋",
+      "dept_name": "機務組"
+    },
+    "RT016982": {
+      "employee_no": "RT016982",
+      "employee_name": "陳俊淇",
+      "dept_name": "總經理室"
+    },
+    "RT017491": {
+      "employee_no": "RT017491",
+      "employee_name": "陳武霆",
+      "dept_name": "T寶山3廠"
+    },
+    "RT020091": {
+      "employee_no": "RT020091",
+      "employee_name": "陳禾云秦",
+      "dept_name": "南海段都更案"
+    },
+    "RT020092": {
+      "employee_no": "RT020092",
+      "employee_name": "廖怡萱",
+      "dept_name": "專業施工部"
+    },
+    "RT020150": {
+      "employee_no": "RT020150",
+      "employee_name": "陳岱琪",
+      "dept_name": "工程規劃部"
+    },
+    "RT020151": {
+      "employee_no": "RT020151",
+      "employee_name": "謝炎邦",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT020154": {
+      "employee_no": "RT020154",
+      "employee_name": "張玹瑋",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT020155": {
+      "employee_no": "RT020155",
+      "employee_name": "楊孟宇",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT020396": {
+      "employee_no": "RT020396",
+      "employee_name": "彭耀陞",
+      "dept_name": "機電規劃設計"
+    },
+    "RT020427": {
+      "employee_no": "RT020427",
+      "employee_name": "李曉芹",
+      "dept_name": "發包採購"
+    },
+    "RT016099": {
+      "employee_no": "RT016099",
+      "employee_name": "譚國光",
+      "dept_name": "機電工務部"
+    },
+    "RT018479": {
+      "employee_no": "RT018479",
+      "employee_name": "楊勝傑",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT018481": {
+      "employee_no": "RT018481",
+      "employee_name": "林仲沛",
+      "dept_name": "製造課"
+    },
+    "RT018482": {
+      "employee_no": "RT018482",
+      "employee_name": "西峻霆",
+      "dept_name": "M專案AATT2"
+    },
+    "RT018484": {
+      "employee_no": "RT018484",
+      "employee_name": "羅健瑜",
+      "dept_name": "室內設計一部"
+    },
+    "RT020107": {
+      "employee_no": "RT020107",
+      "employee_name": "鍾志明",
+      "dept_name": "T台南9廠"
+    },
+    "RT020108": {
+      "employee_no": "RT020108",
+      "employee_name": "余健鵬",
+      "dept_name": "生產一組"
+    },
+    "RT020698": {
+      "employee_no": "RT020698",
+      "employee_name": "邱建邦",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT020700": {
+      "employee_no": "RT020700",
+      "employee_name": "陳欣懋",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT020701": {
+      "employee_no": "RT020701",
+      "employee_name": "陳威寧",
+      "dept_name": "台南群聯館"
+    },
+    "RT016253": {
+      "employee_no": "RT016253",
+      "employee_name": "余君倫",
+      "dept_name": "會計部"
+    },
+    "RT020780": {
+      "employee_no": "RT020780",
+      "employee_name": "黃啟鋒",
+      "dept_name": "生產一組"
+    },
+    "RT020816": {
+      "employee_no": "RT020816",
+      "employee_name": "程泓皓",
+      "dept_name": "T寶山3廠"
+    },
+    "RT020818": {
+      "employee_no": "RT020818",
+      "employee_name": "潘建安",
+      "dept_name": "全球人壽總部"
+    },
+    "RT020819": {
+      "employee_no": "RT020819",
+      "employee_name": "陳景澤",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT020820": {
+      "employee_no": "RT020820",
+      "employee_name": "吳佳穎",
+      "dept_name": "松江路都更案"
+    },
+    "RT020821": {
+      "employee_no": "RT020821",
+      "employee_name": "曾韋晨",
+      "dept_name": "製造課"
+    },
+    "RT020688": {
+      "employee_no": "RT020688",
+      "employee_name": "黃品綸",
+      "dept_name": "生產一組"
+    },
+    "RT020689": {
+      "employee_no": "RT020689",
+      "employee_name": "黃敏男",
+      "dept_name": "管制組"
+    },
+    "RT020019": {
+      "employee_no": "RT020019",
+      "employee_name": "盧姵均",
+      "dept_name": "生管課"
+    },
+    "RT020020": {
+      "employee_no": "RT020020",
+      "employee_name": "游朝淵",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT020795": {
+      "employee_no": "RT020795",
+      "employee_name": "陳秋玲",
+      "dept_name": "機料部"
+    },
+    "RT020796": {
+      "employee_no": "RT020796",
+      "employee_name": "邱琨皓",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT019583": {
+      "employee_no": "RT019583",
+      "employee_name": "林志謙",
+      "dept_name": "能資研發"
+    },
+    "RT020331": {
+      "employee_no": "RT020331",
+      "employee_name": "簡思維",
+      "dept_name": "台南群聯館"
+    },
+    "RT020332": {
+      "employee_no": "RT020332",
+      "employee_name": "邱以屏",
+      "dept_name": "估算部"
+    },
+    "RT020827": {
+      "employee_no": "RT020827",
+      "employee_name": "黃語羚",
+      "dept_name": "美特耐業務部"
+    },
+    "RT020531": {
+      "employee_no": "RT020531",
+      "employee_name": "林鼎濬",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT020535": {
+      "employee_no": "RT020535",
+      "employee_name": "蕭如辰",
+      "dept_name": "工程規劃部"
+    },
+    "RT020071": {
+      "employee_no": "RT020071",
+      "employee_name": "陳銘湯",
+      "dept_name": "南港之星"
+    },
+    "RT017275": {
+      "employee_no": "RT017275",
+      "employee_name": "林冠宇",
+      "dept_name": "工程規劃部"
+    },
+    "RT019413": {
+      "employee_no": "RT019413",
+      "employee_name": "吳炯億",
+      "dept_name": "製造課"
+    },
+    "RT020765": {
+      "employee_no": "RT020765",
+      "employee_name": "許祐翔",
+      "dept_name": "台南群聯館"
+    },
+    "RT020767": {
+      "employee_no": "RT020767",
+      "employee_name": "沈柏宏",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT020770": {
+      "employee_no": "RT020770",
+      "employee_name": "胡文獻",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT020662": {
+      "employee_no": "RT020662",
+      "employee_name": "章格銘",
+      "dept_name": "物料組"
+    },
+    "RT020983": {
+      "employee_no": "RT020983",
+      "employee_name": "張芳馨",
+      "dept_name": "南港之星"
+    },
+    "RT020988": {
+      "employee_no": "RT020988",
+      "employee_name": "顏顥羽",
+      "dept_name": "工程規劃部"
+    },
+    "RT021066": {
+      "employee_no": "RT021066",
+      "employee_name": "張竣凱",
+      "dept_name": "製造課"
+    },
+    "RT021139": {
+      "employee_no": "RT021139",
+      "employee_name": "劉為翔",
+      "dept_name": "機務組"
+    },
+    "RT020948": {
+      "employee_no": "RT020948",
+      "employee_name": "林心怡",
+      "dept_name": "創新環翠段"
+    },
+    "RT021046": {
+      "employee_no": "RT021046",
+      "employee_name": "洪如怡",
+      "dept_name": "會計部"
+    },
+    "RT020872": {
+      "employee_no": "RT020872",
+      "employee_name": "林俞余",
+      "dept_name": "工程規劃部"
+    },
+    "RT020825": {
+      "employee_no": "RT020825",
+      "employee_name": "莊鵬達",
+      "dept_name": "修繕部"
+    },
+    "RT021030": {
+      "employee_no": "RT021030",
+      "employee_name": "游中寧",
+      "dept_name": "生產二組"
+    },
+    "RT021058": {
+      "employee_no": "RT021058",
+      "employee_name": "葉人鳳",
+      "dept_name": "景觀設計部"
+    },
+    "RT021027": {
+      "employee_no": "RT021027",
+      "employee_name": "黃國庭",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021128": {
+      "employee_no": "RT021128",
+      "employee_name": "陳怡文",
+      "dept_name": "全球人壽總部"
+    },
+    "RT021129": {
+      "employee_no": "RT021129",
+      "employee_name": "江彥儒",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT021119": {
+      "employee_no": "RT021119",
+      "employee_name": "龔郁涵",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021120": {
+      "employee_no": "RT021120",
+      "employee_name": "歐澤耀",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021042": {
+      "employee_no": "RT021042",
+      "employee_name": "孫維琴",
+      "dept_name": "預鑄設計部"
+    },
+    "RT020953": {
+      "employee_no": "RT020953",
+      "employee_name": "許志昌",
+      "dept_name": "生產二組"
+    },
+    "RT021044": {
+      "employee_no": "RT021044",
+      "employee_name": "江秀惠",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021118": {
+      "employee_no": "RT021118",
+      "employee_name": "簡榮錦",
+      "dept_name": "室內設計三部"
+    },
+    "RT021115": {
+      "employee_no": "RT021115",
+      "employee_name": "王聖淵",
+      "dept_name": "製造課"
+    },
+    "RT021116": {
+      "employee_no": "RT021116",
+      "employee_name": "陳怡如",
+      "dept_name": "創新軟橋案"
+    },
+    "RT021174": {
+      "employee_no": "RT021174",
+      "employee_name": "葉至惟",
+      "dept_name": "維護課"
+    },
+    "RT021175": {
+      "employee_no": "RT021175",
+      "employee_name": "黃宥仁",
+      "dept_name": "修繕部"
+    },
+    "RT021176": {
+      "employee_no": "RT021176",
+      "employee_name": "陳彥文",
+      "dept_name": "台南群聯館"
+    },
+    "RT021182": {
+      "employee_no": "RT021182",
+      "employee_name": "簡煥城",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT021186": {
+      "employee_no": "RT021186",
+      "employee_name": "梁瑞升",
+      "dept_name": "生產部"
+    },
+    "RT020890": {
+      "employee_no": "RT020890",
+      "employee_name": "劉君豪",
+      "dept_name": "工務三部"
+    },
+    "RT021185": {
+      "employee_no": "RT021185",
+      "employee_name": "游君誠",
+      "dept_name": "室內設計一部"
+    },
+    "RT021187": {
+      "employee_no": "RT021187",
+      "employee_name": "邱粲庭",
+      "dept_name": "生產一組"
+    },
+    "RT021188": {
+      "employee_no": "RT021188",
+      "employee_name": "謝宛潔",
+      "dept_name": "M專案AATT2"
+    },
+    "RT020919": {
+      "employee_no": "RT020919",
+      "employee_name": "朱益德",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT020920": {
+      "employee_no": "RT020920",
+      "employee_name": "林榮祥",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT020921": {
+      "employee_no": "RT020921",
+      "employee_name": "江沛恩",
+      "dept_name": "T寶山3廠"
+    },
+    "RT021063": {
+      "employee_no": "RT021063",
+      "employee_name": "徐慈妤",
+      "dept_name": "發包部"
+    },
+    "RT020904": {
+      "employee_no": "RT020904",
+      "employee_name": "雷凱婷",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT020905": {
+      "employee_no": "RT020905",
+      "employee_name": "劉佳榮",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT020910": {
+      "employee_no": "RT020910",
+      "employee_name": "李佳昀",
+      "dept_name": "南港之星"
+    },
+    "RT020911": {
+      "employee_no": "RT020911",
+      "employee_name": "林紹淵",
+      "dept_name": "丹棠青島改建"
+    },
+    "RT021006": {
+      "employee_no": "RT021006",
+      "employee_name": "余志全",
+      "dept_name": "美特耐生管部"
+    },
+    "RT021924": {
+      "employee_no": "RT021924",
+      "employee_name": "王偉凡",
+      "dept_name": "創新軟橋案"
+    },
+    "RT021433": {
+      "employee_no": "RT021433",
+      "employee_name": "曾琮哲",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021578": {
+      "employee_no": "RT021578",
+      "employee_name": "黃柏霖",
+      "dept_name": "工務一部"
+    },
+    "RT021744": {
+      "employee_no": "RT021744",
+      "employee_name": "陳宗漢",
+      "dept_name": "能資研發"
+    },
+    "RT022020": {
+      "employee_no": "RT022020",
+      "employee_name": "王俊欽",
+      "dept_name": "室內設計二部"
+    },
+    "RT022004": {
+      "employee_no": "RT022004",
+      "employee_name": "阮賢豪",
+      "dept_name": "五谷王A"
+    },
+    "RT022005": {
+      "employee_no": "RT022005",
+      "employee_name": "江大勤",
+      "dept_name": "富邦產險PCS"
+    },
+    "RT021542": {
+      "employee_no": "RT021542",
+      "employee_name": "趙紘毅",
+      "dept_name": "台南群聯館"
+    },
+    "RT021393": {
+      "employee_no": "RT021393",
+      "employee_name": "陳美婉",
+      "dept_name": "生產一組"
+    },
+    "RT021680": {
+      "employee_no": "RT021680",
+      "employee_name": "廖建國",
+      "dept_name": "室內設計二部"
+    },
+    "RT022123": {
+      "employee_no": "RT022123",
+      "employee_name": "徐微淇",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021335": {
+      "employee_no": "RT021335",
+      "employee_name": "洪浩哲",
+      "dept_name": "全球人壽總部"
+    },
+    "RT021545": {
+      "employee_no": "RT021545",
+      "employee_name": "江浩均",
+      "dept_name": "製造課"
+    },
+    "RT022175": {
+      "employee_no": "RT022175",
+      "employee_name": "黃俊仁",
+      "dept_name": "儲運課"
+    },
+    "RT021695": {
+      "employee_no": "RT021695",
+      "employee_name": "陳德銓",
+      "dept_name": "M專案台南200K"
+    },
+    "RT021773": {
+      "employee_no": "RT021773",
+      "employee_name": "陳建霖",
+      "dept_name": "生產一組"
+    },
+    "RT021862": {
+      "employee_no": "RT021862",
+      "employee_name": "巫旻融",
+      "dept_name": "M專案台南200K"
+    },
+    "RT021863": {
+      "employee_no": "RT021863",
+      "employee_name": "潘宗呈",
+      "dept_name": "事務所二部"
+    },
+    "RT021865": {
+      "employee_no": "RT021865",
+      "employee_name": "邱鵬誠",
+      "dept_name": "工務三部"
+    },
+    "RT021873": {
+      "employee_no": "RT021873",
+      "employee_name": "陳建維",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021959": {
+      "employee_no": "RT021959",
+      "employee_name": "李坤哲",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT021960": {
+      "employee_no": "RT021960",
+      "employee_name": "林建榮",
+      "dept_name": "T寶山3廠"
+    },
+    "RT021961": {
+      "employee_no": "RT021961",
+      "employee_name": "鄭建峰",
+      "dept_name": "估算部"
+    },
+    "RT021963": {
+      "employee_no": "RT021963",
+      "employee_name": "陳彥均",
+      "dept_name": "製造課"
+    },
+    "RT021971": {
+      "employee_no": "RT021971",
+      "employee_name": "張孟雪",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021275": {
+      "employee_no": "RT021275",
+      "employee_name": "鍾韶國",
+      "dept_name": "機務組"
+    },
+    "RT021280": {
+      "employee_no": "RT021280",
+      "employee_name": "葉茂弘",
+      "dept_name": "三重捷六"
+    },
+    "RT021281": {
+      "employee_no": "RT021281",
+      "employee_name": "鄭尹廷",
+      "dept_name": "機電規劃設計"
+    },
+    "RT021682": {
+      "employee_no": "RT021682",
+      "employee_name": "田聖捷",
+      "dept_name": "新吉美碩案"
+    },
+    "RT021683": {
+      "employee_no": "RT021683",
+      "employee_name": "陳聖仁",
+      "dept_name": "T高雄4廠"
+    },
+    "RT022092": {
+      "employee_no": "RT022092",
+      "employee_name": "陳忠謙",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021249": {
+      "employee_no": "RT021249",
+      "employee_name": "葉星怡",
+      "dept_name": "會計部"
+    },
+    "RT021254": {
+      "employee_no": "RT021254",
+      "employee_name": "林奕州",
+      "dept_name": "南港之星"
+    },
+    "RT021539": {
+      "employee_no": "RT021539",
+      "employee_name": "施宇鴻",
+      "dept_name": "台南群聯館"
+    },
+    "RT021311": {
+      "employee_no": "RT021311",
+      "employee_name": "謝家莉",
+      "dept_name": "業務部"
+    },
+    "RT021736": {
+      "employee_no": "RT021736",
+      "employee_name": "羅芳銘",
+      "dept_name": "T寶山3廠"
+    },
+    "RT022000": {
+      "employee_no": "RT022000",
+      "employee_name": "黃偉庭",
+      "dept_name": "工務二部"
+    },
+    "RT022125": {
+      "employee_no": "RT022125",
+      "employee_name": "林冠辰",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT022126": {
+      "employee_no": "RT022126",
+      "employee_name": "卓世淇",
+      "dept_name": "製造課"
+    },
+    "RT021257": {
+      "employee_no": "RT021257",
+      "employee_name": "梁俊慧",
+      "dept_name": "機務組"
+    },
+    "RT021813": {
+      "employee_no": "RT021813",
+      "employee_name": "賴柏恩",
+      "dept_name": "管制組"
+    },
+    "RT022197": {
+      "employee_no": "RT022197",
+      "employee_name": "呂柏桀",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT021333": {
+      "employee_no": "RT021333",
+      "employee_name": "許琇雅",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT021814": {
+      "employee_no": "RT021814",
+      "employee_name": "謝王崴",
+      "dept_name": "五谷王A"
+    },
+    "RT021443": {
+      "employee_no": "RT021443",
+      "employee_name": "林長波",
+      "dept_name": "生產一組"
+    },
+    "RT021606": {
+      "employee_no": "RT021606",
+      "employee_name": "林婉君",
+      "dept_name": "T高雄4廠"
+    },
+    "RT021440": {
+      "employee_no": "RT021440",
+      "employee_name": "鄭昭銘",
+      "dept_name": "機電規劃設計"
+    },
+    "RT021326": {
+      "employee_no": "RT021326",
+      "employee_name": "陳翰均",
+      "dept_name": "美特耐生管部"
+    },
+    "RT021544": {
+      "employee_no": "RT021544",
+      "employee_name": "李盈萱",
+      "dept_name": "估算部"
+    },
+    "RT021698": {
+      "employee_no": "RT021698",
+      "employee_name": "林姿吟",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT021879": {
+      "employee_no": "RT021879",
+      "employee_name": "黃弘毅",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT021880": {
+      "employee_no": "RT021880",
+      "employee_name": "覺文宏",
+      "dept_name": "創新軟橋案"
+    },
+    "RT021881": {
+      "employee_no": "RT021881",
+      "employee_name": "莊昀蒨",
+      "dept_name": "三重捷六"
+    },
+    "RT021882": {
+      "employee_no": "RT021882",
+      "employee_name": "鄭玉惠",
+      "dept_name": "工程規劃部"
+    },
+    "RT021883": {
+      "employee_no": "RT021883",
+      "employee_name": "陳宥岱",
+      "dept_name": "M專案台南200K"
+    },
+    "RT021491": {
+      "employee_no": "RT021491",
+      "employee_name": "鄭友淳",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021450": {
+      "employee_no": "RT021450",
+      "employee_name": "李玫信",
+      "dept_name": "T高雄4廠"
+    },
+    "RT021700": {
+      "employee_no": "RT021700",
+      "employee_name": "華振翔",
+      "dept_name": "三重捷六"
+    },
+    "RT021702": {
+      "employee_no": "RT021702",
+      "employee_name": "蔡宜縉",
+      "dept_name": "機料部"
+    },
+    "RT021798": {
+      "employee_no": "RT021798",
+      "employee_name": "陳泓錡",
+      "dept_name": "工程規劃部"
+    },
+    "RT021888": {
+      "employee_no": "RT021888",
+      "employee_name": "林建宏",
+      "dept_name": "生產二組"
+    },
+    "RT021464": {
+      "employee_no": "RT021464",
+      "employee_name": "許瀚聰",
+      "dept_name": "機務組"
+    },
+    "RT021555": {
+      "employee_no": "RT021555",
+      "employee_name": "劉家豪",
+      "dept_name": "品保組"
+    },
+    "RT021342": {
+      "employee_no": "RT021342",
+      "employee_name": "洪姮其",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021344": {
+      "employee_no": "RT021344",
+      "employee_name": "呂錫來",
+      "dept_name": "材料課"
+    },
+    "RT021992": {
+      "employee_no": "RT021992",
+      "employee_name": "程彥嘉",
+      "dept_name": "品保安衛部"
+    },
+    "RT021535": {
+      "employee_no": "RT021535",
+      "employee_name": "張祐瑄",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021530": {
+      "employee_no": "RT021530",
+      "employee_name": "許瑞紜",
+      "dept_name": "南港之星"
+    },
+    "RT021532": {
+      "employee_no": "RT021532",
+      "employee_name": "朱益杰",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT021533": {
+      "employee_no": "RT021533",
+      "employee_name": "吳苡?",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT021721": {
+      "employee_no": "RT021721",
+      "employee_name": "謝政諺",
+      "dept_name": "工務二部"
+    },
+    "RT021770": {
+      "employee_no": "RT021770",
+      "employee_name": "林立邦",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT021772": {
+      "employee_no": "RT021772",
+      "employee_name": "王昱棋",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT021892": {
+      "employee_no": "RT021892",
+      "employee_name": "楊知豫",
+      "dept_name": "工程處"
+    },
+    "RT021717": {
+      "employee_no": "RT021717",
+      "employee_name": "游崇柏",
+      "dept_name": "估算部"
+    },
+    "RT021765": {
+      "employee_no": "RT021765",
+      "employee_name": "黃必翰",
+      "dept_name": "品保組"
+    },
+    "RT021807": {
+      "employee_no": "RT021807",
+      "employee_name": "蕭哲翰",
+      "dept_name": "台南群聯館"
+    },
+    "RT021808": {
+      "employee_no": "RT021808",
+      "employee_name": "朱晉廷",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021969": {
+      "employee_no": "RT021969",
+      "employee_name": "許杏如",
+      "dept_name": "專業施工部"
+    },
+    "RT021995": {
+      "employee_no": "RT021995",
+      "employee_name": "戴妘",
+      "dept_name": "工程規劃部"
+    },
+    "RT021812": {
+      "employee_no": "RT021812",
+      "employee_name": "鄭博文",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021387": {
+      "employee_no": "RT021387",
+      "employee_name": "張俊龍",
+      "dept_name": "機電規劃設計"
+    },
+    "RT022089": {
+      "employee_no": "RT022089",
+      "employee_name": "李昀霖",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT021894": {
+      "employee_no": "RT021894",
+      "employee_name": "徐義民",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021931": {
+      "employee_no": "RT021931",
+      "employee_name": "林暄錡",
+      "dept_name": "T高雄4廠"
+    },
+    "RT022050": {
+      "employee_no": "RT022050",
+      "employee_name": "趙冠豪",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT022051": {
+      "employee_no": "RT022051",
+      "employee_name": "李建旻",
+      "dept_name": "T高雄4廠"
+    },
+    "RT022053": {
+      "employee_no": "RT022053",
+      "employee_name": "羅雲襄",
+      "dept_name": "創新軟橋案"
+    },
+    "RT022009": {
+      "employee_no": "RT022009",
+      "employee_name": "李岳融",
+      "dept_name": "新吉美碩案"
+    },
+    "RT021493": {
+      "employee_no": "RT021493",
+      "employee_name": "王任遠",
+      "dept_name": "機務組"
+    },
+    "RT022177": {
+      "employee_no": "RT022177",
+      "employee_name": "郭勁寧",
+      "dept_name": "景觀設計部"
+    },
+    "RT021490": {
+      "employee_no": "RT021490",
+      "employee_name": "陳幸榛",
+      "dept_name": "製造課"
+    },
+    "RT021842": {
+      "employee_no": "RT021842",
+      "employee_name": "蔡承軒",
+      "dept_name": "材料課"
+    },
+    "RT021889": {
+      "employee_no": "RT021889",
+      "employee_name": "李貞儀",
+      "dept_name": "水泥業務部"
+    },
+    "RT021558": {
+      "employee_no": "RT021558",
+      "employee_name": "李其泓",
+      "dept_name": "T台南9廠"
+    },
+    "RT021559": {
+      "employee_no": "RT021559",
+      "employee_name": "廖冠喬",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT021561": {
+      "employee_no": "RT021561",
+      "employee_name": "謝佩玫",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT021607": {
+      "employee_no": "RT021607",
+      "employee_name": "許文娜",
+      "dept_name": "機電規劃設計"
+    },
+    "RT021987": {
+      "employee_no": "RT021987",
+      "employee_name": "李宛容",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT021451": {
+      "employee_no": "RT021451",
+      "employee_name": "吳崇毅",
+      "dept_name": "室內設計一部"
+    },
+    "RT021996": {
+      "employee_no": "RT021996",
+      "employee_name": "楊亭育",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021997": {
+      "employee_no": "RT021997",
+      "employee_name": "曹永廷",
+      "dept_name": "美特耐生管部"
+    },
+    "RT022194": {
+      "employee_no": "RT022194",
+      "employee_name": "李東成",
+      "dept_name": "管制組"
+    },
+    "RT021843": {
+      "employee_no": "RT021843",
+      "employee_name": "曹永霖",
+      "dept_name": "生產二組"
+    },
+    "RT021890": {
+      "employee_no": "RT021890",
+      "employee_name": "孫筑楹",
+      "dept_name": "人力資源部"
+    },
+    "RT021600": {
+      "employee_no": "RT021600",
+      "employee_name": "蔡孟杰",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT021601": {
+      "employee_no": "RT021601",
+      "employee_name": "余文彬",
+      "dept_name": "機料部"
+    },
+    "RT021501": {
+      "employee_no": "RT021501",
+      "employee_name": "陳郁姍",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT021502": {
+      "employee_no": "RT021502",
+      "employee_name": "張樂均",
+      "dept_name": "富邦產險PCS"
+    },
+    "RT021738": {
+      "employee_no": "RT021738",
+      "employee_name": "陳嘉敏",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT021739": {
+      "employee_no": "RT021739",
+      "employee_name": "賴冠宇",
+      "dept_name": "三重捷六"
+    },
+    "RT021740": {
+      "employee_no": "RT021740",
+      "employee_name": "林文偉",
+      "dept_name": "T寶山3廠"
+    },
+    "RT021871": {
+      "employee_no": "RT021871",
+      "employee_name": "李俊明",
+      "dept_name": "工務一部"
+    },
+    "RT021317": {
+      "employee_no": "RT021317",
+      "employee_name": "陳盛全",
+      "dept_name": "維護課"
+    },
+    "RT021318": {
+      "employee_no": "RT021318",
+      "employee_name": "謝舜文",
+      "dept_name": "製造課"
+    },
+    "RT022203": {
+      "employee_no": "RT022203",
+      "employee_name": "陳惠玲",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT022204": {
+      "employee_no": "RT022204",
+      "employee_name": "吳玉燕",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT021262": {
+      "employee_no": "RT021262",
+      "employee_name": "陳志勇",
+      "dept_name": "南港之星"
+    },
+    "RT021222": {
+      "employee_no": "RT021222",
+      "employee_name": "李育泱",
+      "dept_name": "材料課"
+    },
+    "RT021749": {
+      "employee_no": "RT021749",
+      "employee_name": "許苡暄",
+      "dept_name": "南海段都更案"
+    },
+    "RT021752": {
+      "employee_no": "RT021752",
+      "employee_name": "廖重嘉",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT022115": {
+      "employee_no": "RT022115",
+      "employee_name": "李嘉欽",
+      "dept_name": "T台南9廠"
+    },
+    "RT021465": {
+      "employee_no": "RT021465",
+      "employee_name": "蔡雅蓉",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT021602": {
+      "employee_no": "RT021602",
+      "employee_name": "莊正昌",
+      "dept_name": "電務組"
+    },
+    "RT022205": {
+      "employee_no": "RT022205",
+      "employee_name": "許鳴格",
+      "dept_name": "生產一組"
+    },
+    "RT021614": {
+      "employee_no": "RT021614",
+      "employee_name": "鄧適婕",
+      "dept_name": "富邦產險PCS"
+    },
+    "RT021616": {
+      "employee_no": "RT021616",
+      "employee_name": "劉邦龍",
+      "dept_name": "製造課"
+    },
+    "RT021497": {
+      "employee_no": "RT021497",
+      "employee_name": "許瑋玟",
+      "dept_name": "美特耐業務部"
+    },
+    "RT021627": {
+      "employee_no": "RT021627",
+      "employee_name": "王呈豪",
+      "dept_name": "生產二組"
+    },
+    "RT021628": {
+      "employee_no": "RT021628",
+      "employee_name": "石清暉",
+      "dept_name": "管制組"
+    },
+    "RT023101": {
+      "employee_no": "RT023101",
+      "employee_name": "蘇秋燕",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023110": {
+      "employee_no": "RT023110",
+      "employee_name": "楊東融",
+      "dept_name": "美特耐業務部"
+    },
+    "RT023131": {
+      "employee_no": "RT023131",
+      "employee_name": "鄭伊芳",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023132": {
+      "employee_no": "RT023132",
+      "employee_name": "謝均瑋",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT023135": {
+      "employee_no": "RT023135",
+      "employee_name": "詹子樓",
+      "dept_name": "景觀設計部"
+    },
+    "RT022520": {
+      "employee_no": "RT022520",
+      "employee_name": "周欣宜",
+      "dept_name": "室內設計二部"
+    },
+    "RT022669": {
+      "employee_no": "RT022669",
+      "employee_name": "宋治漢",
+      "dept_name": "發包部"
+    },
+    "RT022749": {
+      "employee_no": "RT022749",
+      "employee_name": "黃育哲",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT022799": {
+      "employee_no": "RT022799",
+      "employee_name": "曹勻騄",
+      "dept_name": "工務一部"
+    },
+    "RT022868": {
+      "employee_no": "RT022868",
+      "employee_name": "劉右嘉",
+      "dept_name": "工務三部"
+    },
+    "RT022665": {
+      "employee_no": "RT022665",
+      "employee_name": "陳宏旻",
+      "dept_name": "管制組"
+    },
+    "RT021400": {
+      "employee_no": "RT021400",
+      "employee_name": "蘇益慶",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT022523": {
+      "employee_no": "RT022523",
+      "employee_name": "陳柏彥",
+      "dept_name": "美特耐業務部"
+    },
+    "RT022524": {
+      "employee_no": "RT022524",
+      "employee_name": "高春富",
+      "dept_name": "生產二組"
+    },
+    "RT022776": {
+      "employee_no": "RT022776",
+      "employee_name": "吳玉凱",
+      "dept_name": "能資研發"
+    },
+    "RT021397": {
+      "employee_no": "RT021397",
+      "employee_name": "呂楷淞",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT023001": {
+      "employee_no": "RT023001",
+      "employee_name": "張中立",
+      "dept_name": "前導測試組"
+    },
+    "RT023123": {
+      "employee_no": "RT023123",
+      "employee_name": "游家豪",
+      "dept_name": "品保組"
+    },
+    "RT022552": {
+      "employee_no": "RT022552",
+      "employee_name": "蕭耀祖",
+      "dept_name": "工務一部"
+    },
+    "RT022587": {
+      "employee_no": "RT022587",
+      "employee_name": "黃進和",
+      "dept_name": "機料部"
+    },
+    "RT022573": {
+      "employee_no": "RT022573",
+      "employee_name": "張凱明",
+      "dept_name": "能資研發"
+    },
+    "RT022575": {
+      "employee_no": "RT022575",
+      "employee_name": "黃義翔",
+      "dept_name": "生產一組"
+    },
+    "RT022837": {
+      "employee_no": "RT022837",
+      "employee_name": "詹育華",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023091": {
+      "employee_no": "RT023091",
+      "employee_name": "謝佳宏",
+      "dept_name": "物料組"
+    },
+    "RT022517": {
+      "employee_no": "RT022517",
+      "employee_name": "楊雅如",
+      "dept_name": "美特耐業務部"
+    },
+    "RT022518": {
+      "employee_no": "RT022518",
+      "employee_name": "林家強",
+      "dept_name": "品保組"
+    },
+    "RT023126": {
+      "employee_no": "RT023126",
+      "employee_name": "洪仲薇",
+      "dept_name": "管理組"
+    },
+    "RT023127": {
+      "employee_no": "RT023127",
+      "employee_name": "謝佾錡",
+      "dept_name": "資訊部"
+    },
+    "RT023128": {
+      "employee_no": "RT023128",
+      "employee_name": "石孟勳",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT022320": {
+      "employee_no": "RT022320",
+      "employee_name": "陳昭榮",
+      "dept_name": "工程規劃部"
+    },
+    "RT022417": {
+      "employee_no": "RT022417",
+      "employee_name": "陳秉昇",
+      "dept_name": "製造課"
+    },
+    "RT022432": {
+      "employee_no": "RT022432",
+      "employee_name": "莊勝旭",
+      "dept_name": "M專案台南200K"
+    },
+    "RT022433": {
+      "employee_no": "RT022433",
+      "employee_name": "賴明余",
+      "dept_name": "製造課"
+    },
+    "RT022652": {
+      "employee_no": "RT022652",
+      "employee_name": "王詩文",
+      "dept_name": "景觀設計部"
+    },
+    "RT022874": {
+      "employee_no": "RT022874",
+      "employee_name": "鍾喬如",
+      "dept_name": "進口代理部"
+    },
+    "RT023015": {
+      "employee_no": "RT023015",
+      "employee_name": "黃稚豐",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023074": {
+      "employee_no": "RT023074",
+      "employee_name": "張景翔",
+      "dept_name": "室內設計三部"
+    },
+    "RT022354": {
+      "employee_no": "RT022354",
+      "employee_name": "葉軒宏",
+      "dept_name": "室內設計三部"
+    },
+    "RT022807": {
+      "employee_no": "RT022807",
+      "employee_name": "呂仰欽",
+      "dept_name": "美特耐技術部"
+    },
+    "RT022278": {
+      "employee_no": "RT022278",
+      "employee_name": "袁肇鴻",
+      "dept_name": "工務一部"
+    },
+    "RT022387": {
+      "employee_no": "RT022387",
+      "employee_name": "李靜雯",
+      "dept_name": "室內設計一部"
+    },
+    "RT022388": {
+      "employee_no": "RT022388",
+      "employee_name": "江晨",
+      "dept_name": "工務二部"
+    },
+    "RT022514": {
+      "employee_no": "RT022514",
+      "employee_name": "林詩賢",
+      "dept_name": "機務組"
+    },
+    "RT022559": {
+      "employee_no": "RT022559",
+      "employee_name": "蔡富翔",
+      "dept_name": "美特耐業務部"
+    },
+    "RT022875": {
+      "employee_no": "RT022875",
+      "employee_name": "廖羿婷",
+      "dept_name": "工程規劃部"
+    },
+    "RT022971": {
+      "employee_no": "RT022971",
+      "employee_name": "彭聖文",
+      "dept_name": "美特耐業務部"
+    },
+    "RT022670": {
+      "employee_no": "RT022670",
+      "employee_name": "成雨生",
+      "dept_name": "工務二部"
+    },
+    "RT022566": {
+      "employee_no": "RT022566",
+      "employee_name": "鄧穎喬",
+      "dept_name": "能資研發"
+    },
+    "RT022567": {
+      "employee_no": "RT022567",
+      "employee_name": "朱睿基",
+      "dept_name": "美特耐業務部"
+    },
+    "RT023075": {
+      "employee_no": "RT023075",
+      "employee_name": "袁肇陽",
+      "dept_name": "工務一部"
+    },
+    "RT022482": {
+      "employee_no": "RT022482",
+      "employee_name": "謝亞浩",
+      "dept_name": "會計部"
+    },
+    "RT022859": {
+      "employee_no": "RT022859",
+      "employee_name": "李彥承",
+      "dept_name": "能資研發"
+    },
+    "RT022927": {
+      "employee_no": "RT022927",
+      "employee_name": "林威廷",
+      "dept_name": "事務所二部"
+    },
+    "RT022636": {
+      "employee_no": "RT022636",
+      "employee_name": "陳鈞傑",
+      "dept_name": "美特耐業務部"
+    },
+    "RT022791": {
+      "employee_no": "RT022791",
+      "employee_name": "葉國賓",
+      "dept_name": "M專案AATT2"
+    },
+    "RT022352": {
+      "employee_no": "RT022352",
+      "employee_name": "李志中",
+      "dept_name": "電務組"
+    },
+    "RT022820": {
+      "employee_no": "RT022820",
+      "employee_name": "吳寶雲",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT022822": {
+      "employee_no": "RT022822",
+      "employee_name": "陳沛縈",
+      "dept_name": "資訊部"
+    },
+    "RT022843": {
+      "employee_no": "RT022843",
+      "employee_name": "張裕謙",
+      "dept_name": "預鑄設計部"
+    },
+    "RT022860": {
+      "employee_no": "RT022860",
+      "employee_name": "鄧丞浩",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT022381": {
+      "employee_no": "RT022381",
+      "employee_name": "蔡啟聖",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT022498": {
+      "employee_no": "RT022498",
+      "employee_name": "沈美玲",
+      "dept_name": "總務課"
+    },
+    "RT022241": {
+      "employee_no": "RT022241",
+      "employee_name": "劉慶昌",
+      "dept_name": "美特耐生管部"
+    },
+    "RT022285": {
+      "employee_no": "RT022285",
+      "employee_name": "張金延",
+      "dept_name": "生產一組"
+    },
+    "RT023076": {
+      "employee_no": "RT023076",
+      "employee_name": "楊景鼎",
+      "dept_name": "專案開發"
+    },
+    "RT022318": {
+      "employee_no": "RT022318",
+      "employee_name": "林呂容",
+      "dept_name": "管理組"
+    },
+    "RT022319": {
+      "employee_no": "RT022319",
+      "employee_name": "潘建璋",
+      "dept_name": "物料組"
+    },
+    "RT023111": {
+      "employee_no": "RT023111",
+      "employee_name": "林余宣",
+      "dept_name": "進口代理部"
+    },
+    "RT022508": {
+      "employee_no": "RT022508",
+      "employee_name": "廖凱軒",
+      "dept_name": "電務組"
+    },
+    "RT022560": {
+      "employee_no": "RT022560",
+      "employee_name": "張？慈",
+      "dept_name": "室內設計二部"
+    },
+    "RT022902": {
+      "employee_no": "RT022902",
+      "employee_name": "葉欣宜",
+      "dept_name": "室內設計三部"
+    },
+    "RT022923": {
+      "employee_no": "RT022923",
+      "employee_name": "陳孝萱",
+      "dept_name": "全球人壽總部"
+    },
+    "RT022314": {
+      "employee_no": "RT022314",
+      "employee_name": "呂仁偉",
+      "dept_name": "創新材料"
+    },
+    "RT022455": {
+      "employee_no": "RT022455",
+      "employee_name": "蔡宗穎",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT022456": {
+      "employee_no": "RT022456",
+      "employee_name": "郭皓凱",
+      "dept_name": "M專案台南200K"
+    },
+    "RT022458": {
+      "employee_no": "RT022458",
+      "employee_name": "方偉圳",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT022460": {
+      "employee_no": "RT022460",
+      "employee_name": "馬玉宣",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT022720": {
+      "employee_no": "RT022720",
+      "employee_name": "林昱伶",
+      "dept_name": "發包部"
+    },
+    "RT022727": {
+      "employee_no": "RT022727",
+      "employee_name": "李芷萱",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT022488": {
+      "employee_no": "RT022488",
+      "employee_name": "孫自立",
+      "dept_name": "室內設計二部"
+    },
+    "RT022489": {
+      "employee_no": "RT022489",
+      "employee_name": "盧曉琪",
+      "dept_name": "室內設計三部"
+    },
+    "RT022825": {
+      "employee_no": "RT022825",
+      "employee_name": "張景毓",
+      "dept_name": "工務一部"
+    },
+    "RT022236": {
+      "employee_no": "RT022236",
+      "employee_name": "張凱彬",
+      "dept_name": "修繕部"
+    },
+    "RT022237": {
+      "employee_no": "RT022237",
+      "employee_name": "黃俞樺",
+      "dept_name": "南港之星"
+    },
+    "RT022746": {
+      "employee_no": "RT022746",
+      "employee_name": "蔡譯陞",
+      "dept_name": "能資研發"
+    },
+    "RT023113": {
+      "employee_no": "RT023113",
+      "employee_name": "施富比",
+      "dept_name": "品保組"
+    },
+    "RT022393": {
+      "employee_no": "RT022393",
+      "employee_name": "許育瑋",
+      "dept_name": "M專案台南200K"
+    },
+    "RT022395": {
+      "employee_no": "RT022395",
+      "employee_name": "周大立",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT022396": {
+      "employee_no": "RT022396",
+      "employee_name": "黃冠菘",
+      "dept_name": "M專案台南200K"
+    },
+    "RT022468": {
+      "employee_no": "RT022468",
+      "employee_name": "陳凱琳",
+      "dept_name": "景觀設計部"
+    },
+    "RT022391": {
+      "employee_no": "RT022391",
+      "employee_name": "王宣普",
+      "dept_name": "M專案台南200K"
+    },
+    "RT022392": {
+      "employee_no": "RT022392",
+      "employee_name": "張晏綺",
+      "dept_name": "室內設計一部"
+    },
+    "RT022557": {
+      "employee_no": "RT022557",
+      "employee_name": "蔣仁偉",
+      "dept_name": "稽核營運組"
+    },
+    "RT022615": {
+      "employee_no": "RT022615",
+      "employee_name": "陳立緯",
+      "dept_name": "管理組"
+    },
+    "RT022911": {
+      "employee_no": "RT022911",
+      "employee_name": "賴昱彤",
+      "dept_name": "M專案AATT2"
+    },
+    "RT023009": {
+      "employee_no": "RT023009",
+      "employee_name": "?帝丞",
+      "dept_name": "工程規劃部"
+    },
+    "RT022370": {
+      "employee_no": "RT022370",
+      "employee_name": "葛義心",
+      "dept_name": "會計部"
+    },
+    "RT022372": {
+      "employee_no": "RT022372",
+      "employee_name": "張峻維",
+      "dept_name": "能資研發"
+    },
+    "RT022569": {
+      "employee_no": "RT022569",
+      "employee_name": "張沛宸",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT022570": {
+      "employee_no": "RT022570",
+      "employee_name": "許文杰",
+      "dept_name": "南海段都更案"
+    },
+    "RT022571": {
+      "employee_no": "RT022571",
+      "employee_name": "陳億王民",
+      "dept_name": "專業施工部"
+    },
+    "RT023085": {
+      "employee_no": "RT023085",
+      "employee_name": "許哲維",
+      "dept_name": "機電規劃設計"
+    },
+    "RT022580": {
+      "employee_no": "RT022580",
+      "employee_name": "張清均",
+      "dept_name": "室內設計二部"
+    },
+    "RT022817": {
+      "employee_no": "RT022817",
+      "employee_name": "林佳毅",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT022824": {
+      "employee_no": "RT022824",
+      "employee_name": "戴詠琮",
+      "dept_name": "生產一組"
+    },
+    "RT022384": {
+      "employee_no": "RT022384",
+      "employee_name": "黃冠硯",
+      "dept_name": "美特耐生管部"
+    },
+    "RT022385": {
+      "employee_no": "RT022385",
+      "employee_name": "石資充",
+      "dept_name": "事務所二部"
+    },
+    "RT022712": {
+      "employee_no": "RT022712",
+      "employee_name": "王繼明",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT022751": {
+      "employee_no": "RT022751",
+      "employee_name": "張文俊",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT023086": {
+      "employee_no": "RT023086",
+      "employee_name": "陳青縈",
+      "dept_name": "M專案AATT2"
+    },
+    "RT023088": {
+      "employee_no": "RT023088",
+      "employee_name": "王敬銓",
+      "dept_name": "製造課"
+    },
+    "RT022292": {
+      "employee_no": "RT022292",
+      "employee_name": "蘇文麒",
+      "dept_name": "儲運課"
+    },
+    "RT022293": {
+      "employee_no": "RT022293",
+      "employee_name": "沈承叡",
+      "dept_name": "製造課"
+    },
+    "RT022299": {
+      "employee_no": "RT022299",
+      "employee_name": "黃裕軒",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT022322": {
+      "employee_no": "RT022322",
+      "employee_name": "朱琇筠",
+      "dept_name": "T寶山3廠"
+    },
+    "RT023078": {
+      "employee_no": "RT023078",
+      "employee_name": "林承佑",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT023080": {
+      "employee_no": "RT023080",
+      "employee_name": "劉晏儒",
+      "dept_name": "創新環翠段"
+    },
+    "RT022339": {
+      "employee_no": "RT022339",
+      "employee_name": "劉羽珊",
+      "dept_name": "工務三部"
+    },
+    "RT022453": {
+      "employee_no": "RT022453",
+      "employee_name": "徐新凱",
+      "dept_name": "能資研發"
+    },
+    "RT022454": {
+      "employee_no": "RT022454",
+      "employee_name": "林宗賢",
+      "dept_name": "生產二組"
+    },
+    "RT022662": {
+      "employee_no": "RT022662",
+      "employee_name": "林奕欣",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT022663": {
+      "employee_no": "RT022663",
+      "employee_name": "巫建宏",
+      "dept_name": "機料部"
+    },
+    "RT022539": {
+      "employee_no": "RT022539",
+      "employee_name": "葉耿豪",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT022540": {
+      "employee_no": "RT022540",
+      "employee_name": "吳幸慧",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT023988": {
+      "employee_no": "RT023988",
+      "employee_name": "鄭自廷",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023989": {
+      "employee_no": "RT023989",
+      "employee_name": "游翎昇",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023744": {
+      "employee_no": "RT023744",
+      "employee_name": "顏國任",
+      "dept_name": "室內設計二部"
+    },
+    "RT023615": {
+      "employee_no": "RT023615",
+      "employee_name": "李金霖",
+      "dept_name": "工務二部"
+    },
+    "RT023955": {
+      "employee_no": "RT023955",
+      "employee_name": "林秋燕",
+      "dept_name": "機務組"
+    },
+    "RT023788": {
+      "employee_no": "RT023788",
+      "employee_name": "李承軒",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023715": {
+      "employee_no": "RT023715",
+      "employee_name": "吳芓葳",
+      "dept_name": "工務三部"
+    },
+    "RT023292": {
+      "employee_no": "RT023292",
+      "employee_name": "陳緯賓",
+      "dept_name": "進口代理部"
+    },
+    "RT023434": {
+      "employee_no": "RT023434",
+      "employee_name": "黃三桂",
+      "dept_name": "物料組"
+    },
+    "RT023435": {
+      "employee_no": "RT023435",
+      "employee_name": "何玥？",
+      "dept_name": "管制組"
+    },
+    "RT023662": {
+      "employee_no": "RT023662",
+      "employee_name": "莊澤祐",
+      "dept_name": "生產二組"
+    },
+    "RT023191": {
+      "employee_no": "RT023191",
+      "employee_name": "王偉臨",
+      "dept_name": "T台南9廠"
+    },
+    "RT023352": {
+      "employee_no": "RT023352",
+      "employee_name": "林福二",
+      "dept_name": "生產一組"
+    },
+    "RT023345": {
+      "employee_no": "RT023345",
+      "employee_name": "許禮堯",
+      "dept_name": "工程規劃部"
+    },
+    "RT023650": {
+      "employee_no": "RT023650",
+      "employee_name": "周士誠",
+      "dept_name": "室內設計二部"
+    },
+    "RT023268": {
+      "employee_no": "RT023268",
+      "employee_name": "謝時愷",
+      "dept_name": "材料課"
+    },
+    "RT023370": {
+      "employee_no": "RT023370",
+      "employee_name": "黃建樺",
+      "dept_name": "M專案台南200K"
+    },
+    "RT023371": {
+      "employee_no": "RT023371",
+      "employee_name": "葉家宏",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT023372": {
+      "employee_no": "RT023372",
+      "employee_name": "許芫鉿",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT023587": {
+      "employee_no": "RT023587",
+      "employee_name": "陳泳勳",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023293": {
+      "employee_no": "RT023293",
+      "employee_name": "劉承恩",
+      "dept_name": "事務所二部"
+    },
+    "RT023437": {
+      "employee_no": "RT023437",
+      "employee_name": "李淑懷",
+      "dept_name": "總經理室"
+    },
+    "RT023798": {
+      "employee_no": "RT023798",
+      "employee_name": "李哲諺",
+      "dept_name": "工程規劃部"
+    },
+    "RT023309": {
+      "employee_no": "RT023309",
+      "employee_name": "蘇桂平",
+      "dept_name": "富邦承德預鑄"
+    },
+    "RT023310": {
+      "employee_no": "RT023310",
+      "employee_name": "林昱昇",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT023311": {
+      "employee_no": "RT023311",
+      "employee_name": "蘇靖惠",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT023312": {
+      "employee_no": "RT023312",
+      "employee_name": "趙千慧",
+      "dept_name": "南海段都更案"
+    },
+    "RT023313": {
+      "employee_no": "RT023313",
+      "employee_name": "楊邦平",
+      "dept_name": "全球人壽總部"
+    },
+    "RT023220": {
+      "employee_no": "RT023220",
+      "employee_name": "李宗義",
+      "dept_name": "機務組"
+    },
+    "RT023223": {
+      "employee_no": "RT023223",
+      "employee_name": "謝佑澤",
+      "dept_name": "物料組"
+    },
+    "RT024003": {
+      "employee_no": "RT024003",
+      "employee_name": "范如伶",
+      "dept_name": "新吉美碩案"
+    },
+    "RT024004": {
+      "employee_no": "RT024004",
+      "employee_name": "詹介榜",
+      "dept_name": "機務組"
+    },
+    "RT024006": {
+      "employee_no": "RT024006",
+      "employee_name": "蔡竣豪",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024007": {
+      "employee_no": "RT024007",
+      "employee_name": "謝秉樺",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT023264": {
+      "employee_no": "RT023264",
+      "employee_name": "杜承龍",
+      "dept_name": "T寶山3廠"
+    },
+    "RT023266": {
+      "employee_no": "RT023266",
+      "employee_name": "邱竫慧",
+      "dept_name": "南海段都更案"
+    },
+    "RT023267": {
+      "employee_no": "RT023267",
+      "employee_name": "張宇涵",
+      "dept_name": "T高雄5廠"
+    },
+    "RT023222": {
+      "employee_no": "RT023222",
+      "employee_name": "劉愛玲",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT023224": {
+      "employee_no": "RT023224",
+      "employee_name": "郭家琇",
+      "dept_name": "台南群聯館"
+    },
+    "RT023228": {
+      "employee_no": "RT023228",
+      "employee_name": "傅文暐",
+      "dept_name": "M專案台南200K"
+    },
+    "RT023231": {
+      "employee_no": "RT023231",
+      "employee_name": "劉仕瑀",
+      "dept_name": "工程規劃部"
+    },
+    "RT023583": {
+      "employee_no": "RT023583",
+      "employee_name": "賴偉方",
+      "dept_name": "室內設計一部"
+    },
+    "RT023799": {
+      "employee_no": "RT023799",
+      "employee_name": "陳姵樺",
+      "dept_name": "工程規劃部"
+    },
+    "RT023611": {
+      "employee_no": "RT023611",
+      "employee_name": "黃宗玉",
+      "dept_name": "製造課"
+    },
+    "RT023824": {
+      "employee_no": "RT023824",
+      "employee_name": "施又嘉",
+      "dept_name": "業務部"
+    },
+    "RT023905": {
+      "employee_no": "RT023905",
+      "employee_name": "田金玉",
+      "dept_name": "事務所二部"
+    },
+    "RT023914": {
+      "employee_no": "RT023914",
+      "employee_name": "馬克",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT023915": {
+      "employee_no": "RT023915",
+      "employee_name": "克斯頓",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023469": {
+      "employee_no": "RT023469",
+      "employee_name": "陳虹錡",
+      "dept_name": "會計部"
+    },
+    "RT023470": {
+      "employee_no": "RT023470",
+      "employee_name": "袁浩倫",
+      "dept_name": "專案部"
+    },
+    "RT023473": {
+      "employee_no": "RT023473",
+      "employee_name": "鄭慧鈴",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023475": {
+      "employee_no": "RT023475",
+      "employee_name": "蕭宇傑",
+      "dept_name": "製造課"
+    },
+    "RT023211": {
+      "employee_no": "RT023211",
+      "employee_name": "楊裕閔",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT023396": {
+      "employee_no": "RT023396",
+      "employee_name": "羅鈺",
+      "dept_name": "室內設計三部"
+    },
+    "RT023594": {
+      "employee_no": "RT023594",
+      "employee_name": "陳婉玲",
+      "dept_name": "生產一組"
+    },
+    "RT023839": {
+      "employee_no": "RT023839",
+      "employee_name": "許永濰",
+      "dept_name": "製造課"
+    },
+    "RT023315": {
+      "employee_no": "RT023315",
+      "employee_name": "張瑋倫",
+      "dept_name": "事務所二部"
+    },
+    "RT023894": {
+      "employee_no": "RT023894",
+      "employee_name": "洪啟忠",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023916": {
+      "employee_no": "RT023916",
+      "employee_name": "馬諾亞",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023917": {
+      "employee_no": "RT023917",
+      "employee_name": "喬爾",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023284": {
+      "employee_no": "RT023284",
+      "employee_name": "劉嘉修",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT023285": {
+      "employee_no": "RT023285",
+      "employee_name": "黃文德",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT023286": {
+      "employee_no": "RT023286",
+      "employee_name": "陳育潔",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023382": {
+      "employee_no": "RT023382",
+      "employee_name": "張智耀",
+      "dept_name": "工程規劃部"
+    },
+    "RT023757": {
+      "employee_no": "RT023757",
+      "employee_name": "鄭樺",
+      "dept_name": "室內設計一部"
+    },
+    "RT023759": {
+      "employee_no": "RT023759",
+      "employee_name": "張馥薇",
+      "dept_name": "室內設計二部"
+    },
+    "RT023271": {
+      "employee_no": "RT023271",
+      "employee_name": "林家羽",
+      "dept_name": "室內設計一部"
+    },
+    "RT023708": {
+      "employee_no": "RT023708",
+      "employee_name": "林霈宜",
+      "dept_name": "室內設計一部"
+    },
+    "RT023543": {
+      "employee_no": "RT023543",
+      "employee_name": "曹淑靚",
+      "dept_name": "材料課"
+    },
+    "RT023635": {
+      "employee_no": "RT023635",
+      "employee_name": "蔡漢勳",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023307": {
+      "employee_no": "RT023307",
+      "employee_name": "歐隆昌",
+      "dept_name": "專業施工部"
+    },
+    "RT023612": {
+      "employee_no": "RT023612",
+      "employee_name": "張智傑",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023967": {
+      "employee_no": "RT023967",
+      "employee_name": "闕千庭",
+      "dept_name": "美特耐業務部"
+    },
+    "RT023378": {
+      "employee_no": "RT023378",
+      "employee_name": "劉淞維",
+      "dept_name": "機務組"
+    },
+    "RT023969": {
+      "employee_no": "RT023969",
+      "employee_name": "許沁瑀",
+      "dept_name": "人力資源部"
+    },
+    "RT023970": {
+      "employee_no": "RT023970",
+      "employee_name": "陳冠廷",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023493": {
+      "employee_no": "RT023493",
+      "employee_name": "程宇恩",
+      "dept_name": "製造課"
+    },
+    "RT023426": {
+      "employee_no": "RT023426",
+      "employee_name": "許輝龍",
+      "dept_name": "專業施工部"
+    },
+    "RT023870": {
+      "employee_no": "RT023870",
+      "employee_name": "葉淑虹",
+      "dept_name": "室內設計三部"
+    },
+    "RT023548": {
+      "employee_no": "RT023548",
+      "employee_name": "羅于青",
+      "dept_name": "人力資源部"
+    },
+    "RT023983": {
+      "employee_no": "RT023983",
+      "employee_name": "陳靜瑩",
+      "dept_name": "人力資源部"
+    },
+    "RT023813": {
+      "employee_no": "RT023813",
+      "employee_name": "詹姆斯",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT023814": {
+      "employee_no": "RT023814",
+      "employee_name": "凱文",
+      "dept_name": "製造課"
+    },
+    "RT023860": {
+      "employee_no": "RT023860",
+      "employee_name": "邱絲語",
+      "dept_name": "美特耐業務部"
+    },
+    "RT023873": {
+      "employee_no": "RT023873",
+      "employee_name": "張鈺明",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT023385": {
+      "employee_no": "RT023385",
+      "employee_name": "曾涵郁",
+      "dept_name": "M專案台南200K"
+    },
+    "RT023817": {
+      "employee_no": "RT023817",
+      "employee_name": "艾倫",
+      "dept_name": "製造課"
+    },
+    "RT023722": {
+      "employee_no": "RT023722",
+      "employee_name": "王努力",
+      "dept_name": "製造課"
+    },
+    "RT023818": {
+      "employee_no": "RT023818",
+      "employee_name": "約瑟夫",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT023887": {
+      "employee_no": "RT023887",
+      "employee_name": "林文斌",
+      "dept_name": "美特耐生管部"
+    },
+    "RT023861": {
+      "employee_no": "RT023861",
+      "employee_name": "徐福雯",
+      "dept_name": "室內設計二部"
+    },
+    "RT023647": {
+      "employee_no": "RT023647",
+      "employee_name": "柯尚廷",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023900": {
+      "employee_no": "RT023900",
+      "employee_name": "何宜錚",
+      "dept_name": "估算部"
+    },
+    "RT023908": {
+      "employee_no": "RT023908",
+      "employee_name": "安東尼",
+      "dept_name": "M專案AATT2"
+    },
+    "RT023614": {
+      "employee_no": "RT023614",
+      "employee_name": "楊晴文",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT023888": {
+      "employee_no": "RT023888",
+      "employee_name": "劉正斌",
+      "dept_name": "管制組"
+    },
+    "RT023890": {
+      "employee_no": "RT023890",
+      "employee_name": "葛雷",
+      "dept_name": "製造課"
+    },
+    "RT023892": {
+      "employee_no": "RT023892",
+      "employee_name": "李采庭",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023585": {
+      "employee_no": "RT023585",
+      "employee_name": "伍修毅",
+      "dept_name": "M專案AATT2"
+    },
+    "RT023196": {
+      "employee_no": "RT023196",
+      "employee_name": "廖珮慈",
+      "dept_name": "管理組"
+    },
+    "RT023586": {
+      "employee_no": "RT023586",
+      "employee_name": "許景皓",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT023910": {
+      "employee_no": "RT023910",
+      "employee_name": "奧利佛",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT023911": {
+      "employee_no": "RT023911",
+      "employee_name": "巴塞納",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT023912": {
+      "employee_no": "RT023912",
+      "employee_name": "羅納德",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT023913": {
+      "employee_no": "RT023913",
+      "employee_name": "衛斯理",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT023942": {
+      "employee_no": "RT023942",
+      "employee_name": "林曉儷",
+      "dept_name": "工程規劃部"
+    },
+    "RT023273": {
+      "employee_no": "RT023273",
+      "employee_name": "李煒羨",
+      "dept_name": "生產一組"
+    },
+    "RT023359": {
+      "employee_no": "RT023359",
+      "employee_name": "蘇政華",
+      "dept_name": "工程規劃部"
+    },
+    "RT023373": {
+      "employee_no": "RT023373",
+      "employee_name": "吳貞樺",
+      "dept_name": "室內設計二部"
+    },
+    "RT023376": {
+      "employee_no": "RT023376",
+      "employee_name": "蕭現龍",
+      "dept_name": "物料組"
+    },
+    "RT023377": {
+      "employee_no": "RT023377",
+      "employee_name": "邱建中",
+      "dept_name": "管制組"
+    },
+    "RT023720": {
+      "employee_no": "RT023720",
+      "employee_name": "林傳舜",
+      "dept_name": "工務一部"
+    },
+    "RT023907": {
+      "employee_no": "RT023907",
+      "employee_name": "詹金錫",
+      "dept_name": "電務組"
+    },
+    "RT023943": {
+      "employee_no": "RT023943",
+      "employee_name": "陳淑君",
+      "dept_name": "估算部"
+    },
+    "RT023669": {
+      "employee_no": "RT023669",
+      "employee_name": "廖沁柔",
+      "dept_name": "資訊部"
+    },
+    "RT023670": {
+      "employee_no": "RT023670",
+      "employee_name": "邱子芸",
+      "dept_name": "預鑄設計部"
+    },
+    "RT023678": {
+      "employee_no": "RT023678",
+      "employee_name": "黃瀚霆",
+      "dept_name": "全球人壽總部"
+    },
+    "RT023889": {
+      "employee_no": "RT023889",
+      "employee_name": "東尼",
+      "dept_name": "材料課"
+    },
+    "RT023972": {
+      "employee_no": "RT023972",
+      "employee_name": "林建志",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023306": {
+      "employee_no": "RT023306",
+      "employee_name": "吳菖毓",
+      "dept_name": "專案開發"
+    },
+    "RT023516": {
+      "employee_no": "RT023516",
+      "employee_name": "潘智威",
+      "dept_name": "機務組"
+    },
+    "RT023244": {
+      "employee_no": "RT023244",
+      "employee_name": "尤耀慶",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT023245": {
+      "employee_no": "RT023245",
+      "employee_name": "沈天樂",
+      "dept_name": "T高雄4廠"
+    },
+    "RT023546": {
+      "employee_no": "RT023546",
+      "employee_name": "傅泓文",
+      "dept_name": "景觀設計部"
+    },
+    "RT023547": {
+      "employee_no": "RT023547",
+      "employee_name": "江旌豪",
+      "dept_name": "室內設計一部"
+    },
+    "RT023189": {
+      "employee_no": "RT023189",
+      "employee_name": "王文明",
+      "dept_name": "機料部"
+    },
+    "RT023337": {
+      "employee_no": "RT023337",
+      "employee_name": "袁凡瓔",
+      "dept_name": "總經理室"
+    },
+    "RT023411": {
+      "employee_no": "RT023411",
+      "employee_name": "郭順觀",
+      "dept_name": "室內設計一部"
+    },
+    "RT023412": {
+      "employee_no": "RT023412",
+      "employee_name": "陳映慈",
+      "dept_name": "室內設計二部"
+    },
+    "RT023413": {
+      "employee_no": "RT023413",
+      "employee_name": "林珊妤",
+      "dept_name": "室內設計一部"
+    },
+    "RT023561": {
+      "employee_no": "RT023561",
+      "employee_name": "黃長升",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT023545": {
+      "employee_no": "RT023545",
+      "employee_name": "林長和",
+      "dept_name": "生產一組"
+    },
+    "RT023592": {
+      "employee_no": "RT023592",
+      "employee_name": "蘇勝豐",
+      "dept_name": "能資研發"
+    },
+    "RT023937": {
+      "employee_no": "RT023937",
+      "employee_name": "黃立維",
+      "dept_name": "品保安衛部"
+    },
+    "RT023772": {
+      "employee_no": "RT023772",
+      "employee_name": "西學偉",
+      "dept_name": "工程處"
+    },
+    "RT024314": {
+      "employee_no": "RT024314",
+      "employee_name": "葉欣旻",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024315": {
+      "employee_no": "RT024315",
+      "employee_name": "張薰文",
+      "dept_name": "估算部"
+    },
+    "RT024316": {
+      "employee_no": "RT024316",
+      "employee_name": "張祐綸",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT024317": {
+      "employee_no": "RT024317",
+      "employee_name": "鄭智瑋",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT024331": {
+      "employee_no": "RT024331",
+      "employee_name": "李衍孝",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024333": {
+      "employee_no": "RT024333",
+      "employee_name": "連振佑",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024464": {
+      "employee_no": "RT024464",
+      "employee_name": "楊又任",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024465": {
+      "employee_no": "RT024465",
+      "employee_name": "陳公翔",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024853": {
+      "employee_no": "RT024853",
+      "employee_name": "黃思韻",
+      "dept_name": "專業施工部"
+    },
+    "RT024861": {
+      "employee_no": "RT024861",
+      "employee_name": "李宜家",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024862": {
+      "employee_no": "RT024862",
+      "employee_name": "紀崢",
+      "dept_name": "工程規劃部"
+    },
+    "RT024863": {
+      "employee_no": "RT024863",
+      "employee_name": "羅鈺蓉",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024602": {
+      "employee_no": "RT024602",
+      "employee_name": "張家銘",
+      "dept_name": "員工福利組"
+    },
+    "RT024603": {
+      "employee_no": "RT024603",
+      "employee_name": "張博閔",
+      "dept_name": "工程規劃部"
+    },
+    "RT024604": {
+      "employee_no": "RT024604",
+      "employee_name": "陳巍心",
+      "dept_name": "發包中心"
+    },
+    "RT024605": {
+      "employee_no": "RT024605",
+      "employee_name": "劉錦霖",
+      "dept_name": "製造課"
+    },
+    "RT024622": {
+      "employee_no": "RT024622",
+      "employee_name": "黃建發",
+      "dept_name": "南海段都更案"
+    },
+    "RT024431": {
+      "employee_no": "RT024431",
+      "employee_name": "曾敬驊",
+      "dept_name": "美特耐技術部"
+    },
+    "RT024105": {
+      "employee_no": "RT024105",
+      "employee_name": "李緯宸",
+      "dept_name": "室內設計一部"
+    },
+    "RT024300": {
+      "employee_no": "RT024300",
+      "employee_name": "江曉琪",
+      "dept_name": "專業施工部"
+    },
+    "RT024908": {
+      "employee_no": "RT024908",
+      "employee_name": "林瀚平",
+      "dept_name": "工程規劃部"
+    },
+    "RT024102": {
+      "employee_no": "RT024102",
+      "employee_name": "吳宜芳",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024122": {
+      "employee_no": "RT024122",
+      "employee_name": "宋浩宇",
+      "dept_name": "研發中心"
+    },
+    "RT024563": {
+      "employee_no": "RT024563",
+      "employee_name": "蔡念哲",
+      "dept_name": "工程規劃部"
+    },
+    "RT024570": {
+      "employee_no": "RT024570",
+      "employee_name": "羅興煌",
+      "dept_name": "南海段都更案"
+    },
+    "RT024091": {
+      "employee_no": "RT024091",
+      "employee_name": "宋明瑜",
+      "dept_name": "事務所二部"
+    },
+    "RT024157": {
+      "employee_no": "RT024157",
+      "employee_name": "林恒毅",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024183": {
+      "employee_no": "RT024183",
+      "employee_name": "林芸妗",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT024467": {
+      "employee_no": "RT024467",
+      "employee_name": "黃奕峰",
+      "dept_name": "機電工務部"
+    },
+    "RT024637": {
+      "employee_no": "RT024637",
+      "employee_name": "謝珮珊",
+      "dept_name": "事務所二部"
+    },
+    "RT024267": {
+      "employee_no": "RT024267",
+      "employee_name": "陳冠能",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024471": {
+      "employee_no": "RT024471",
+      "employee_name": "蘇登豪",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024515": {
+      "employee_no": "RT024515",
+      "employee_name": "劉沛東",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024447": {
+      "employee_no": "RT024447",
+      "employee_name": "鄭智沅",
+      "dept_name": "工務二部"
+    },
+    "RT024448": {
+      "employee_no": "RT024448",
+      "employee_name": "蔡昀芝",
+      "dept_name": "景觀設計部"
+    },
+    "RT024425": {
+      "employee_no": "RT024425",
+      "employee_name": "蔡俐屏",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024792": {
+      "employee_no": "RT024792",
+      "employee_name": "林躍宬",
+      "dept_name": "生產一組"
+    },
+    "RT024793": {
+      "employee_no": "RT024793",
+      "employee_name": "呂政軒",
+      "dept_name": "能資研發"
+    },
+    "RT024794": {
+      "employee_no": "RT024794",
+      "employee_name": "林湘庭",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024795": {
+      "employee_no": "RT024795",
+      "employee_name": "蔡青汶",
+      "dept_name": "人力資源部"
+    },
+    "RT024516": {
+      "employee_no": "RT024516",
+      "employee_name": "李慶修",
+      "dept_name": "品保安衛部"
+    },
+    "RT024517": {
+      "employee_no": "RT024517",
+      "employee_name": "石仲翔",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024518": {
+      "employee_no": "RT024518",
+      "employee_name": "林慧婷",
+      "dept_name": "工程規劃部"
+    },
+    "RT024519": {
+      "employee_no": "RT024519",
+      "employee_name": "何恭雄",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024520": {
+      "employee_no": "RT024520",
+      "employee_name": "孟志宏",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024541": {
+      "employee_no": "RT024541",
+      "employee_name": "曾睿霖",
+      "dept_name": "室內設計一部"
+    },
+    "RT024716": {
+      "employee_no": "RT024716",
+      "employee_name": "賴允晟",
+      "dept_name": "事務所二部"
+    },
+    "RT024905": {
+      "employee_no": "RT024905",
+      "employee_name": "黃庭翊",
+      "dept_name": "生產一組"
+    },
+    "RT024906": {
+      "employee_no": "RT024906",
+      "employee_name": "李羿頡",
+      "dept_name": "生產一組"
+    },
+    "RT024868": {
+      "employee_no": "RT024868",
+      "employee_name": "陳慧如",
+      "dept_name": "人力資源部"
+    },
+    "RT024330": {
+      "employee_no": "RT024330",
+      "employee_name": "陳宛君",
+      "dept_name": "管制組"
+    },
+    "RT024835": {
+      "employee_no": "RT024835",
+      "employee_name": "鄭文翰",
+      "dept_name": "南海段都更案"
+    },
+    "RT024833": {
+      "employee_no": "RT024833",
+      "employee_name": "郝士傑",
+      "dept_name": "創新軟橋案"
+    },
+    "RT024165": {
+      "employee_no": "RT024165",
+      "employee_name": "路易杰",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024296": {
+      "employee_no": "RT024296",
+      "employee_name": "田維晴",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024297": {
+      "employee_no": "RT024297",
+      "employee_name": "姚宗賢",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024706": {
+      "employee_no": "RT024706",
+      "employee_name": "黃丞營",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024707": {
+      "employee_no": "RT024707",
+      "employee_name": "陳柏宇",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024285": {
+      "employee_no": "RT024285",
+      "employee_name": "劉易恩",
+      "dept_name": "南港之星"
+    },
+    "RT024293": {
+      "employee_no": "RT024293",
+      "employee_name": "申俊輝",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024294": {
+      "employee_no": "RT024294",
+      "employee_name": "蘇芷芸",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024295": {
+      "employee_no": "RT024295",
+      "employee_name": "陳盈達",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024418": {
+      "employee_no": "RT024418",
+      "employee_name": "林潔婷",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024848": {
+      "employee_no": "RT024848",
+      "employee_name": "傅誠",
+      "dept_name": "估算部"
+    },
+    "RT024902": {
+      "employee_no": "RT024902",
+      "employee_name": "魏靖倫",
+      "dept_name": "製造課"
+    },
+    "RT024032": {
+      "employee_no": "RT024032",
+      "employee_name": "羅婉禎",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT024371": {
+      "employee_no": "RT024371",
+      "employee_name": "克斯汀",
+      "dept_name": "製造課"
+    },
+    "RT024846": {
+      "employee_no": "RT024846",
+      "employee_name": "張瑞華",
+      "dept_name": "生產一組"
+    },
+    "RT024246": {
+      "employee_no": "RT024246",
+      "employee_name": "陳聖膽",
+      "dept_name": "室內設計二部"
+    },
+    "RT024717": {
+      "employee_no": "RT024717",
+      "employee_name": "林奕翰",
+      "dept_name": "南港之星"
+    },
+    "RT024723": {
+      "employee_no": "RT024723",
+      "employee_name": "方正宜",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024724": {
+      "employee_no": "RT024724",
+      "employee_name": "方偉宸",
+      "dept_name": "T台南9廠"
+    },
+    "RT024663": {
+      "employee_no": "RT024663",
+      "employee_name": "曾昕",
+      "dept_name": "工程規劃部"
+    },
+    "RT024569": {
+      "employee_no": "RT024569",
+      "employee_name": "陳雅婷",
+      "dept_name": "發包採購"
+    },
+    "RT024828": {
+      "employee_no": "RT024828",
+      "employee_name": "黃書瑋",
+      "dept_name": "T台南9廠"
+    },
+    "RT024052": {
+      "employee_no": "RT024052",
+      "employee_name": "林哲遠",
+      "dept_name": "物料組"
+    },
+    "RT024070": {
+      "employee_no": "RT024070",
+      "employee_name": "羅宗藩",
+      "dept_name": "工程規劃部"
+    },
+    "RT024406": {
+      "employee_no": "RT024406",
+      "employee_name": "丁怡文",
+      "dept_name": "工程規劃部"
+    },
+    "RT024620": {
+      "employee_no": "RT024620",
+      "employee_name": "王炘楷",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024621": {
+      "employee_no": "RT024621",
+      "employee_name": "王柏閔",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024644": {
+      "employee_no": "RT024644",
+      "employee_name": "林杰良",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024919": {
+      "employee_no": "RT024919",
+      "employee_name": "馬儷庭",
+      "dept_name": "T台南9廠"
+    },
+    "RT024254": {
+      "employee_no": "RT024254",
+      "employee_name": "陳安甄",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024613": {
+      "employee_no": "RT024613",
+      "employee_name": "曾華彥",
+      "dept_name": "製造課"
+    },
+    "RT024614": {
+      "employee_no": "RT024614",
+      "employee_name": "江貿詮",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT024615": {
+      "employee_no": "RT024615",
+      "employee_name": "廖峰毅",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024852": {
+      "employee_no": "RT024852",
+      "employee_name": "許安和",
+      "dept_name": "工務二部"
+    },
+    "RT024062": {
+      "employee_no": "RT024062",
+      "employee_name": "杰尼爾",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024063": {
+      "employee_no": "RT024063",
+      "employee_name": "安德羅",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024420": {
+      "employee_no": "RT024420",
+      "employee_name": "王子靖",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024421": {
+      "employee_no": "RT024421",
+      "employee_name": "劉奕昇",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024422": {
+      "employee_no": "RT024422",
+      "employee_name": "廖建利",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024423": {
+      "employee_no": "RT024423",
+      "employee_name": "吳燿州",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024491": {
+      "employee_no": "RT024491",
+      "employee_name": "蕭瑋呈",
+      "dept_name": "機務組"
+    },
+    "RT023909": {
+      "employee_no": "RT023909",
+      "employee_name": "克里斯",
+      "dept_name": "T嘉義1-O棟"
+    },
+    "RT024849": {
+      "employee_no": "RT024849",
+      "employee_name": "蔡承錩",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024850": {
+      "employee_no": "RT024850",
+      "employee_name": "許弘明",
+      "dept_name": "預鑄設計部"
+    },
+    "RT024247": {
+      "employee_no": "RT024247",
+      "employee_name": "郭大榮",
+      "dept_name": "全球人壽總部"
+    },
+    "RT024248": {
+      "employee_no": "RT024248",
+      "employee_name": "鄭芷嵐",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024266": {
+      "employee_no": "RT024266",
+      "employee_name": "吳家君",
+      "dept_name": "事務所一部"
+    },
+    "RT024460": {
+      "employee_no": "RT024460",
+      "employee_name": "張勝雄",
+      "dept_name": "生產二組"
+    },
+    "RT024755": {
+      "employee_no": "RT024755",
+      "employee_name": "楊禮謙",
+      "dept_name": "南港之星"
+    },
+    "RT024756": {
+      "employee_no": "RT024756",
+      "employee_name": "張家瑞",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024757": {
+      "employee_no": "RT024757",
+      "employee_name": "陳亭安",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024758": {
+      "employee_no": "RT024758",
+      "employee_name": "王冠博",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024759": {
+      "employee_no": "RT024759",
+      "employee_name": "何俊宏",
+      "dept_name": "發包中心"
+    },
+    "RT024404": {
+      "employee_no": "RT024404",
+      "employee_name": "湯宸志",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024405": {
+      "employee_no": "RT024405",
+      "employee_name": "郭原倡",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024244": {
+      "employee_no": "RT024244",
+      "employee_name": "陳致仰",
+      "dept_name": "美特耐技術部"
+    },
+    "RT024264": {
+      "employee_no": "RT024264",
+      "employee_name": "黃閔偉",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024163": {
+      "employee_no": "RT024163",
+      "employee_name": "徐子翔",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024164": {
+      "employee_no": "RT024164",
+      "employee_name": "張凱翔",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024328": {
+      "employee_no": "RT024328",
+      "employee_name": "何秉駿",
+      "dept_name": "工務一部"
+    },
+    "RT024379": {
+      "employee_no": "RT024379",
+      "employee_name": "連翌涵",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT024380": {
+      "employee_no": "RT024380",
+      "employee_name": "潘宗瑋",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024382": {
+      "employee_no": "RT024382",
+      "employee_name": "吳昭進",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT024784": {
+      "employee_no": "RT024784",
+      "employee_name": "施怡均",
+      "dept_name": "人力資源部"
+    },
+    "RT024081": {
+      "employee_no": "RT024081",
+      "employee_name": "范錦泉",
+      "dept_name": "製造課"
+    },
+    "RT024083": {
+      "employee_no": "RT024083",
+      "employee_name": "錢煜澤",
+      "dept_name": "南海段都更案"
+    },
+    "RT024702": {
+      "employee_no": "RT024702",
+      "employee_name": "葉毓襄",
+      "dept_name": "專業施工部"
+    },
+    "RT024719": {
+      "employee_no": "RT024719",
+      "employee_name": "黃威遠",
+      "dept_name": "工務二部"
+    },
+    "RT024720": {
+      "employee_no": "RT024720",
+      "employee_name": "林欣儀",
+      "dept_name": "室內設計二部"
+    },
+    "RT024721": {
+      "employee_no": "RT024721",
+      "employee_name": "黃薇蓉",
+      "dept_name": "室內設計二部"
+    },
+    "RT024185": {
+      "employee_no": "RT024185",
+      "employee_name": "郭志暄",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024532": {
+      "employee_no": "RT024532",
+      "employee_name": "江文宗",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024299": {
+      "employee_no": "RT024299",
+      "employee_name": "游鈞閎",
+      "dept_name": "工務一部"
+    },
+    "RT024210": {
+      "employee_no": "RT024210",
+      "employee_name": "陳民軒",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024277": {
+      "employee_no": "RT024277",
+      "employee_name": "詹貿旭",
+      "dept_name": "工務三部"
+    },
+    "RT024385": {
+      "employee_no": "RT024385",
+      "employee_name": "范仲宇",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024386": {
+      "employee_no": "RT024386",
+      "employee_name": "朱天罡",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024574": {
+      "employee_no": "RT024574",
+      "employee_name": "薛惠謙",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024575": {
+      "employee_no": "RT024575",
+      "employee_name": "蔡佳靜",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024576": {
+      "employee_no": "RT024576",
+      "employee_name": "陳怡汶",
+      "dept_name": "工程規劃部"
+    },
+    "RT024577": {
+      "employee_no": "RT024577",
+      "employee_name": "郭聿凱",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024679": {
+      "employee_no": "RT024679",
+      "employee_name": "莊子霈",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024680": {
+      "employee_no": "RT024680",
+      "employee_name": "尤妤甄",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024681": {
+      "employee_no": "RT024681",
+      "employee_name": "林子珊",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024682": {
+      "employee_no": "RT024682",
+      "employee_name": "李冠賦",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024683": {
+      "employee_no": "RT024683",
+      "employee_name": "賴科樺",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024684": {
+      "employee_no": "RT024684",
+      "employee_name": "賴昱衡",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024685": {
+      "employee_no": "RT024685",
+      "employee_name": "廖韋勳",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024761": {
+      "employee_no": "RT024761",
+      "employee_name": "劉家瑋",
+      "dept_name": "生產二組"
+    },
+    "RT024829": {
+      "employee_no": "RT024829",
+      "employee_name": "潘祥榮",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024830": {
+      "employee_no": "RT024830",
+      "employee_name": "徐偉銘",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024897": {
+      "employee_no": "RT024897",
+      "employee_name": "李佾倫",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024898": {
+      "employee_no": "RT024898",
+      "employee_name": "陳冠亦",
+      "dept_name": "資訊部"
+    },
+    "RT024045": {
+      "employee_no": "RT024045",
+      "employee_name": "德斯特",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024046": {
+      "employee_no": "RT024046",
+      "employee_name": "馬艾爾",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024047": {
+      "employee_no": "RT024047",
+      "employee_name": "丹尼爾",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024049": {
+      "employee_no": "RT024049",
+      "employee_name": "羅伯特",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024051": {
+      "employee_no": "RT024051",
+      "employee_name": "舒文",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024053": {
+      "employee_no": "RT024053",
+      "employee_name": "裘伊",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024054": {
+      "employee_no": "RT024054",
+      "employee_name": "傑諾米",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024500": {
+      "employee_no": "RT024500",
+      "employee_name": "賴翊瑄",
+      "dept_name": "能資研發"
+    },
+    "RT024501": {
+      "employee_no": "RT024501",
+      "employee_name": "吳埕維",
+      "dept_name": "會計部"
+    },
+    "RT024785": {
+      "employee_no": "RT024785",
+      "employee_name": "蔡屹",
+      "dept_name": "南海段都更案"
+    },
+    "RT024786": {
+      "employee_no": "RT024786",
+      "employee_name": "李政緯",
+      "dept_name": "總務課"
+    },
+    "RT024787": {
+      "employee_no": "RT024787",
+      "employee_name": "林佩宣",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024836": {
+      "employee_no": "RT024836",
+      "employee_name": "彭庶育",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024061": {
+      "employee_no": "RT024061",
+      "employee_name": "白柏樂",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024282": {
+      "employee_no": "RT024282",
+      "employee_name": "陳師睿",
+      "dept_name": "研發中心"
+    },
+    "RT024283": {
+      "employee_no": "RT024283",
+      "employee_name": "莊茜雯",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024312": {
+      "employee_no": "RT024312",
+      "employee_name": "徐啟華",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024313": {
+      "employee_no": "RT024313",
+      "employee_name": "張世昕",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024211": {
+      "employee_no": "RT024211",
+      "employee_name": "張瑋倫",
+      "dept_name": "品保組"
+    },
+    "RT024214": {
+      "employee_no": "RT024214",
+      "employee_name": "呂廣智",
+      "dept_name": "電務組"
+    },
+    "RT024548": {
+      "employee_no": "RT024548",
+      "employee_name": "卡麥斯",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024549": {
+      "employee_no": "RT024549",
+      "employee_name": "迪恩",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024550": {
+      "employee_no": "RT024550",
+      "employee_name": "拉瑪斯",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024551": {
+      "employee_no": "RT024551",
+      "employee_name": "卡洛",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024552": {
+      "employee_no": "RT024552",
+      "employee_name": "巴瑞",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024741": {
+      "employee_no": "RT024741",
+      "employee_name": "范世忠",
+      "dept_name": "T台南9廠"
+    },
+    "RT024742": {
+      "employee_no": "RT024742",
+      "employee_name": "王琇玉",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024745": {
+      "employee_no": "RT024745",
+      "employee_name": "李曄舜",
+      "dept_name": "創新新都段"
+    },
+    "RT024180": {
+      "employee_no": "RT024180",
+      "employee_name": "游偉翔",
+      "dept_name": "美特耐生管部"
+    },
+    "RT024181": {
+      "employee_no": "RT024181",
+      "employee_name": "葛凱駿",
+      "dept_name": "生產二組"
+    },
+    "RT024199": {
+      "employee_no": "RT024199",
+      "employee_name": "李明仁",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024200": {
+      "employee_no": "RT024200",
+      "employee_name": "張兆安",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024305": {
+      "employee_no": "RT024305",
+      "employee_name": "吳嘉恩",
+      "dept_name": "室內設計三部"
+    },
+    "RT024306": {
+      "employee_no": "RT024306",
+      "employee_name": "陳芮蓁",
+      "dept_name": "室內設計二部"
+    },
+    "RT024553": {
+      "employee_no": "RT024553",
+      "employee_name": "喬安",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024490": {
+      "employee_no": "RT024490",
+      "employee_name": "單復昇",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024554": {
+      "employee_no": "RT024554",
+      "employee_name": "亞諾德",
+      "dept_name": "高雄光寶大樓"
+    },
+    "RT024555": {
+      "employee_no": "RT024555",
+      "employee_name": "基羅斯",
+      "dept_name": "南港之星"
+    },
+    "RT024592": {
+      "employee_no": "RT024592",
+      "employee_name": "楊淳孝",
+      "dept_name": "松江路都更案"
+    },
+    "RT024847": {
+      "employee_no": "RT024847",
+      "employee_name": "曾翔逵",
+      "dept_name": "生產二組"
+    },
+    "RT024593": {
+      "employee_no": "RT024593",
+      "employee_name": "楊冠穎",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024388": {
+      "employee_no": "RT024388",
+      "employee_name": "艾斯",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024389": {
+      "employee_no": "RT024389",
+      "employee_name": "竣瑞",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024343": {
+      "employee_no": "RT024343",
+      "employee_name": "方頌仰",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024344": {
+      "employee_no": "RT024344",
+      "employee_name": "常哲愷",
+      "dept_name": "全球人壽總部"
+    },
+    "RT024346": {
+      "employee_no": "RT024346",
+      "employee_name": "蘇振宇",
+      "dept_name": "T寶山4廠"
+    },
+    "RT024496": {
+      "employee_no": "RT024496",
+      "employee_name": "徐銘偉",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024498": {
+      "employee_no": "RT024498",
+      "employee_name": "許仲嘉",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024695": {
+      "employee_no": "RT024695",
+      "employee_name": "謝明原",
+      "dept_name": "T中科P1C廠"
+    },
+    "RT024696": {
+      "employee_no": "RT024696",
+      "employee_name": "韋薩米",
+      "dept_name": "工程規劃部"
+    },
+    "RT024927": {
+      "employee_no": "RT024927",
+      "employee_name": "黃証峰",
+      "dept_name": "電務組"
+    },
+    "RT024364": {
+      "employee_no": "RT024364",
+      "employee_name": "張凱筑",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024365": {
+      "employee_no": "RT024365",
+      "employee_name": "戴子翔",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024366": {
+      "employee_no": "RT024366",
+      "employee_name": "許琇媛",
+      "dept_name": "資訊部"
+    },
+    "RT024367": {
+      "employee_no": "RT024367",
+      "employee_name": "拉斐爾",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024368": {
+      "employee_no": "RT024368",
+      "employee_name": "戴夫",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024369": {
+      "employee_no": "RT024369",
+      "employee_name": "利奧多",
+      "dept_name": "正覺寺新建案"
+    },
+    "RT024076": {
+      "employee_no": "RT024076",
+      "employee_name": "江彥麇",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024078": {
+      "employee_no": "RT024078",
+      "employee_name": "許哲瑋",
+      "dept_name": "南海段都更案"
+    },
+    "RT024160": {
+      "employee_no": "RT024160",
+      "employee_name": "陳信甫",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024301": {
+      "employee_no": "RT024301",
+      "employee_name": "廖婉惠",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024899": {
+      "employee_no": "RT024899",
+      "employee_name": "鄧鴻鑫",
+      "dept_name": "T台南9廠"
+    },
+    "RT024033": {
+      "employee_no": "RT024033",
+      "employee_name": "羅莘耘",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024322": {
+      "employee_no": "RT024322",
+      "employee_name": "吳奐貞",
+      "dept_name": "山榮南美預鑄"
+    },
+    "RT024323": {
+      "employee_no": "RT024323",
+      "employee_name": "陳哲仲",
+      "dept_name": "工程規劃部"
+    },
+    "RT024143": {
+      "employee_no": "RT024143",
+      "employee_name": "周佩儀",
+      "dept_name": "T台南9廠"
+    },
+    "RT024145": {
+      "employee_no": "RT024145",
+      "employee_name": "岑復興",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024213": {
+      "employee_no": "RT024213",
+      "employee_name": "王柏文",
+      "dept_name": "預鑄設計部"
+    },
+    "RT024215": {
+      "employee_no": "RT024215",
+      "employee_name": "曾俊耀",
+      "dept_name": "預鑄設計部"
+    },
+    "RT024216": {
+      "employee_no": "RT024216",
+      "employee_name": "高逸安",
+      "dept_name": "研發中心"
+    },
+    "RT024217": {
+      "employee_no": "RT024217",
+      "employee_name": "喬麥可",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT024218": {
+      "employee_no": "RT024218",
+      "employee_name": "馬杰維",
+      "dept_name": "埔心安居社宅"
+    },
+    "RT024901": {
+      "employee_no": "RT024901",
+      "employee_name": "莊志清",
+      "dept_name": "室內設計一部"
+    },
+    "RT024325": {
+      "employee_no": "RT024325",
+      "employee_name": "許哲瑋",
+      "dept_name": "生產二組"
+    },
+    "RT024472": {
+      "employee_no": "RT024472",
+      "employee_name": "陳佳佑",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024531": {
+      "employee_no": "RT024531",
+      "employee_name": "劉選恩",
+      "dept_name": "進口代理部"
+    },
+    "RT024722": {
+      "employee_no": "RT024722",
+      "employee_name": "江宥宣",
+      "dept_name": "事務所一部"
+    },
+    "RT024738": {
+      "employee_no": "RT024738",
+      "employee_name": "諾亞",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024813": {
+      "employee_no": "RT024813",
+      "employee_name": "黃宥文",
+      "dept_name": "室內設計二部"
+    },
+    "RT024452": {
+      "employee_no": "RT024452",
+      "employee_name": "王蕙伶",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024453": {
+      "employee_no": "RT024453",
+      "employee_name": "劉彥志",
+      "dept_name": "前導測試組"
+    },
+    "RT024140": {
+      "employee_no": "RT024140",
+      "employee_name": "周承毅",
+      "dept_name": "製造課"
+    },
+    "RT024142": {
+      "employee_no": "RT024142",
+      "employee_name": "何家達",
+      "dept_name": "儲運課"
+    },
+    "RT024241": {
+      "employee_no": "RT024241",
+      "employee_name": "陳茹婷",
+      "dept_name": "室內設計二部"
+    },
+    "RT024242": {
+      "employee_no": "RT024242",
+      "employee_name": "張堯閎",
+      "dept_name": "室內設計二部"
+    },
+    "RT024454": {
+      "employee_no": "RT024454",
+      "employee_name": "徐志仁",
+      "dept_name": "美特耐業務部"
+    },
+    "RT024106": {
+      "employee_no": "RT024106",
+      "employee_name": "爾文",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024107": {
+      "employee_no": "RT024107",
+      "employee_name": "康堤洛",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024108": {
+      "employee_no": "RT024108",
+      "employee_name": "傑森",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024598": {
+      "employee_no": "RT024598",
+      "employee_name": "吳采婕",
+      "dept_name": "進口代理部"
+    },
+    "RT024546": {
+      "employee_no": "RT024546",
+      "employee_name": "陳沛禎",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024789": {
+      "employee_no": "RT024789",
+      "employee_name": "林佳興",
+      "dept_name": "T高雄4廠"
+    },
+    "RT024093": {
+      "employee_no": "RT024093",
+      "employee_name": "周承熹",
+      "dept_name": "室內設計二部"
+    },
+    "RT024154": {
+      "employee_no": "RT024154",
+      "employee_name": "蘇詺勛",
+      "dept_name": "T寶山3廠"
+    },
+    "RT024128": {
+      "employee_no": "RT024128",
+      "employee_name": "劉碩宸",
+      "dept_name": "物料組"
+    },
+    "RT024399": {
+      "employee_no": "RT024399",
+      "employee_name": "林韻如",
+      "dept_name": "工務三部"
+    },
+    "RT024675": {
+      "employee_no": "RT024675",
+      "employee_name": "張婷蔚",
+      "dept_name": "室內設計一部"
+    },
+    "RT024109": {
+      "employee_no": "RT024109",
+      "employee_name": "林俊翰",
+      "dept_name": "南港之星"
+    },
+    "RT023921": {
+      "employee_no": "RT023921",
+      "employee_name": "郭慧玲",
+      "dept_name": "室內設計三部"
+    },
+    "RT024678": {
+      "employee_no": "RT024678",
+      "employee_name": "王彥彬",
+      "dept_name": "室內設計二部"
+    },
+    "RT024752": {
+      "employee_no": "RT024752",
+      "employee_name": "林佳彥",
+      "dept_name": "生產一組"
+    },
+    "RT024134": {
+      "employee_no": "RT024134",
+      "employee_name": "張妏如",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024073": {
+      "employee_no": "RT024073",
+      "employee_name": "張暘",
+      "dept_name": "光寶高雄二期"
+    },
+    "RT024459": {
+      "employee_no": "RT024459",
+      "employee_name": "許弼實",
+      "dept_name": "M專案AATT2"
+    },
+    "RT024166": {
+      "employee_no": "RT024166",
+      "employee_name": "艾瑞德",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT024167": {
+      "employee_no": "RT024167",
+      "employee_name": "喬愷文",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024168": {
+      "employee_no": "RT024168",
+      "employee_name": "史蒂夫",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024169": {
+      "employee_no": "RT024169",
+      "employee_name": "保羅",
+      "dept_name": "M專案台南200K"
+    },
+    "RT024170": {
+      "employee_no": "RT024170",
+      "employee_name": "喬內爾",
+      "dept_name": "龍潭質子加速"
+    },
+    "RT024355": {
+      "employee_no": "RT024355",
+      "employee_name": "林吟霜",
+      "dept_name": "T嘉義2廠"
+    },
+    "RT024726": {
+      "employee_no": "RT024726",
+      "employee_name": "吳麗珊",
+      "dept_name": "T台南9廠"
+    },
+    "RT024728": {
+      "employee_no": "RT024728",
+      "employee_name": "鄭依佩",
+      "dept_name": "鋼筋管理中心"
+    },
+    "RT024729": {
+      "employee_no": "RT024729",
+      "employee_name": "遲劭同",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024730": {
+      "employee_no": "RT024730",
+      "employee_name": "魏厚亞",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024731": {
+      "employee_no": "RT024731",
+      "employee_name": "帕斯",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024732": {
+      "employee_no": "RT024732",
+      "employee_name": "弗拉姆",
+      "dept_name": "T台南9廠"
+    },
+    "RT024733": {
+      "employee_no": "RT024733",
+      "employee_name": "克萊斯",
+      "dept_name": "臺大虎尾醫院"
+    },
+    "RT024734": {
+      "employee_no": "RT024734",
+      "employee_name": "米爾",
+      "dept_name": "南港之星"
+    },
+    "RT024639": {
+      "employee_no": "RT024639",
+      "employee_name": "林恩德",
+      "dept_name": "T高雄5廠"
+    },
+    "RT024641": {
+      "employee_no": "RT024641",
+      "employee_name": "林振明",
+      "dept_name": "T中科P1F廠"
+    },
+    "RT024642": {
+      "employee_no": "RT024642",
+      "employee_name": "李育誠",
+      "dept_name": "T中科P1F廠"
+    }
+  }
+}

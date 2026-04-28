@@ -15,7 +15,7 @@ export async function POST(req: Request, { params }: { params: { id: string } })
     const next = await tx.request.update({
       where: { id: params.id },
       data: {
-        status: "PROCESSING",
+        status: "SUBMITTED",
         shippedAt: null,
         shippedById: null,
         items: { updateMany: { where: { requestId: params.id }, data: { shippedAt: null } } },
@@ -25,7 +25,7 @@ export async function POST(req: Request, { params }: { params: { id: string } })
       data: {
         requestId: params.id,
         fromStatus: "SHIPPED",
-        toStatus: "PROCESSING",
+        toStatus: "SUBMITTED",
         changedById: r.user.id,
         note,
       },
