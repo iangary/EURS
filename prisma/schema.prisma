@@ -1,0 +1,150 @@
+// EURS — 總務部設備／制服線上領取系統
+// 詳細欄位說明見 SPEC.md §4
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RequestType {
+  HELMET
+  SHOES
+  UNIFORM
+}
+
+enum RequestStatus {
+  SUBMITTED
+  PROCESSING
+  SHIPPED
+  REJECTED
+}
+
+enum UniformAction {
+  NEW
+  REPLACE
+  PURCHASE
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+enum BloodType {
+  A
+  B
+  O
+  AB
+}
+
+enum Role {
+  REQUESTER
+  ADMIN
+}
+
+model User {
+  id         String    @id // 員工編號
+  name       String
+  email      String
+  department String
+  role       Role      @default(REQUESTER)
+  createdAt  DateTime  @default(now())
+  requests   Request[]
+}
+
+model Request {
+  id            String        @id @default(cuid())
+  requestNo     String        @unique
+  type          RequestType
+  requesterId   String
+  requester     User          @relation(fields: [requesterId], references: [id])
+  requesterName String
+  siteOrDept    String
+  status        RequestStatus @default(SUBMITTED)
+  remark        String?
+  rejectReason  String?
+  submittedAt   DateTime      @default(now())
+  shippedAt     DateTime?
+  shippedById   String?
+  importNote    String? // §3.5.6 例如「由 Excel 匯入 12 列」
+  items         RequestItem[]
+  attachments   Attachment[]
+  logs          StatusLog[]
+
+  @@index([type, status])
+  @@index([requesterId])
+  @@index([submittedAt])
+}
+
+model RequestItem {
+  id        String  @id @default(cuid())
+  requestId String
+  request   Request @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  wearerAcc String  @default("") // 使用人員工編號 (acc)
+  userName  String  // 使用人姓名快照（由 acc 查 emp API 帶入）
+
+  // 安全帽
+  bloodType BloodType?
+
+  // 安全鞋
+  shoeSize Int?
+  reason   String?
+
+  // 制服 — 主分類層級
+  gender Gender?
+
+  // 制服 — 上衣子卡
+  topSelected Boolean        @default(false)
+  topSize     String?
+  topQty      Int?
+  topAction   UniformAction?
+
+  // 制服 — 折褲子卡
+  pantsSelected Boolean        @default(false)
+  pantsWaist    Int?
+  pantsLength   Int?
+  pantsQty      Int?
+  pantsAction   UniformAction?
+
+  shippedAt DateTime?
+
+  @@index([wearerAcc])
+  @@index([userName])
+  @@index([shippedAt])
+}
+
+model Attachment {
+  id          String   @id @default(cuid())
+  requestId   String?
+  request     Request? @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  uploaderId  String   // 上傳者員工編號（用以驗證 pending 附件擁有者）
+  fileName    String
+  storedPath  String
+  mimeType    String
+  size        Int
+  uploadedAt  DateTime @default(now())
+
+  @@index([requestId])
+  @@index([uploaderId])
+}
+
+model StatusLog {
+  id          String         @id @default(cuid())
+  requestId   String
+  request     Request        @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  fromStatus  RequestStatus?
+  toStatus    RequestStatus
+  changedById String
+  changedAt   DateTime       @default(now())
+  note        String?
+}
+
+model SystemSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
