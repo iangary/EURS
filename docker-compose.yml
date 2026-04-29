@@ -28,7 +28,7 @@ services:
       NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
       EMP_API_BASE: ${EMP_API_BASE:-http://172.16.105.117/emp}
       SSO_API_KEY: ${SSO_API_KEY}
-      MAIL_API_BASE: ${MAIL_API_BASE:-http://172.16.105.117/app}
+      MAIL_API_BASE: ${MAIL_API_BASE:-http://172.16.105.117/app/mail}
       UPLOAD_DIR: /app/uploads
       MAX_UPLOAD_MB: "10"
       MAX_ATTACHMENTS_PER_REQUEST: "5"

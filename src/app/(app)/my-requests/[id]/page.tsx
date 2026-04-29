@@ -18,5 +18,6 @@ export default async function MyRequestDetail({ params }: { params: { id: string
   });
   if (!r) notFound();
   if (r.requesterId !== session.user.id && session.user.role !== "ADMIN") notFound();
-  return <RequestDetail request={r as any} viewerRole={session.user.role} />;
+  const viewerRole = r.requesterId === session.user.id ? "REQUESTER" : "ADMIN";
+  return <RequestDetail request={r as any} viewerRole={viewerRole} />;
 }

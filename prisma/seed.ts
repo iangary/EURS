@@ -10,15 +10,15 @@ async function main() {
     SHOE_SIZES: JSON.stringify([36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]),
     BLOOD_TYPES: JSON.stringify(["A", "B", "O", "AB"]),
     TOP_SIZES: JSON.stringify(["S", "M", "L", "XL", "2XL", "3XL"]),
-    PANTS_WAIST: JSON.stringify([28, 30, 32, 34, 36, 38, 40, 42]),
-    PANTS_LENGTH: JSON.stringify([28, 30, 32, 34, 36]),
+    PANTS_WAIST: JSON.stringify(Array.from({ length: 41 }, (_, i) => 70 + i)),
+    PANTS_LENGTH: JSON.stringify(Array.from({ length: 21 }, (_, i) => 70 + i)),
     ADMIN_NOTIFY_EMAILS: JSON.stringify(["admin@example.com"]),
     ADMIN_EMPLOYEE_IDS: JSON.stringify(["A001"]),
   };
   for (const [key, value] of Object.entries(settings)) {
     await db.systemSetting.upsert({
       where: { key },
-      update: { value },
+      update: {},
       create: { key, value },
     });
   }

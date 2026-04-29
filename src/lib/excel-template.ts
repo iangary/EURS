@@ -68,8 +68,8 @@ async function addUniformSheet(wb: ExcelJS.Workbook): Promise<void> {
     "L",
     1,
     "新領",
-    32,
-    30,
+    80,
+    80,
     1,
     "新領",
     "上衣與折褲至少填一組；不申請的子項目整組留空",
@@ -83,8 +83,8 @@ async function addUniformSheet(wb: ExcelJS.Workbook): Promise<void> {
   ];
 
   const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, ["S", "M", "L", "XL", "2XL", "3XL"]);
-  const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
-  const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
+  const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, Array.from({ length: 41 }, (_, i) => 70 + i));
+  const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, Array.from({ length: 21 }, (_, i) => 70 + i));
   const actions = "新領,更換,自購";
 
   (ws as any).dataValidations.add("B3:B500", { type: "list", allowBlank: false, formulae: ['"男,女"'] });
@@ -99,8 +99,8 @@ async function addHelp(wb: ExcelJS.Workbook): Promise<void> {
   const blood = await getSettingJson<string[]>(SettingKeys.BLOOD_TYPES, ["A", "B", "O", "AB"]);
   const sizes = await getSettingJson<number[]>(SettingKeys.SHOE_SIZES, [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]);
   const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, ["S", "M", "L", "XL", "2XL", "3XL"]);
-  const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
-  const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
+  const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, Array.from({ length: 41 }, (_, i) => 70 + i));
+  const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, Array.from({ length: 21 }, (_, i) => 70 + i));
   const help = wb.addWorksheet("說明");
   help.addRow(["分頁", "欄位", "規則"]);
   help.addRow(["安全帽", "血型", `必填，可選：${blood.join("／")}`]);

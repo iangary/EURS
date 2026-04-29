@@ -5,6 +5,8 @@
 // - 嘗試常見欄位 (id/employee_id, name/cname, email, department/dept)
 // - 連線失敗時回傳 null，由呼叫端 fallback 至本地 User 表
 
+import { recordApiError, clearApiError } from "./api-health";
+
 const BASE = process.env.EMP_API_BASE ?? "http://172.16.105.117/emp";
 const API_KEY = process.env.SSO_API_KEY ?? "";
 
@@ -45,9 +47,15 @@ async function safeJson(url: string): Promise<any | null> {
       signal: AbortSignal.timeout(3000),
       headers: authHeaders(),
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      await recordApiError("emp", res.status, `${res.status} ${text || res.statusText}`);
+      return null;
+    }
+    await clearApiError("emp");
     return await res.json();
-  } catch {
+  } catch (e) {
+    await recordApiError("emp", null, e instanceof Error ? e.message : String(e));
     return null;
   }
 }
@@ -74,9 +82,17 @@ export async function lookupByAcc(acc: string): Promise<Employee | null> {
       cache: "no-store",
       signal: AbortSignal.timeout(5000),
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      await recordApiError("emp", res.status, `${res.status} ${text || res.statusText}`);
+      return null;
+    }
     const json = await res.json();
-    if (json?.result === false || !json?.data) return null;
+    if (json?.result === false || !json?.data) {
+      await clearApiError("emp");
+      return null;
+    }
+    await clearApiError("emp");
     const d = json.data;
     const id = d.employee_no || d.acc || acc;
     const name = d.employee_name || d.name || "";
@@ -87,7 +103,8 @@ export async function lookupByAcc(acc: string): Promise<Employee | null> {
       email: String(d.email ?? ""),
       department: String(d.dept_name ?? d.cost_deptname ?? ""),
     };
-  } catch {
+  } catch (e) {
+    await recordApiError("emp", null, e instanceof Error ? e.message : String(e));
     return null;
   }
 }
