@@ -1,7 +1,7 @@
 import ExcelJS from "exceljs";
 import { getSettingJson, SettingKeys } from "./settings";
 
-export type TemplateType = "helmet" | "shoes" | "uniform";
+export type TemplateType = "helmet" | "shoes" | "uniform" | "unified";
 
 const NOTE_FILL: ExcelJS.FillPattern = {
   type: "pattern",
@@ -14,8 +14,7 @@ const HEADER_FILL: ExcelJS.FillPattern = {
   fgColor: { argb: "FFDBEAFE" },
 };
 
-async function buildHelmet(): Promise<ExcelJS.Workbook> {
-  const wb = new ExcelJS.Workbook();
+async function addHelmetSheet(wb: ExcelJS.Workbook): Promise<void> {
   const ws = wb.addWorksheet("安全帽");
   ws.addRow(["使用人工號*", "血型*", "備註"]);
   ws.addRow(["A12345", "A", "（範例列，匯入時略過）"]);
@@ -30,17 +29,9 @@ async function buildHelmet(): Promise<ExcelJS.Workbook> {
     allowBlank: false,
     formulae: [`"${blood.join(",")}"`],
   });
-
-  const help = wb.addWorksheet("說明");
-  help.addRow(["欄位", "規則"]);
-  help.addRow(["使用人工號", "必填，將自動查詢人事系統帶出姓名"]);
-  help.addRow(["血型", `必填，可選：${blood.join("／")}`]);
-  help.addRow(["備註", "可空白"]);
-  return wb;
 }
 
-async function buildShoes(): Promise<ExcelJS.Workbook> {
-  const wb = new ExcelJS.Workbook();
+async function addShoesSheet(wb: ExcelJS.Workbook): Promise<void> {
   const ws = wb.addWorksheet("安全鞋");
   ws.addRow(["使用人工號*", "鞋號*", "說明原因*", "備註"]);
   ws.addRow(["A12345", 42, "工地新進人員", "（範例列）"]);
@@ -55,17 +46,9 @@ async function buildShoes(): Promise<ExcelJS.Workbook> {
     allowBlank: false,
     formulae: [`"${sizes.join(",")}"`],
   });
-
-  const help = wb.addWorksheet("說明");
-  help.addRow(["欄位", "規則"]);
-  help.addRow(["使用人工號", "必填，將自動查詢人事系統帶出姓名"]);
-  help.addRow(["鞋號", `必填，可選：${sizes.join("／")}`]);
-  help.addRow(["說明原因", "必填，工地申請理由"]);
-  return wb;
 }
 
-async function buildUniform(): Promise<ExcelJS.Workbook> {
-  const wb = new ExcelJS.Workbook();
+async function addUniformSheet(wb: ExcelJS.Workbook): Promise<void> {
   const ws = wb.addWorksheet("制服");
   ws.addRow([
     "使用人工號*",
@@ -110,41 +93,51 @@ async function buildUniform(): Promise<ExcelJS.Workbook> {
   (ws as any).dataValidations.add("F3:F500", { type: "list", allowBlank: true, formulae: [`"${waists.join(",")}"`] });
   (ws as any).dataValidations.add("G3:G500", { type: "list", allowBlank: true, formulae: [`"${lengths.join(",")}"`] });
   (ws as any).dataValidations.add("I3:I500", { type: "list", allowBlank: true, formulae: [`"${actions}"`] });
+}
 
+async function addHelp(wb: ExcelJS.Workbook): Promise<void> {
+  const blood = await getSettingJson<string[]>(SettingKeys.BLOOD_TYPES, ["A", "B", "O", "AB"]);
+  const sizes = await getSettingJson<number[]>(SettingKeys.SHOE_SIZES, [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]);
+  const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, ["S", "M", "L", "XL", "2XL", "3XL"]);
+  const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
+  const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
   const help = wb.addWorksheet("說明");
-  help.addRow(["欄位", "規則"]);
-  help.addRow(["性別", "男 或 女（必填）"]);
-  help.addRow(["上衣尺寸", `S／M／L／XL／2XL／3XL；不申請可留空`]);
-  help.addRow(["上衣件數", "1～5；不申請可留空"]);
-  help.addRow(["上衣領用方式", "新領／更換／自購；不申請可留空"]);
-  help.addRow(["折褲腰圍", waists.join("／")]);
-  help.addRow(["折褲褲長", lengths.join("／")]);
-  help.addRow(["折褲件數", "1～5；不申請可留空"]);
-  help.addRow(["折褲領用方式", "新領／更換／自購"]);
-  help.addRow([
-    "更換／自購",
-    "更換需於上傳後在預覽頁補附件；自購送出時會跳出匯款資訊視窗",
-  ]);
-  return wb;
+  help.addRow(["分頁", "欄位", "規則"]);
+  help.addRow(["安全帽", "血型", `必填，可選：${blood.join("／")}`]);
+  help.addRow(["安全鞋", "鞋號", `必填，可選：${sizes.join("／")}`]);
+  help.addRow(["安全鞋", "說明原因", "必填"]);
+  help.addRow(["制服", "性別", "男 或 女（必填）"]);
+  help.addRow(["制服", "上衣尺寸", tops.join("／")]);
+  help.addRow(["制服", "折褲腰圍", waists.join("／")]);
+  help.addRow(["制服", "折褲褲長", lengths.join("／")]);
+  help.addRow(["制服", "領用方式", "新領／更換／自購；更換需附件、自購跳匯款視窗"]);
+  help.addRow(["共通", "使用人工號", "必填，自動帶入姓名與所屬部門"]);
 }
 
 export async function buildTemplate(type: TemplateType): Promise<{ buffer: Buffer; filename: string }> {
-  let wb: ExcelJS.Workbook;
+  const wb = new ExcelJS.Workbook();
   let label: string;
   switch (type) {
     case "helmet":
-      wb = await buildHelmet();
+      await addHelmetSheet(wb);
       label = "安全帽";
       break;
     case "shoes":
-      wb = await buildShoes();
+      await addShoesSheet(wb);
       label = "安全鞋";
       break;
     case "uniform":
-      wb = await buildUniform();
+      await addUniformSheet(wb);
       label = "制服";
       break;
+    case "unified":
+      await addHelmetSheet(wb);
+      await addShoesSheet(wb);
+      await addUniformSheet(wb);
+      label = "統一";
+      break;
   }
+  await addHelp(wb);
   const buf = await wb.xlsx.writeBuffer();
-  return { buffer: Buffer.from(buf), filename: `EURS_批量範本_${label}.xlsx` };
+  return { buffer: Buffer.from(buf), filename: `EURS_批量範本_${label!}.xlsx` };
 }

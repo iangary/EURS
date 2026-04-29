@@ -21,6 +21,12 @@ export type ImportRow = {
   data: any;
 };
 
+export type UnifiedImportResult = {
+  helmet: ImportRow[];
+  shoes: ImportRow[];
+  uniform: ImportRow[];
+};
+
 const ROW_LIMIT = 200;
 const ACTION_MAP = { 新領: "NEW", 更換: "REPLACE", 自購: "PURCHASE" } as const;
 
@@ -41,22 +47,37 @@ function num(cell: ExcelJS.Cell): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
-async function readFirstSheet(file: File): Promise<ExcelJS.Worksheet> {
+async function loadWorkbook(file: File): Promise<ExcelJS.Workbook> {
   const ab = await file.arrayBuffer();
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.load(ab as any);
+  return wb;
+}
+
+async function readFirstSheet(file: File): Promise<ExcelJS.Worksheet> {
+  const wb = await loadWorkbook(file);
   const ws = wb.worksheets[0];
   if (!ws) throw new Error("Excel 檔內沒有任何工作表");
   return ws;
 }
 
-export async function parseHelmet(file: File): Promise<ImportRow[]> {
-  const ws = await readFirstSheet(file);
+const SHEET_NAME_HELMET = ["HELMET", "安全帽"];
+const SHEET_NAME_SHOES = ["SHOES", "安全鞋"];
+const SHEET_NAME_UNIFORM = ["UNIFORM", "制服"];
+
+function findSheet(wb: ExcelJS.Workbook, names: string[]): ExcelJS.Worksheet | null {
+  for (const ws of wb.worksheets) {
+    const n = (ws.name ?? "").trim().toUpperCase();
+    if (names.some((x) => x.toUpperCase() === n)) return ws;
+  }
+  return null;
+}
+
+async function parseHelmetSheet(ws: ExcelJS.Worksheet): Promise<ImportRow[]> {
   const blood = await getSettingJson<string[]>(SettingKeys.BLOOD_TYPES, ["A", "B", "O", "AB"]);
   const out: ImportRow[] = [];
   const empCache = new Map<string, Employee | null>();
 
-  // 第 1 列為表頭、第 2 列為範例（略過）；資料從第 3 列起
   const total = Math.max(0, ws.rowCount - 2);
   if (total > ROW_LIMIT) {
     return [{ rowNumber: 0, status: "error", errors: [`一次最多匯入 ${ROW_LIMIT} 列，目前 ${total} 列`], warnings: [], data: null }];
@@ -71,12 +92,16 @@ export async function parseHelmet(file: File): Promise<ImportRow[]> {
 
     const errors: string[] = [];
     let userName = "";
+    let userDept = "";
     if (!wearerAcc) {
       errors.push("「使用人工號」為必填");
     } else {
       const emp = await resolveAcc(wearerAcc, empCache);
       if (!emp) errors.push(`查無工號 ${wearerAcc}`);
-      else userName = emp.name;
+      else {
+        userName = emp.name;
+        userDept = emp.department ?? "";
+      }
     }
     if (!bloodType) errors.push("「血型」為必填");
     else if (!blood.includes(bloodType)) errors.push(`「血型」必須為 ${blood.join("／")}`);
@@ -86,14 +111,13 @@ export async function parseHelmet(file: File): Promise<ImportRow[]> {
       status: errors.length ? "error" : "ok",
       errors,
       warnings: [],
-      data: { wearerAcc, userName, bloodType: bloodType as any, remark },
+      data: { wearerAcc, userName, userDept, bloodType: bloodType as any, remark },
     });
   }
   return out;
 }
 
-export async function parseShoes(file: File): Promise<ImportRow[]> {
-  const ws = await readFirstSheet(file);
+async function parseShoesSheet(ws: ExcelJS.Worksheet): Promise<ImportRow[]> {
   const sizes = await getSettingJson<number[]>(SettingKeys.SHOE_SIZES, [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]);
   const out: ImportRow[] = [];
   const empCache = new Map<string, Employee | null>();
@@ -112,12 +136,16 @@ export async function parseShoes(file: File): Promise<ImportRow[]> {
 
     const errors: string[] = [];
     let userName = "";
+    let userDept = "";
     if (!wearerAcc) {
       errors.push("「使用人工號」為必填");
     } else {
       const emp = await resolveAcc(wearerAcc, empCache);
       if (!emp) errors.push(`查無工號 ${wearerAcc}`);
-      else userName = emp.name;
+      else {
+        userName = emp.name;
+        userDept = emp.department ?? "";
+      }
     }
     if (shoeSize === null) errors.push("「鞋號」為必填");
     else if (!sizes.includes(shoeSize)) errors.push(`「鞋號」需為 ${sizes.join("／")}`);
@@ -128,14 +156,13 @@ export async function parseShoes(file: File): Promise<ImportRow[]> {
       status: errors.length ? "error" : "ok",
       errors,
       warnings: [],
-      data: { wearerAcc, userName, shoeSize, reason, remark },
+      data: { wearerAcc, userName, userDept, shoeSize, reason, remark },
     });
   }
   return out;
 }
 
-export async function parseUniform(file: File): Promise<ImportRow[]> {
-  const ws = await readFirstSheet(file);
+async function parseUniformSheet(ws: ExcelJS.Worksheet): Promise<ImportRow[]> {
   const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, ["S", "M", "L", "XL", "2XL", "3XL"]);
   const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
   const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
@@ -164,12 +191,16 @@ export async function parseUniform(file: File): Promise<ImportRow[]> {
     const errors: string[] = [];
     const warnings: string[] = [];
     let userName = "";
+    let userDept = "";
     if (!wearerAcc) {
       errors.push("「使用人工號」為必填");
     } else {
       const emp = await resolveAcc(wearerAcc, empCache);
       if (!emp) errors.push(`查無工號 ${wearerAcc}`);
-      else userName = emp.name;
+      else {
+        userName = emp.name;
+        userDept = emp.department ?? "";
+      }
     }
     const gender = genderRaw === "男" ? "MALE" : genderRaw === "女" ? "FEMALE" : null;
     if (!gender) errors.push("「性別」需為 男 或 女");
@@ -210,6 +241,7 @@ export async function parseUniform(file: File): Promise<ImportRow[]> {
       data: {
         wearerAcc,
         userName,
+        userDept,
         gender,
         topSelected,
         topSize: topSelected ? topSize : null,
@@ -225,4 +257,28 @@ export async function parseUniform(file: File): Promise<ImportRow[]> {
     });
   }
   return out;
+}
+
+export async function parseHelmet(file: File): Promise<ImportRow[]> {
+  return parseHelmetSheet(await readFirstSheet(file));
+}
+
+export async function parseShoes(file: File): Promise<ImportRow[]> {
+  return parseShoesSheet(await readFirstSheet(file));
+}
+
+export async function parseUniform(file: File): Promise<ImportRow[]> {
+  return parseUniformSheet(await readFirstSheet(file));
+}
+
+export async function parseUnified(file: File): Promise<UnifiedImportResult> {
+  const wb = await loadWorkbook(file);
+  const helmetWs = findSheet(wb, SHEET_NAME_HELMET);
+  const shoesWs = findSheet(wb, SHEET_NAME_SHOES);
+  const uniformWs = findSheet(wb, SHEET_NAME_UNIFORM);
+  return {
+    helmet: helmetWs ? await parseHelmetSheet(helmetWs) : [],
+    shoes: shoesWs ? await parseShoesSheet(shoesWs) : [],
+    uniform: uniformWs ? await parseUniformSheet(uniformWs) : [],
+  };
 }

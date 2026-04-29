@@ -95,6 +95,7 @@ export function RequestDetail({ request: r, viewerRole }: { request: Req; viewer
             <thead className="bg-slate-50 text-left">
               <tr>
                 <th className="p-2">使用人</th>
+                <th className="p-2">工地／部門</th>
                 <th className="p-2">規格</th>
                 <th className="p-2">數量</th>
                 <th className="p-2">領用方式</th>
@@ -199,6 +200,7 @@ function itemRows(type: keyof typeof TYPE_LABEL, it: any) {
     return (
       <tr key={it.id}>
         <td className="p-2">{it.userName}</td>
+        <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">血型 {it.bloodType}</td>
         <td className="p-2">1</td>
         <td className="p-2">—</td>
@@ -210,6 +212,7 @@ function itemRows(type: keyof typeof TYPE_LABEL, it: any) {
     return (
       <tr key={it.id}>
         <td className="p-2">{it.userName}</td>
+        <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">鞋號 {it.shoeSize} · {it.reason}</td>
         <td className="p-2">1</td>
         <td className="p-2">—</td>
@@ -223,6 +226,7 @@ function itemRows(type: keyof typeof TYPE_LABEL, it: any) {
     rows.push(
       <tr key={`${it.id}-top`}>
         <td className="p-2">{it.userName}（{GENDER_LABEL[it.gender as "MALE" | "FEMALE"]}）</td>
+        <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">上衣 {it.topSize}</td>
         <td className="p-2">{it.topQty}</td>
         <td className="p-2">{ACTION_LABEL[it.topAction as keyof typeof ACTION_LABEL]}</td>
@@ -234,6 +238,7 @@ function itemRows(type: keyof typeof TYPE_LABEL, it: any) {
     rows.push(
       <tr key={`${it.id}-pants`}>
         <td className="p-2">{it.userName}（{GENDER_LABEL[it.gender as "MALE" | "FEMALE"]}）</td>
+        <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">折褲 腰{it.pantsWaist}/長{it.pantsLength}</td>
         <td className="p-2">{it.pantsQty}</td>
         <td className="p-2">{ACTION_LABEL[it.pantsAction as keyof typeof ACTION_LABEL]}</td>

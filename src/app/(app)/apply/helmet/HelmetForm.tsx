@@ -1,35 +1,63 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { BulkImport } from "@/components/BulkImport";
 import { AccLookupField } from "@/components/AccLookupField";
+import { FloatingInput, FloatingSelect } from "@/components/FloatingField";
+import { clearImportedData } from "@/lib/import-storage";
 
-type Item = { wearerAcc: string; userName: string; valid: boolean; bloodType: string };
+type Item = {
+  wearerAcc: string;
+  userName: string;
+  userDept: string;
+  valid: boolean;
+  bloodType: string;
+};
 
 export function HelmetForm({
   bloodOptions,
-  defaultDept,
-  requesterName,
-  requesterId,
   initial,
 }: {
   bloodOptions: string[];
-  defaultDept: string;
-  requesterName: string;
-  requesterId: string;
-  initial?: { dept: string; remark: string; items: { wearerAcc: string; userName: string; bloodType: string }[] };
+  initial?: { remark: string; items: { wearerAcc: string; userName: string; userDept: string; bloodType: string }[] };
 }) {
   const router = useRouter();
-  const [dept, setDept] = useState(initial?.dept ?? defaultDept);
   const [remark, setRemark] = useState(initial?.remark ?? "");
   const [items, setItems] = useState<Item[]>(
     initial && initial.items.length > 0
       ? initial.items.map((it) => ({ ...it, valid: !!it.wearerAcc }))
-      : [{ wearerAcc: "", userName: "", valid: false, bloodType: bloodOptions[0] ?? "A" }]
+      : [{ wearerAcc: "", userName: "", userDept: "", valid: false, bloodType: bloodOptions[0] ?? "A" }]
   );
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [importedCount, setImportedCount] = useState(0);
+
+  useEffect(() => {
+    if (initial) return;
+    const raw = sessionStorage.getItem("eurs.import.helmet");
+    if (!raw) return;
+    try {
+      const arr = JSON.parse(raw) as Array<{
+        wearerAcc: string;
+        userName: string;
+        userDept: string;
+        bloodType: string;
+      }>;
+      if (!Array.isArray(arr) || arr.length === 0) return;
+      setItems(
+        arr.map((it) => ({
+          wearerAcc: it.wearerAcc ?? "",
+          userName: it.userName ?? "",
+          userDept: it.userDept ?? "",
+          valid: !!it.wearerAcc,
+          bloodType: it.bloodType ?? bloodOptions[0] ?? "A",
+        }))
+      );
+      setImportedCount(arr.length);
+    } catch {
+      // ignore malformed payload
+    }
+  }, [bloodOptions, initial]);
 
   function update(i: number, patch: Partial<Item>) {
     setItems((xs) => xs.map((it, k) => (k === i ? { ...it, ...patch } : it)));
@@ -37,7 +65,7 @@ export function HelmetForm({
   function add() {
     setItems((xs) => [
       ...xs,
-      { wearerAcc: "", userName: "", valid: false, bloodType: bloodOptions[0] ?? "A" },
+      { wearerAcc: "", userName: "", userDept: "", valid: false, bloodType: bloodOptions[0] ?? "A" },
     ]);
   }
   function remove(i: number) {
@@ -56,11 +84,11 @@ export function HelmetForm({
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         type: "HELMET",
-        siteOrDept: dept,
         remark,
         items: items.map((it) => ({
           wearerAcc: it.wearerAcc,
           userName: it.userName,
+          userDept: it.userDept,
           bloodType: it.bloodType,
         })),
       }),
@@ -71,39 +99,17 @@ export function HelmetForm({
       setError(d.error ?? "送出失敗");
       return;
     }
+    clearImportedData("helmet");
     router.push("/my-requests");
   }
 
   return (
     <div className="space-y-4">
-      <BulkImport
-        type="helmet"
-        onApply={(rows) =>
-          setItems(
-            rows.map((r: any) => ({
-              wearerAcc: r.wearerAcc,
-              userName: r.userName,
-              valid: true,
-              bloodType: r.bloodType,
-            }))
-          )
-        }
-      />
-
-      <div className="card">
-        <div className="card-header">基本資料</div>
-        <div className="card-body grid md:grid-cols-2 gap-4">
-          <div>
-            <label className="label">申請人</label>
-            <input className="input bg-slate-50" disabled value={`${requesterName}（${requesterId}）`} />
-          </div>
-          <div>
-            <label className="label">所屬工地／部門 *</label>
-            <input className="input" value={dept} onChange={(e) => setDept(e.target.value)} />
-          </div>
+      {importedCount > 0 && (
+        <div className="notice border-emerald-300 bg-emerald-50 text-emerald-900">
+          已載入匯入資料 {importedCount} 筆，請檢視後送出。
         </div>
-      </div>
-
+      )}
       <div className="card">
         <div className="card-header flex items-center justify-between">
           <span>使用人清單</span>
@@ -111,32 +117,36 @@ export function HelmetForm({
         </div>
         <div className="card-body space-y-3">
           {items.map((it, i) => (
-            <div key={i} className="grid md:grid-cols-[1fr_180px_80px_60px] gap-2 items-end">
+            <div key={i} className="grid md:grid-cols-[1fr_100px_70px_auto] gap-2 items-start">
               <AccLookupField
                 acc={it.wearerAcc}
                 userName={it.userName}
+                userDept={it.userDept}
                 valid={it.valid}
                 onChange={(next) =>
-                  update(i, { wearerAcc: next.acc, userName: next.userName, valid: next.valid })
+                  update(i, {
+                    wearerAcc: next.acc,
+                    userName: next.userName,
+                    userDept: next.userDept,
+                    valid: next.valid,
+                  })
                 }
               />
-              <div>
-                <label className="label">血型 *</label>
-                <select
-                  className="select"
-                  value={it.bloodType}
-                  onChange={(e) => update(i, { bloodType: e.target.value })}
-                >
-                  {bloodOptions.map((b) => (
-                    <option key={b} value={b}>{b}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="label">數量</label>
-                <input className="input bg-slate-50" disabled value={1} />
-              </div>
-              <button className="btn btn-ghost text-rose-600" onClick={() => remove(i)} disabled={items.length === 1}>
+              <FloatingSelect
+                label="血型 *"
+                value={it.bloodType}
+                onChange={(v) => update(i, { bloodType: v })}
+              >
+                {bloodOptions.map((b) => (
+                  <option key={b} value={b}>{b}</option>
+                ))}
+              </FloatingSelect>
+              <FloatingInput label="數量" value={1} disabled readOnly />
+              <button
+                className="btn btn-danger h-[46px]"
+                onClick={() => remove(i)}
+                disabled={items.length === 1}
+              >
                 刪除
               </button>
             </div>

@@ -85,6 +85,7 @@ model RequestItem {
   request   Request @relation(fields: [requestId], references: [id], onDelete: Cascade)
   wearerAcc String  @default("") // 使用人員工編號 (acc)
   userName  String  // 使用人姓名快照（由 acc 查 emp API 帶入）
+  userDept  String? // 使用人所屬工地／部門快照（由 acc 查 emp API 帶入）
 
   // 安全帽
   bloodType BloodType?

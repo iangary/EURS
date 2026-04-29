@@ -1,15 +1,16 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/cn";
-import { BulkImport } from "@/components/BulkImport";
 import { AccLookupField } from "@/components/AccLookupField";
+import { clearImportedData } from "@/lib/import-storage";
 
 type Action = "NEW" | "REPLACE" | "PURCHASE";
 type Item = {
   wearerAcc: string;
   userName: string;
+  userDept: string;
   valid: boolean;
   gender: "MALE" | "FEMALE";
   topSelected: boolean;
@@ -33,6 +34,7 @@ function blankItem(): Item {
   return {
     wearerAcc: "",
     userName: "",
+    userDept: "",
     valid: false,
     gender: "MALE",
     topSelected: false,
@@ -46,9 +48,6 @@ export function UniformForm({
   lengthOptions,
   bankBranch,
   bankAccount,
-  defaultDept,
-  requesterName,
-  requesterId,
   initial,
 }: {
   topOptions: string[];
@@ -56,13 +55,9 @@ export function UniformForm({
   lengthOptions: number[];
   bankBranch: string;
   bankAccount: string;
-  defaultDept: string;
-  requesterName: string;
-  requesterId: string;
-  initial?: { dept: string; remark: string; items: Omit<Item, "valid">[] };
+  initial?: { remark: string; items: Omit<Item, "valid">[] };
 }) {
   const router = useRouter();
-  const [dept, setDept] = useState(initial?.dept ?? defaultDept);
   const [remark, setRemark] = useState(initial?.remark ?? "");
   const [items, setItems] = useState<Item[]>(
     initial && initial.items.length > 0
@@ -73,7 +68,46 @@ export function UniformForm({
   const [showPurchase, setShowPurchase] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [importedCount, setImportedCount] = useState(0);
+  const [importedHasReplace, setImportedHasReplace] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (initial) return;
+    const raw = sessionStorage.getItem("eurs.import.uniform");
+    if (!raw) return;
+    try {
+      const arr = JSON.parse(raw) as Array<any>;
+      if (!Array.isArray(arr) || arr.length === 0) return;
+      const next: Item[] = arr.map((it) => ({
+        wearerAcc: it.wearerAcc ?? "",
+        userName: it.userName ?? "",
+        userDept: it.userDept ?? "",
+        valid: !!it.wearerAcc,
+        gender: it.gender === "FEMALE" ? "FEMALE" : "MALE",
+        topSelected: !!it.topSelected,
+        topSize: it.topSelected ? it.topSize ?? topOptions[0] : undefined,
+        topQty: it.topSelected ? it.topQty ?? 1 : undefined,
+        topAction: it.topSelected ? (it.topAction ?? "NEW") : undefined,
+        pantsSelected: !!it.pantsSelected,
+        pantsWaist: it.pantsSelected ? it.pantsWaist ?? waistOptions[0] : undefined,
+        pantsLength: it.pantsSelected ? it.pantsLength ?? lengthOptions[0] : undefined,
+        pantsQty: it.pantsSelected ? it.pantsQty ?? 1 : undefined,
+        pantsAction: it.pantsSelected ? (it.pantsAction ?? "NEW") : undefined,
+      }));
+      setItems(next);
+      setImportedCount(arr.length);
+      setImportedHasReplace(
+        next.some(
+          (it) =>
+            (it.topSelected && it.topAction === "REPLACE") ||
+            (it.pantsSelected && it.pantsAction === "REPLACE")
+        )
+      );
+    } catch {
+      // ignore malformed payload
+    }
+  }, [topOptions, waistOptions, lengthOptions, initial]);
 
   const hasReplace = useMemo(
     () =>
@@ -148,7 +182,6 @@ export function UniformForm({
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         type: "UNIFORM",
-        siteOrDept: dept,
         remark,
         items,
         attachmentIds: attachments.map((a) => a.id),
@@ -160,61 +193,41 @@ export function UniformForm({
       setError(d.error ?? "送出失敗");
       return;
     }
+    clearImportedData("uniform");
     router.push("/my-requests");
   }
 
   return (
     <div className="space-y-4">
-      <BulkImport
-        type="uniform"
-        onApply={(rows) =>
-          setItems(
-            rows.map((r: any) => ({
-              wearerAcc: r.wearerAcc,
-              userName: r.userName,
-              valid: true,
-              gender: r.gender,
-              topSelected: r.topSelected,
-              topSize: r.topSize ?? undefined,
-              topQty: r.topQty ?? undefined,
-              topAction: r.topAction ?? undefined,
-              pantsSelected: r.pantsSelected,
-              pantsWaist: r.pantsWaist ?? undefined,
-              pantsLength: r.pantsLength ?? undefined,
-              pantsQty: r.pantsQty ?? undefined,
-              pantsAction: r.pantsAction ?? undefined,
-            }))
-          )
-        }
-      />
-
-      <div className="card">
-        <div className="card-header">基本資料</div>
-        <div className="card-body grid md:grid-cols-2 gap-4">
-          <div>
-            <label className="label">申請人</label>
-            <input className="input bg-slate-50" disabled value={`${requesterName}（${requesterId}）`} />
-          </div>
-          <div>
-            <label className="label">所屬工地／部門 *</label>
-            <input className="input" value={dept} onChange={(e) => setDept(e.target.value)} />
-          </div>
+      {importedCount > 0 && (
+        <div className="notice border-emerald-300 bg-emerald-50 text-emerald-900">
+          已載入匯入資料 {importedCount} 筆，請檢視後送出。
+          {importedHasReplace && (
+            <span className="ml-1">
+              含「更換」項目，請於送出前於下方補上附件。
+            </span>
+          )}
         </div>
-      </div>
-
+      )}
       {/* 制服主分類卡片 */}
       <div className="bg-sky-50 border-2 border-sky-200 rounded-xl">
         <div className="px-5 py-3 border-b border-sky-200 font-semibold text-sky-900">制服 領用項目</div>
         <div className="p-5 space-y-5">
           {items.map((it, i) => (
             <div key={i} className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 space-y-4">
-              <div className="grid md:grid-cols-[1fr_180px_60px] gap-3 items-end">
+              <div className="grid md:grid-cols-[1fr_180px_80px] gap-3 items-end">
                 <AccLookupField
                   acc={it.wearerAcc}
                   userName={it.userName}
+                  userDept={it.userDept}
                   valid={it.valid}
                   onChange={(next) =>
-                    update(i, { wearerAcc: next.acc, userName: next.userName, valid: next.valid })
+                    update(i, {
+                      wearerAcc: next.acc,
+                      userName: next.userName,
+                      userDept: next.userDept,
+                      valid: next.valid,
+                    })
                   }
                 />
                 <div>
@@ -234,7 +247,11 @@ export function UniformForm({
                     </button>
                   </div>
                 </div>
-                <button className="btn btn-ghost text-rose-600" onClick={() => remove(i)} disabled={items.length === 1}>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => remove(i)}
+                  disabled={items.length === 1}
+                >
                   刪除
                 </button>
               </div>

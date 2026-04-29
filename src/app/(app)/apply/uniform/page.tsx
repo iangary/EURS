@@ -21,11 +21,11 @@ export default async function UniformPage({ searchParams }: { searchParams: { fr
     });
     if (src && src.requesterId === session.user.id && src.type === "UNIFORM" && src.status === "REJECTED") {
       initial = {
-        dept: src.siteOrDept,
         remark: src.remark ?? "",
         items: src.items.map((it) => ({
           wearerAcc: it.wearerAcc,
           userName: it.userName,
+          userDept: it.userDept ?? "",
           gender: (it.gender ?? "MALE") as "MALE" | "FEMALE",
           topSelected: it.topSelected,
           topSize: it.topSize ?? undefined,
@@ -55,9 +55,6 @@ export default async function UniformPage({ searchParams }: { searchParams: { fr
         lengthOptions={lengths}
         bankBranch={bankBranch}
         bankAccount={bankAccount}
-        defaultDept={session.user.department}
-        requesterName={session.user.name}
-        requesterId={session.user.id}
         initial={initial}
       />
     </div>

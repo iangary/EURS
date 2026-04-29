@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { apiRequireUser } from "@/lib/auth-helpers";
-import { parseHelmet, parseShoes, parseUniform } from "@/lib/excel-import";
+import { parseHelmet, parseShoes, parseUniform, parseUnified } from "@/lib/excel-import";
 
 export async function POST(req: Request, { params }: { params: { type: string } }) {
   const r = await apiRequireUser();
@@ -16,6 +16,10 @@ export async function POST(req: Request, { params }: { params: { type: string } 
   }
 
   try {
+    if (params.type === "unified") {
+      const result = await parseUnified(file);
+      return NextResponse.json(result);
+    }
     let rows;
     if (params.type === "helmet") rows = await parseHelmet(file);
     else if (params.type === "shoes") rows = await parseShoes(file);

@@ -1,19 +1,29 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FloatingInput } from "@/components/FloatingField";
 
 type Status = "idle" | "loading" | "ok" | "notfound" | "error";
+
+export type AccLookupValue = {
+  acc: string;
+  userName: string;
+  userDept: string;
+  valid: boolean;
+};
 
 export function AccLookupField({
   acc,
   userName,
+  userDept,
   valid,
   onChange,
 }: {
   acc: string;
   userName: string;
+  userDept: string;
   valid: boolean;
-  onChange: (next: { acc: string; userName: string; valid: boolean }) => void;
+  onChange: (next: AccLookupValue) => void;
 }) {
   const [status, setStatus] = useState<Status>(
     acc && userName && valid ? "ok" : "idle"
@@ -25,7 +35,7 @@ export function AccLookupField({
     if (!v) {
       setStatus("idle");
       lastLookedUp.current = "";
-      onChange({ acc: "", userName: "", valid: false });
+      onChange({ acc: "", userName: "", userDept: "", valid: false });
       return;
     }
     if (lastLookedUp.current === v && status === "ok") return;
@@ -39,23 +49,28 @@ export function AccLookupField({
       if (res.status === 404) {
         setStatus("notfound");
         lastLookedUp.current = v;
-        onChange({ acc: v, userName: "", valid: false });
+        onChange({ acc: v, userName: "", userDept: "", valid: false });
         return;
       }
       if (!res.ok) {
         setStatus("error");
         lastLookedUp.current = v;
-        onChange({ acc: v, userName: "", valid: false });
+        onChange({ acc: v, userName: "", userDept: "", valid: false });
         return;
       }
       const emp = await res.json();
       setStatus("ok");
       lastLookedUp.current = v;
-      onChange({ acc: v, userName: emp.name ?? "", valid: !!emp.name });
+      onChange({
+        acc: v,
+        userName: emp.name ?? "",
+        userDept: emp.department ?? "",
+        valid: !!emp.name,
+      });
     } catch {
       setStatus("error");
       lastLookedUp.current = v;
-      onChange({ acc: v, userName: "", valid: false });
+      onChange({ acc: v, userName: "", userDept: "", valid: false });
     }
   }
 
@@ -67,52 +82,40 @@ export function AccLookupField({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const namePlaceholder =
+    status === "loading"
+      ? "查詢中…"
+      : status === "notfound"
+      ? "查無此工號"
+      : status === "error"
+      ? "查詢失敗"
+      : "輸入工號後自動帶入";
+
   return (
-    <div className="grid grid-cols-[120px_1fr] gap-2">
-      <div>
-        <label className="label">工號 *</label>
-        <input
-          className="input"
-          value={acc}
-          placeholder="acc"
-          onChange={(e) => {
-            const v = e.target.value;
-            setStatus("idle");
-            onChange({ acc: v, userName: "", valid: false });
-          }}
-          onBlur={(e) => doLookup(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              e.preventDefault();
-              doLookup((e.target as HTMLInputElement).value);
-            }
-          }}
+    <div className="grid grid-cols-1 md:grid-cols-[140px_minmax(160px,1fr)_180px] gap-2">
+      <FloatingInput
+        label="工號 *"
+        value={acc}
+        onChange={(v) => {
+          setStatus("idle");
+          onChange({ acc: v, userName: "", userDept: "", valid: false });
+        }}
+        onBlur={(v) => doLookup(v)}
+        onEnter={(v) => doLookup(v)}
+      />
+      <div className="relative">
+        <FloatingInput
+          label="使用人姓名 *"
+          value={userName}
+          disabled
+          readOnly
+          placeholder={namePlaceholder}
         />
-      </div>
-      <div>
-        <label className="label">使用人姓名 *</label>
-        <div className="relative">
-          <input
-            className="input bg-slate-50"
-            value={userName}
-            disabled
-            readOnly
-            placeholder={
-              status === "loading"
-                ? "查詢中…"
-                : status === "notfound"
-                ? "查無此工號"
-                : status === "error"
-                ? "查詢失敗，請重試"
-                : "輸入工號後自動帶入"
-            }
-          />
-          {status === "ok" && (
-            <span className="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-600 text-sm">
-              ✓
-            </span>
-          )}
-        </div>
+        {status === "ok" && (
+          <span className="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-600 text-sm">
+            ✓
+          </span>
+        )}
         {status === "notfound" && (
           <div className="text-xs text-rose-600 mt-1">查無此工號</div>
         )}
@@ -120,6 +123,14 @@ export function AccLookupField({
           <div className="text-xs text-rose-600 mt-1">查詢失敗，請重試</div>
         )}
       </div>
+      <FloatingInput
+        label="所屬工地／部門"
+        value={userDept}
+        disabled
+        readOnly
+        placeholder="自動帶入"
+      />
     </div>
   );
 }
+

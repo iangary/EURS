@@ -6,7 +6,7 @@ export async function GET(_: Request, { params }: { params: { type: string } }) 
   const r = await apiRequireUser();
   if (r instanceof NextResponse) return r;
   const t = params.type as TemplateType;
-  if (!["helmet", "shoes", "uniform"].includes(t)) {
+  if (!["helmet", "shoes", "uniform", "unified"].includes(t)) {
     return NextResponse.json({ error: "未知範本" }, { status: 400 });
   }
   const { buffer, filename } = await buildTemplate(t);

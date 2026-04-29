@@ -57,7 +57,7 @@ export async function POST(req: Request) {
         type,
         requesterId: r.user.id,
         requesterName: r.user.name,
-        siteOrDept: data.siteOrDept,
+        siteOrDept: r.user.department ?? "",
         remark: data.remark ?? null,
         items: {
           create: data.items.map((it: any) => normalizeItem(type, it)),
@@ -94,13 +94,15 @@ export async function POST(req: Request) {
 }
 
 function normalizeItem(type: "HELMET" | "SHOES" | "UNIFORM", it: any) {
+  const userDept = it.userDept ?? null;
   if (type === "HELMET") {
-    return { wearerAcc: it.wearerAcc, userName: it.userName, bloodType: it.bloodType };
+    return { wearerAcc: it.wearerAcc, userName: it.userName, userDept, bloodType: it.bloodType };
   }
   if (type === "SHOES") {
     return {
       wearerAcc: it.wearerAcc,
       userName: it.userName,
+      userDept,
       shoeSize: it.shoeSize,
       reason: it.reason,
     };
@@ -108,6 +110,7 @@ function normalizeItem(type: "HELMET" | "SHOES" | "UNIFORM", it: any) {
   return {
     wearerAcc: it.wearerAcc,
     userName: it.userName,
+    userDept,
     gender: it.gender,
     topSelected: !!it.topSelected,
     topSize: it.topSelected ? it.topSize : null,

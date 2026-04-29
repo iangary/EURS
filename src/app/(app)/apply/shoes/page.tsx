@@ -10,7 +10,7 @@ export default async function ShoesPage({ searchParams }: { searchParams: { from
   const sizes = await getSettingJson<number[]>(SettingKeys.SHOE_SIZES, [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]);
 
   let initial:
-    | { dept: string; remark: string; items: { wearerAcc: string; userName: string; shoeSize: number; reason: string }[] }
+    | { remark: string; items: { wearerAcc: string; userName: string; userDept: string; shoeSize: number; reason: string }[] }
     | undefined;
   if (searchParams.from) {
     const src = await db.request.findUnique({
@@ -19,11 +19,11 @@ export default async function ShoesPage({ searchParams }: { searchParams: { from
     });
     if (src && src.requesterId === session.user.id && src.type === "SHOES" && src.status === "REJECTED") {
       initial = {
-        dept: src.siteOrDept,
         remark: src.remark ?? "",
         items: src.items.map((it) => ({
           wearerAcc: it.wearerAcc,
           userName: it.userName,
+          userDept: it.userDept ?? "",
           shoeSize: it.shoeSize ?? 42,
           reason: it.reason ?? "",
         })),
@@ -39,13 +39,7 @@ export default async function ShoesPage({ searchParams }: { searchParams: { from
           已載入退件單資料，請修正後重新送出（將建立新申請單，原退件單保留稽核）。
         </div>
       )}
-      <ShoesForm
-        sizeOptions={sizes}
-        defaultDept={session.user.department}
-        requesterName={session.user.name}
-        requesterId={session.user.id}
-        initial={initial}
-      />
+      <ShoesForm sizeOptions={sizes} initial={initial} />
     </div>
   );
 }

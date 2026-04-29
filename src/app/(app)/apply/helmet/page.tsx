@@ -9,7 +9,9 @@ export default async function HelmetPage({ searchParams }: { searchParams: { fro
   const session = await requireUser();
   const blood = await getSettingJson<string[]>(SettingKeys.BLOOD_TYPES, ["A", "B", "O", "AB"]);
 
-  let initial: { dept: string; remark: string; items: { wearerAcc: string; userName: string; bloodType: string }[] } | undefined;
+  let initial:
+    | { remark: string; items: { wearerAcc: string; userName: string; userDept: string; bloodType: string }[] }
+    | undefined;
   if (searchParams.from) {
     const src = await db.request.findUnique({
       where: { id: searchParams.from },
@@ -17,11 +19,11 @@ export default async function HelmetPage({ searchParams }: { searchParams: { fro
     });
     if (src && src.requesterId === session.user.id && src.type === "HELMET" && src.status === "REJECTED") {
       initial = {
-        dept: src.siteOrDept,
         remark: src.remark ?? "",
         items: src.items.map((it) => ({
           wearerAcc: it.wearerAcc,
           userName: it.userName,
+          userDept: it.userDept ?? "",
           bloodType: it.bloodType ?? blood[0] ?? "A",
         })),
       };
@@ -36,13 +38,7 @@ export default async function HelmetPage({ searchParams }: { searchParams: { fro
           已載入退件單資料，請修正後重新送出（將建立新申請單，原退件單保留稽核）。
         </div>
       )}
-      <HelmetForm
-        bloodOptions={blood}
-        defaultDept={session.user.department}
-        requesterName={session.user.name}
-        requesterId={session.user.id}
-        initial={initial}
-      />
+      <HelmetForm bloodOptions={blood} initial={initial} />
     </div>
   );
 }

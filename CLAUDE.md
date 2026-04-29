@@ -51,3 +51,13 @@ docker compose exec web npm run prisma:seed
 - IDE / lint / 單元測試
 
 其餘一律走 docker compose。
+
+## 自動更新授權
+
+若改動程式碼 / Prisma schema / Dockerfile / 相依套件後需要讓容器反映最新狀態，Claude 可在必要時自行執行：
+
+```bash
+docker compose up -d --build
+```
+
+不需另外徵詢同意。其他破壞性指令（`down -v`、`rm`、`reset` 等）仍須先確認。

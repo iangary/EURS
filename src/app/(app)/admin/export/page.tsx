@@ -32,7 +32,7 @@ export default function ExportPage() {
   const [preview, setPreview] = useState<PreviewData | null>(null);
   const [loading, setLoading] = useState(false);
 
-  function buildHref(format: "xlsx" | "csv" | "preview") {
+  function buildHref(format: "xlsx" | "preview") {
     const sp = new URLSearchParams();
     sp.set("format", format);
     if (type) sp.set("type", type);
@@ -107,7 +107,6 @@ export default function ExportPage() {
           <button className="btn btn-outline" onClick={loadPreview} disabled={loading}>
             {loading ? "載入中…" : "預覽"}
           </button>
-          <a className="btn btn-outline" href={buildHref("csv")}>匯出 CSV</a>
           <a className="btn btn-primary" href={buildHref("xlsx")}>匯出 Excel</a>
         </div>
       </div>
