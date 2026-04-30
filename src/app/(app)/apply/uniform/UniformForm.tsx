@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/cn";
 import { AccLookupField } from "@/components/AccLookupField";
 import { clearImportedData } from "@/lib/import-storage";
+import { useT, useTPlural, useTEnum } from "@/i18n/client";
 
 type Action = "NEW" | "REPLACE" | "PURCHASE";
 type Item = {
@@ -24,11 +25,7 @@ type Item = {
   pantsAction?: Action;
 };
 
-const ACTION_OPTIONS: { value: Action; label: string }[] = [
-  { value: "NEW", label: "新領" },
-  { value: "REPLACE", label: "更換" },
-  { value: "PURCHASE", label: "自購" },
-];
+const ACTION_VALUES: Action[] = ["NEW", "REPLACE", "PURCHASE"];
 
 function blankItem(): Item {
   return {
@@ -58,6 +55,9 @@ export function UniformForm({
   initial?: { remark: string; items: Omit<Item, "valid">[] };
 }) {
   const router = useRouter();
+  const t = useT();
+  const tPlural = useTPlural();
+  const tEnum = useTEnum();
   const [remark, setRemark] = useState(initial?.remark ?? "");
   const [items, setItems] = useState<Item[]>(
     initial && initial.items.length > 0
@@ -144,7 +144,7 @@ export function UniformForm({
     const res = await fetch("/api/uploads", { method: "POST", body: fd });
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
-      alert(d.error ?? "上傳失敗");
+      alert(d.error ?? t("common.uploadFailed"));
       return;
     }
     const d = await res.json();
@@ -154,16 +154,16 @@ export function UniformForm({
   async function trySubmit() {
     setError(null);
     if (!items.every((it) => it.valid && it.wearerAcc && it.userName)) {
-      setError("請確認所有使用人工號皆已查詢成功");
+      setError(t("form.error.lookupAll"));
       return;
     }
     const ok = items.every((it) => it.topSelected || it.pantsSelected);
     if (!ok) {
-      setError("每位使用人上衣／折褲至少需勾選一項");
+      setError(t("uniform.error.atLeastOne"));
       return;
     }
     if (hasReplace && attachments.length === 0) {
-      setError("含「更換」項目，請至少上傳一個附件");
+      setError(t("uniform.error.replaceAttachment"));
       return;
     }
     if (hasPurchase) {
@@ -190,7 +190,7 @@ export function UniformForm({
     setSubmitting(false);
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
-      setError(d.error ?? "送出失敗");
+      setError(d.error ?? t("form.error.submit"));
       return;
     }
     clearImportedData("uniform");
@@ -201,17 +201,16 @@ export function UniformForm({
     <div className="space-y-4">
       {importedCount > 0 && (
         <div className="notice border-emerald-300 bg-emerald-50 text-emerald-900">
-          已載入匯入資料 {importedCount} 筆，請檢視後送出。
+          {tPlural("apply.notice.imported", importedCount)}
           {importedHasReplace && (
             <span className="ml-1">
-              含「更換」項目，請於送出前於下方補上附件。
+              {t("apply.notice.importedReplace")}
             </span>
           )}
         </div>
       )}
-      {/* 制服主分類卡片 */}
       <div className="bg-sky-50 border-2 border-sky-200 rounded-xl">
-        <div className="px-5 py-3 border-b border-sky-200 font-semibold text-sky-900">制服 領用項目</div>
+        <div className="px-5 py-3 border-b border-sky-200 font-semibold text-sky-900">{t("uniform.section.title")}</div>
         <div className="p-5 space-y-5">
           {items.map((it, i) => (
             <div key={i} className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 space-y-4">
@@ -231,19 +230,19 @@ export function UniformForm({
                   }
                 />
                 <div>
-                  <label className="label">性別（男／女款）*</label>
+                  <label className="label">{t("uniform.field.gender")}</label>
                   <div className="flex gap-2">
                     <button
                       className={cn("size-pill flex-1", it.gender === "MALE" && "size-pill-active")}
                       onClick={() => update(i, { gender: "MALE" })}
                     >
-                      男
+                      {tEnum.gender("MALE")}
                     </button>
                     <button
                       className={cn("size-pill flex-1", it.gender === "FEMALE" && "size-pill-active")}
                       onClick={() => update(i, { gender: "FEMALE" })}
                     >
-                      女
+                      {tEnum.gender("FEMALE")}
                     </button>
                   </div>
                 </div>
@@ -252,13 +251,12 @@ export function UniformForm({
                   onClick={() => remove(i)}
                   disabled={items.length === 1}
                 >
-                  刪除
+                  {t("form.btn.delete")}
                 </button>
               </div>
 
-              {/* 上衣子卡 */}
               <SubCard
-                title="上衣"
+                title={t("uniform.section.top")}
                 checked={it.topSelected}
                 onToggle={(v) =>
                   update(i, {
@@ -270,7 +268,7 @@ export function UniformForm({
                 }
               >
                 <div>
-                  <label className="label">尺寸 *</label>
+                  <label className="label">{t("uniform.field.size")}</label>
                   <select
                     className="select"
                     value={it.topSize ?? topOptions[0]}
@@ -285,7 +283,7 @@ export function UniformForm({
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="label">數量 *（1–5）</label>
+                    <label className="label">{t("uniform.field.qty")}</label>
                     <input
                       type="number" min={1} max={5}
                       className="input"
@@ -294,7 +292,7 @@ export function UniformForm({
                     />
                   </div>
                   <div>
-                    <label className="label">領用方式 *</label>
+                    <label className="label">{t("uniform.field.action")}</label>
                     <ActionRadio
                       value={it.topAction ?? "NEW"}
                       onChange={(v) => update(i, { topAction: v })}
@@ -303,9 +301,8 @@ export function UniformForm({
                 </div>
               </SubCard>
 
-              {/* 折褲子卡 */}
               <SubCard
-                title="折褲"
+                title={t("uniform.section.pants")}
                 checked={it.pantsSelected}
                 onToggle={(v) =>
                   update(i, {
@@ -319,7 +316,7 @@ export function UniformForm({
               >
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="label">腰圍 *</label>
+                    <label className="label">{t("uniform.field.waist")}</label>
                     <select
                       className="select"
                       value={it.pantsWaist ?? waistOptions[0]}
@@ -329,7 +326,7 @@ export function UniformForm({
                     </select>
                   </div>
                   <div>
-                    <label className="label">褲長 *</label>
+                    <label className="label">{t("uniform.field.length")}</label>
                     <select
                       className="select"
                       value={it.pantsLength ?? lengthOptions[0]}
@@ -341,7 +338,7 @@ export function UniformForm({
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="label">數量 *（1–5）</label>
+                    <label className="label">{t("uniform.field.qty")}</label>
                     <input
                       type="number" min={1} max={5}
                       className="input"
@@ -350,7 +347,7 @@ export function UniformForm({
                     />
                   </div>
                   <div>
-                    <label className="label">領用方式 *</label>
+                    <label className="label">{t("uniform.field.action")}</label>
                     <ActionRadio
                       value={it.pantsAction ?? "NEW"}
                       onChange={(v) => update(i, { pantsAction: v })}
@@ -360,17 +357,16 @@ export function UniformForm({
               </SubCard>
             </div>
           ))}
-          <button className="btn btn-outline" onClick={add}>＋ 新增使用人</button>
+          <button className="btn btn-outline" onClick={add}>{t("form.btn.addUser")}</button>
         </div>
       </div>
 
-      {/* 黃色提示區（更換需附件） */}
       {hasReplace && (
         <div className="notice border-rose-300 bg-rose-50 text-rose-900">
-          <div className="font-medium mb-2">含「更換」項目，請上傳舊衣照片（必填）</div>
+          <div className="font-medium mb-2">{t("uniform.replace.title")}</div>
           <input ref={fileRef} type="file" className="hidden" accept=".jpg,.jpeg,.png,.pdf"
             onChange={(e) => e.target.files?.[0] && uploadAtt(e.target.files[0])} />
-          <button className="btn btn-outline" onClick={() => fileRef.current?.click()}>選擇檔案</button>
+          <button className="btn btn-outline" onClick={() => fileRef.current?.click()}>{t("uniform.replace.choose")}</button>
           <ul className="mt-2 text-sm">
             {attachments.map((a) => (
               <li key={a.id}>📎 {a.fileName}</li>
@@ -380,42 +376,41 @@ export function UniformForm({
       )}
 
       <div className="card">
-        <div className="card-header">備註</div>
+        <div className="card-header">{t("form.section.remark")}</div>
         <div className="card-body">
           <textarea className="textarea min-h-24" value={remark} onChange={(e) => setRemark(e.target.value)} />
         </div>
       </div>
 
       <div className="notice">
-        <div>說明：選擇【更換】需上傳舊品照片附件；選擇【自購】請與總務聯繫取得購買金額。</div>
-        <div className="mt-1">匯款帳號：{bankBranch} {bankAccount}</div>
+        <div>{t("uniform.notice.purchase")}</div>
+        <div className="mt-1">{t("uniform.notice.bank", { branch: bankBranch, account: bankAccount })}</div>
       </div>
 
       {error && <div className="text-sm text-rose-600">{error}</div>}
 
       <div className="flex justify-end">
         <button className="btn btn-primary" disabled={submitting} onClick={trySubmit}>
-          {submitting ? "送出中…" : "送出申請"}
+          {submitting ? t("form.btn.submitting") : t("form.btn.submit")}
         </button>
       </div>
 
-      {/* 自購提示視窗 */}
       {showPurchase && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
           <div className="card max-w-md w-full">
-            <div className="card-header">自購提醒</div>
+            <div className="card-header">{t("uniform.purchase.title")}</div>
             <div className="card-body space-y-3 text-sm">
-              <p>本次申請含「自購」項目，請與總務聯繫取得購買金額。</p>
+              <p>{t("uniform.purchase.body")}</p>
               <table className="w-full">
                 <tbody>
-                  <tr><td className="py-1 text-slate-500">匯款銀行／分行</td><td className="font-medium">{bankBranch}</td></tr>
-                  <tr><td className="py-1 text-slate-500">匯款帳號</td><td className="font-medium">{bankAccount}</td></tr>
+                  <tr><td className="py-1 text-slate-500">{t("uniform.purchase.bank")}</td><td className="font-medium">{bankBranch}</td></tr>
+                  <tr><td className="py-1 text-slate-500">{t("uniform.purchase.account")}</td><td className="font-medium">{bankAccount}</td></tr>
                 </tbody>
               </table>
             </div>
             <div className="px-5 py-3 border-t flex justify-end gap-2">
-              <button className="btn btn-outline" onClick={() => setShowPurchase(false)}>取消</button>
-              <button className="btn btn-primary" onClick={doSubmit}>我已知悉並確認送出</button>
+              <button className="btn btn-outline" onClick={() => setShowPurchase(false)}>{t("common.cancel")}</button>
+              <button className="btn btn-primary" onClick={doSubmit}>{t("uniform.purchase.confirm")}</button>
             </div>
           </div>
         </div>
@@ -451,15 +446,16 @@ function SubCard({
 }
 
 function ActionRadio({ value, onChange }: { value: Action; onChange: (v: Action) => void }) {
+  const tEnum = useTEnum();
   return (
     <div className="flex gap-2">
-      {ACTION_OPTIONS.map((o) => (
+      {ACTION_VALUES.map((v) => (
         <button
-          key={o.value}
-          className={cn("size-pill flex-1", value === o.value && "size-pill-active")}
-          onClick={() => onChange(o.value)}
+          key={v}
+          className={cn("size-pill flex-1", value === v && "size-pill-active")}
+          onClick={() => onChange(v)}
         >
-          {o.label}
+          {tEnum.action(v)}
         </button>
       ))}
     </div>

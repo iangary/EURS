@@ -6,6 +6,7 @@ import zh, { type DictKey } from "./dictionaries/zh";
 import en from "./dictionaries/en";
 import { COOKIE_NAME, DEFAULT_LOCALE, type Locale } from "./config";
 import { format } from "./shared";
+import { formatDate, formatDateTime, pluralKey } from "./format";
 
 const dicts: Record<Locale, typeof zh> = { "zh-Hant": zh, en };
 
@@ -57,4 +58,37 @@ export function useLocale() {
 
 export function useT(): TFn {
   return useLocale().t;
+}
+
+export function useFormat() {
+  const { locale } = useLocale();
+  return useMemo(
+    () => ({
+      date: (d: Date | string | number) => formatDate(d, locale),
+      dateTime: (d: Date | string | number) => formatDateTime(d, locale),
+    }),
+    [locale],
+  );
+}
+
+export function useTEnum() {
+  const t = useT();
+  return useMemo(
+    () => ({
+      type: (k: "HELMET" | "SHOES" | "UNIFORM") => t(`type.${k}`),
+      status: (k: "APPLYING" | "SHIPPED" | "REJECTED") => t(`status.${k}`),
+      action: (k: "NEW" | "REPLACE" | "PURCHASE") => t(`action.${k}`),
+      gender: (k: "MALE" | "FEMALE") => t(`gender.${k}`),
+    }),
+    [t],
+  );
+}
+
+export function useTPlural() {
+  const t = useT();
+  return useMemo(
+    () => (baseKey: string, count: number, vars?: Record<string, string | number>) =>
+      t(`${baseKey}.${pluralKey(count)}` as DictKey, { count, ...vars }),
+    [t],
+  );
 }

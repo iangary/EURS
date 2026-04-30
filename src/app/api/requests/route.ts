@@ -118,7 +118,7 @@ export async function POST(req: Request) {
     await tx.statusLog.create({
       data: {
         requestId: request.id,
-        toStatus: "SUBMITTED",
+        toStatus: "APPLYING",
         changedById: r.user.id,
       },
     });

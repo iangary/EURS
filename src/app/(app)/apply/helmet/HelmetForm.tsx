@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { AccLookupField } from "@/components/AccLookupField";
 import { FloatingInput, FloatingSelect } from "@/components/FloatingField";
 import { clearImportedData } from "@/lib/import-storage";
+import { useT, useTPlural } from "@/i18n/client";
 
 type Item = {
   wearerAcc: string;
@@ -22,6 +23,8 @@ export function HelmetForm({
   initial?: { remark: string; items: { wearerAcc: string; userName: string; userDept: string; bloodType: string }[] };
 }) {
   const router = useRouter();
+  const t = useT();
+  const tPlural = useTPlural();
   const [remark, setRemark] = useState(initial?.remark ?? "");
   const [items, setItems] = useState<Item[]>(
     initial && initial.items.length > 0
@@ -75,7 +78,7 @@ export function HelmetForm({
   async function submit() {
     setError(null);
     if (!items.every((it) => it.valid && it.wearerAcc && it.userName)) {
-      setError("請確認所有使用人工號皆已查詢成功");
+      setError(t("form.error.lookupAll"));
       return;
     }
     setSubmitting(true);
@@ -96,7 +99,7 @@ export function HelmetForm({
     setSubmitting(false);
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
-      setError(d.error ?? "送出失敗");
+      setError(d.error ?? t("form.error.submit"));
       return;
     }
     clearImportedData("helmet");
@@ -107,13 +110,13 @@ export function HelmetForm({
     <div className="space-y-4">
       {importedCount > 0 && (
         <div className="notice border-emerald-300 bg-emerald-50 text-emerald-900">
-          已載入匯入資料 {importedCount} 筆，請檢視後送出。
+          {tPlural("apply.notice.imported", importedCount)}
         </div>
       )}
       <div className="card">
         <div className="card-header flex items-center justify-between">
-          <span>使用人清單</span>
-          <button className="btn btn-outline text-xs" onClick={add}>＋ 新增欄位</button>
+          <span>{t("form.section.users")}</span>
+          <button className="btn btn-outline text-xs" onClick={add}>{t("form.btn.addRow")}</button>
         </div>
         <div className="card-body space-y-3">
           {items.map((it, i) => (
@@ -133,7 +136,7 @@ export function HelmetForm({
                 }
               />
               <FloatingSelect
-                label="血型 *"
+                label={t("form.field.bloodType")}
                 value={it.bloodType}
                 onChange={(v) => update(i, { bloodType: v })}
               >
@@ -141,13 +144,13 @@ export function HelmetForm({
                   <option key={b} value={b}>{b}</option>
                 ))}
               </FloatingSelect>
-              <FloatingInput label="數量" value={1} disabled readOnly />
+              <FloatingInput label={t("form.field.qty")} value={1} disabled readOnly />
               <button
                 className="btn btn-danger h-[46px]"
                 onClick={() => remove(i)}
                 disabled={items.length === 1}
               >
-                刪除
+                {t("form.btn.delete")}
               </button>
             </div>
           ))}
@@ -155,7 +158,7 @@ export function HelmetForm({
       </div>
 
       <div className="card">
-        <div className="card-header">備註</div>
+        <div className="card-header">{t("form.section.remark")}</div>
         <div className="card-body">
           <textarea
             className="textarea min-h-24"
@@ -169,7 +172,7 @@ export function HelmetForm({
 
       <div className="flex justify-end gap-2">
         <button className="btn btn-primary" disabled={submitting} onClick={submit}>
-          {submitting ? "送出中…" : "送出申請"}
+          {submitting ? t("form.btn.submitting") : t("form.btn.submit")}
         </button>
       </div>
     </div>

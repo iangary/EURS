@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { RequestDetail } from "@/components/RequestDetail";
+import { useT } from "@/i18n/client";
 
 export function RequestDetailModal({
   id,
@@ -10,6 +11,7 @@ export function RequestDetailModal({
   id: string;
   onClose: () => void;
 }) {
+  const t = useT();
   const [data, setData] = useState<any | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -20,7 +22,7 @@ export function RequestDetailModal({
       const res = await fetch(`/api/requests/${id}`);
       if (cancelled) return;
       if (!res.ok) {
-        setError("載入失敗");
+        setError(t("detail.loadFailed"));
         return;
       }
       setData(await res.json());
@@ -28,7 +30,7 @@ export function RequestDetailModal({
     return () => {
       cancelled = true;
     };
-  }, [id]);
+  }, [id, t]);
 
   return (
     <div
@@ -40,11 +42,11 @@ export function RequestDetailModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-5 py-3 border-b">
-          <span className="font-semibold">申請單詳情</span>
+          <span className="font-semibold">{t("detail.modalTitle")}</span>
           <button
             className="text-slate-400 hover:text-slate-700 text-xl leading-none"
             onClick={onClose}
-            aria-label="close"
+            aria-label={t("common.close")}
           >
             ×
           </button>
@@ -52,7 +54,7 @@ export function RequestDetailModal({
         <div className="p-5">
           {error && <div className="text-rose-600 text-sm">{error}</div>}
           {!data && !error && (
-            <div className="text-slate-400 text-sm py-10 text-center">載入中…</div>
+            <div className="text-slate-400 text-sm py-10 text-center">{t("common.loading")}</div>
           )}
           {data && <RequestDetail request={data} viewerRole="ADMIN" />}
         </div>

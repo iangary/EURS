@@ -3,11 +3,13 @@ import { db } from "@/lib/db";
 import { getSetting, getSettingJson, SettingKeys } from "@/lib/settings";
 import { UniformForm } from "./UniformForm";
 import { defaultTopSizes } from "@/lib/uniform-options";
+import { getT } from "@/i18n/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function UniformPage({ searchParams }: { searchParams: { from?: string } }) {
   const session = await requireUser();
+  const t = getT();
   const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, defaultTopSizes());
   const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
   const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
@@ -44,10 +46,10 @@ export default async function UniformPage({ searchParams }: { searchParams: { fr
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-bold">制服申請</h1>
+      <h1 className="text-xl font-bold">{t("apply.uniform.title")}</h1>
       {initial && (
         <div className="notice border-amber-300 bg-amber-50 text-amber-900">
-          已載入退件單資料，請修正後重新送出（將建立新申請單，原退件單保留稽核）。「更換」附件需重新上傳。
+          {t("apply.notice.rejectedUniform")}
         </div>
       )}
       <UniformForm

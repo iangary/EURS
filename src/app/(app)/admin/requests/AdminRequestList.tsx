@@ -7,6 +7,7 @@ import { format } from "date-fns";
 import "react-day-picker/style.css";
 import { TYPE_LABEL, STATUS_LABEL, STATUS_BADGE_CLASS } from "@/lib/labels";
 import { RequestDetailModal } from "./RequestDetailModal";
+import { useT, useTEnum, useFormat } from "@/i18n/client";
 
 type Req = {
   id: string;
@@ -21,6 +22,9 @@ type Req = {
 };
 
 export function AdminRequestList() {
+  const t = useT();
+  const tEnum = useTEnum();
+  const fmt = useFormat();
   const [list, setList] = useState<Req[]>([]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [busy, setBusy] = useState(false);
@@ -64,14 +68,14 @@ export function AdminRequestList() {
   }
 
   async function ship(id: string) {
-    if (!confirm("確認已出貨？")) return;
+    if (!confirm(t("adminReq.confirm.ship"))) return;
     const res = await fetch(`/api/requests/${id}/ship`, { method: "POST" });
     if (res.ok) load();
-    else alert("失敗");
+    else alert(t("common.fail"));
   }
 
   async function reject(id: string, requestNo: string) {
-    const reason = prompt(`退件 ${requestNo} — 請輸入退件原因`);
+    const reason = prompt(t("adminReq.prompt.reject", { requestNo }));
     if (!reason || !reason.trim()) return;
     const res = await fetch(`/api/requests/${id}/reject`, {
       method: "POST",
@@ -79,12 +83,12 @@ export function AdminRequestList() {
       body: JSON.stringify({ reason: reason.trim() }),
     });
     if (res.ok) load();
-    else alert("失敗");
+    else alert(t("common.fail"));
   }
 
   async function batchShip() {
     if (selected.size === 0) return;
-    if (!confirm(`批次標記 ${selected.size} 筆為已出貨？`)) return;
+    if (!confirm(t("adminReq.confirm.batchShip", { count: selected.size }))) return;
     const res = await fetch(`/api/requests/batch-ship`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -93,7 +97,7 @@ export function AdminRequestList() {
     if (res.ok) {
       setSelected(new Set());
       load();
-    } else alert("失敗");
+    } else alert(t("common.fail"));
   }
 
   const selectedDateObjs = useMemo(
@@ -148,13 +152,13 @@ export function AdminRequestList() {
     <div className="space-y-3">
       <div className="card">
         <div className="card-header flex items-center justify-between gap-3 flex-wrap">
-          <span className="font-medium">申請單清單（{filtered.length}）</span>
+          <span className="font-medium">{t("adminReq.list.title", { count: filtered.length })}</span>
           <button
             className="btn btn-primary"
             onClick={batchShip}
             disabled={selected.size === 0}
           >
-            批次標記已出貨（{selected.size}）
+            {t("adminReq.btn.batchShip", { count: selected.size })}
           </button>
         </div>
         <div className="overflow-x-auto">
@@ -162,12 +166,12 @@ export function AdminRequestList() {
             <thead className="bg-slate-50 text-left">
               <tr>
                 <th className="p-2"></th>
-                <th className="p-2">申請單號</th>
-                <th className="p-2">日期</th>
-                <th className="p-2">類型</th>
-                <th className="p-2">申請人</th>
-                <th className="p-2">工地／部門</th>
-                <th className="p-2">狀態</th>
+                <th className="p-2">{t("adminReq.col.requestNo")}</th>
+                <th className="p-2">{t("adminReq.col.date")}</th>
+                <th className="p-2">{t("adminReq.col.type")}</th>
+                <th className="p-2">{t("adminReq.col.requester")}</th>
+                <th className="p-2">{t("adminReq.col.dept")}</th>
+                <th className="p-2">{t("adminReq.col.status")}</th>
                 <th className="p-2"></th>
               </tr>
               <tr className="bg-white border-t">
@@ -175,7 +179,7 @@ export function AdminRequestList() {
                 <th className="p-1">
                   <input
                     className="input !py-1 !px-2 text-xs"
-                    placeholder="搜尋…"
+                    placeholder={t("common.searchPlaceholder")}
                     value={fNo}
                     onChange={(e) => setFNo(e.target.value)}
                   />
@@ -188,10 +192,10 @@ export function AdminRequestList() {
                     onClick={() => (datesOpen ? setDatesOpen(false) : openDatePicker())}
                   >
                     {selectedDates.size === 0
-                      ? "全部"
+                      ? t("adminReq.filter.dateAll")
                       : selectedDates.size === 1
                       ? Array.from(selectedDates)[0]
-                      : `已選 ${selectedDates.size} 天`}
+                      : t("adminReq.filter.dateSelected", { count: selectedDates.size })}
                     <span className="float-right">▾</span>
                   </button>
                 </th>
@@ -201,10 +205,10 @@ export function AdminRequestList() {
                     value={fType}
                     onChange={(e) => setFType(e.target.value)}
                   >
-                    <option value="">全部</option>
-                    {Object.entries(TYPE_LABEL).map(([k, v]) => (
+                    <option value="">{t("adminReq.filter.typeAll")}</option>
+                    {Object.keys(TYPE_LABEL).map((k) => (
                       <option key={k} value={k}>
-                        {v}
+                        {tEnum.type(k as keyof typeof TYPE_LABEL)}
                       </option>
                     ))}
                   </select>
@@ -212,7 +216,7 @@ export function AdminRequestList() {
                 <th className="p-1">
                   <input
                     className="input !py-1 !px-2 text-xs"
-                    placeholder="搜尋…"
+                    placeholder={t("common.searchPlaceholder")}
                     value={fRequester}
                     onChange={(e) => setFRequester(e.target.value)}
                   />
@@ -220,7 +224,7 @@ export function AdminRequestList() {
                 <th className="p-1">
                   <input
                     className="input !py-1 !px-2 text-xs"
-                    placeholder="搜尋…"
+                    placeholder={t("common.searchPlaceholder")}
                     value={fDept}
                     onChange={(e) => setFDept(e.target.value)}
                   />
@@ -231,10 +235,10 @@ export function AdminRequestList() {
                     value={fStatus}
                     onChange={(e) => setFStatus(e.target.value)}
                   >
-                    <option value="">全部</option>
-                    {Object.entries(STATUS_LABEL).map(([k, v]) => (
+                    <option value="">{t("adminReq.filter.statusAll")}</option>
+                    {Object.keys(STATUS_LABEL).map((k) => (
                       <option key={k} value={k}>
-                        {v}
+                        {tEnum.status(k as keyof typeof STATUS_LABEL)}
                       </option>
                     ))}
                   </select>
@@ -246,14 +250,14 @@ export function AdminRequestList() {
               {busy && (
                 <tr>
                   <td colSpan={8} className="p-6 text-center text-slate-400">
-                    載入中…
+                    {t("common.loading")}
                   </td>
                 </tr>
               )}
               {!busy && filtered.length === 0 && (
                 <tr>
                   <td colSpan={8} className="p-6 text-center text-slate-400">
-                    無資料
+                    {t("common.noData")}
                   </td>
                 </tr>
               )}
@@ -275,38 +279,38 @@ export function AdminRequestList() {
                     </button>
                   </td>
                   <td className="p-2">
-                    {new Date(r.submittedAt).toLocaleDateString("zh-TW")}
+                    {fmt.date(r.submittedAt)}
                   </td>
-                  <td className="p-2">{TYPE_LABEL[r.type]}</td>
+                  <td className="p-2">{tEnum.type(r.type)}</td>
                   <td className="p-2">{r.requesterName}</td>
                   <td className="p-2">{r.siteOrDept}</td>
                   <td className="p-2">
                     <span className={`badge ${STATUS_BADGE_CLASS[r.status]}`}>
-                      {STATUS_LABEL[r.status]}
+                      {tEnum.status(r.status)}
                     </span>
                   </td>
                   <td className="p-2 text-right whitespace-nowrap">
-                    {r.status === "SUBMITTED" && (
+                    {r.status === "APPLYING" && (
                       <div className="flex gap-1 justify-end">
                         <button
                           className="btn btn-outline text-xs"
                           onClick={() => ship(r.id)}
                         >
-                          標記已出貨
+                          {t("adminReq.btn.markShipped")}
                         </button>
                         <button
                           className="btn btn-danger text-xs"
                           onClick={() => reject(r.id, r.requestNo)}
                         >
-                          退件
+                          {t("adminReq.btn.reject")}
                         </button>
                       </div>
                     )}
                     {r.status === "SHIPPED" && (
-                      <span className="text-emerald-700 text-xs">已出貨 ✓</span>
+                      <span className="text-emerald-700 text-xs">{t("adminReq.tag.shipped")}</span>
                     )}
                     {r.status === "REJECTED" && (
-                      <span className="text-rose-700 text-xs">已退件</span>
+                      <span className="text-rose-700 text-xs">{t("adminReq.tag.rejected")}</span>
                     )}
                   </td>
                 </tr>
@@ -334,13 +338,13 @@ export function AdminRequestList() {
                 className="hover:underline text-slate-500"
                 onClick={() => setSelectedDates(new Set())}
               >
-                清除
+                {t("adminReq.datePicker.clear")}
               </button>
               <button
                 className="hover:underline text-slate-500"
                 onClick={() => setDatesOpen(false)}
               >
-                關閉
+                {t("adminReq.datePicker.close")}
               </button>
             </div>
           </div>,

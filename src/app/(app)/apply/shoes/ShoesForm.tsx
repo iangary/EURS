@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { AccLookupField } from "@/components/AccLookupField";
 import { FloatingInput, FloatingSelect } from "@/components/FloatingField";
 import { clearImportedData } from "@/lib/import-storage";
+import { useT, useTPlural, useFormat } from "@/i18n/client";
 
 type Item = {
   wearerAcc: string;
@@ -23,6 +24,9 @@ export function ShoesForm({
   initial?: { remark: string; items: { wearerAcc: string; userName: string; userDept: string; shoeSize: number; reason: string }[] };
 }) {
   const router = useRouter();
+  const t = useT();
+  const tPlural = useTPlural();
+  const fmt = useFormat();
   const [remark, setRemark] = useState(initial?.remark ?? "");
   const [items, setItems] = useState<Item[]>(
     initial && initial.items.length > 0
@@ -90,7 +94,7 @@ export function ShoesForm({
     setError(null);
     setBlocked([]);
     if (!items.every((it) => it.valid && it.wearerAcc && it.userName)) {
-      setError("請確認所有使用人工號皆已查詢成功");
+      setError(t("form.error.lookupAll"));
       return;
     }
     setSubmitting(true);
@@ -112,7 +116,7 @@ export function ShoesForm({
     setSubmitting(false);
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
-      setError(d.error ?? "送出失敗");
+      setError(d.error ?? t("form.error.submit"));
       if (res.status === 409 && Array.isArray(d.blocked)) setBlocked(d.blocked);
       return;
     }
@@ -124,13 +128,13 @@ export function ShoesForm({
     <div className="space-y-4">
       {importedCount > 0 && (
         <div className="notice border-emerald-300 bg-emerald-50 text-emerald-900">
-          已載入匯入資料 {importedCount} 筆，請檢視後送出。
+          {tPlural("apply.notice.imported", importedCount)}
         </div>
       )}
       <div className="card">
         <div className="card-header flex items-center justify-between">
-          <span>使用人清單</span>
-          <button className="btn btn-outline text-xs" onClick={add}>＋ 新增欄位</button>
+          <span>{t("form.section.users")}</span>
+          <button className="btn btn-outline text-xs" onClick={add}>{t("form.btn.addRow")}</button>
         </div>
         <div className="card-body space-y-4">
           {items.map((it, i) => (
@@ -150,7 +154,7 @@ export function ShoesForm({
                 }
               />
               <FloatingSelect
-                label="鞋號 *"
+                label={t("form.field.shoeSize")}
                 value={it.shoeSize}
                 onChange={(v) => update(i, { shoeSize: Number(v) })}
               >
@@ -158,19 +162,19 @@ export function ShoesForm({
                   <option key={s} value={s}>{s}</option>
                 ))}
               </FloatingSelect>
-              <FloatingInput label="數量" value={1} disabled readOnly />
+              <FloatingInput label={t("form.field.qty")} value={1} disabled readOnly />
               <FloatingInput
-                label="說明原因 *"
+                label={t("form.field.reason")}
                 value={it.reason}
                 onChange={(v) => update(i, { reason: v })}
-                placeholder="例：新進人員、舊鞋破損"
+                placeholder={t("form.field.reason.placeholder")}
               />
               <button
                 className="btn btn-danger h-[46px]"
                 onClick={() => remove(i)}
                 disabled={items.length === 1}
               >
-                刪除
+                {t("form.btn.delete")}
               </button>
             </div>
           ))}
@@ -178,7 +182,7 @@ export function ShoesForm({
       </div>
 
       <div className="card">
-        <div className="card-header">備註</div>
+        <div className="card-header">{t("form.section.remark")}</div>
         <div className="card-body">
           <textarea className="textarea min-h-24" value={remark} onChange={(e) => setRemark(e.target.value)} />
         </div>
@@ -187,11 +191,16 @@ export function ShoesForm({
       {error && <div className="text-sm text-rose-600">{error}</div>}
       {blocked.length > 0 && (
         <div className="notice border-rose-300 bg-rose-50 text-rose-900">
-          <div className="font-medium mb-1">90 天冷卻期限制：</div>
+          <div className="font-medium mb-1">{t("shoes.blocked.title")}</div>
           <ul className="text-sm list-disc pl-5 space-y-0.5">
             {blocked.map((b, idx) => (
               <li key={idx}>
-                {b.userName}（{b.wearerAcc}）— 上次申請 {new Date(b.lastSubmittedAt).toLocaleDateString("zh-TW")}（{b.requestNo}）
+                {t("shoes.blocked.row", {
+                  name: b.userName,
+                  acc: b.wearerAcc,
+                  date: fmt.date(b.lastSubmittedAt),
+                  requestNo: b.requestNo,
+                })}
               </li>
             ))}
           </ul>
@@ -200,7 +209,7 @@ export function ShoesForm({
 
       <div className="flex justify-end">
         <button className="btn btn-primary" disabled={submitting} onClick={submit}>
-          {submitting ? "送出中…" : "送出申請"}
+          {submitting ? t("form.btn.submitting") : t("form.btn.submit")}
         </button>
       </div>
     </div>

@@ -6,6 +6,7 @@ import {
   IMPORT_RESULT_STORAGE_KEY,
   IMPORT_TAB_STORAGE_KEY,
 } from "@/lib/import-storage";
+import { useT, useTEnum, useTPlural } from "@/i18n/client";
 
 type Row = {
   rowNumber: number;
@@ -19,10 +20,10 @@ type ParseResult = { helmet: Row[]; shoes: Row[]; uniform: Row[] };
 
 type Tab = "helmet" | "shoes" | "uniform";
 
-const TAB_LABEL: Record<Tab, string> = {
-  helmet: "安全帽",
-  shoes: "安全鞋",
-  uniform: "制服",
+const TAB_TYPE: Record<Tab, "HELMET" | "SHOES" | "UNIFORM"> = {
+  helmet: "HELMET",
+  shoes: "SHOES",
+  uniform: "UNIFORM",
 };
 
 const TAB_PATH: Record<Tab, string> = {
@@ -36,6 +37,9 @@ const RESULT_STORAGE_KEY = IMPORT_RESULT_STORAGE_KEY;
 
 export function BulkImportUnified() {
   const router = useRouter();
+  const t = useT();
+  const tEnum = useTEnum();
+  const tPlural = useTPlural();
   const fileRef = useRef<HTMLInputElement>(null);
   const [result, setResult] = useState<ParseResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -60,7 +64,7 @@ export function BulkImportUnified() {
     setBusy(false);
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
-      setError(d.error ?? "解析失敗");
+      setError(d.error ?? t("import.error.parse"));
       return;
     }
     const d = (await res.json()) as ParseResult;
@@ -84,9 +88,9 @@ export function BulkImportUnified() {
     <div className="space-y-4">
       <div className="card">
         <div className="card-header flex items-center justify-between">
-          <span>批量匯入 — 統一 Excel（三分頁）</span>
+          <span>{t("import.card.title")}</span>
           <a className="btn btn-outline text-xs" href="/api/templates/unified">
-            下載統一範本
+            {t("import.btn.template")}
           </a>
         </div>
         <div className="card-body space-y-3">
@@ -111,10 +115,10 @@ export function BulkImportUnified() {
               onClick={() => fileRef.current?.click()}
               disabled={busy}
             >
-              {busy ? "解析中…" : "選擇 .xlsx 或拖放至此"}
+              {busy ? t("import.btn.parsing") : t("import.btn.choose")}
             </button>
             <div className="mt-2 text-xs text-slate-400">
-              一個 Excel 內含「安全帽 / 安全鞋 / 制服」三個分頁，每頁最多 200 列、總檔 5 MB
+              {t("import.dropHint")}
             </div>
           </div>
           {error && <div className="text-sm text-rose-600">{error}</div>}
@@ -123,24 +127,25 @@ export function BulkImportUnified() {
 
       {result && (
         <div className="card">
-          <div className="card-header">驗證結果</div>
+          <div className="card-header">{t("import.section.result")}</div>
           <div className="card-body space-y-3">
-            {tabs.map((t) => {
-              const rows = result[t];
+            {tabs.map((tab) => {
+              const rows = result[tab];
               const okCount = rows.filter((r) => r.status !== "error").length;
               const errCount = rows.filter((r) => r.status === "error").length;
               const errorRows = rows.filter((r) => r.status === "error");
               const canGo = okCount > 0 && errCount === 0;
+              const tabLabel = tEnum.type(TAB_TYPE[tab]);
               return (
                 <div
-                  key={t}
+                  key={tab}
                   className="border rounded-md p-3 flex flex-col md:flex-row md:items-start md:justify-between gap-3"
                 >
                   <div className="flex-1 space-y-1">
                     <div className="font-medium">
-                      {TAB_LABEL[t]}
+                      {tabLabel}
                       <span className="ml-2 text-sm text-slate-500">
-                        共 {rows.length} 列
+                        {tPlural("import.row.totalCount", rows.length)}
                       </span>
                       {okCount > 0 && (
                         <span className="ml-2 text-emerald-700 text-sm">
@@ -157,29 +162,29 @@ export function BulkImportUnified() {
                       <ul className="text-xs text-rose-700 list-disc pl-5">
                         {errorRows.map((r) => (
                           <li key={r.rowNumber}>
-                            第 {r.rowNumber} 列：{r.errors.join("；")}
+                            {t("import.row.errorRow", { row: r.rowNumber, errors: r.errors.join("；") })}
                           </li>
                         ))}
                       </ul>
                     )}
                     {rows.length === 0 && (
-                      <div className="text-xs text-slate-400">此分頁無資料</div>
+                      <div className="text-xs text-slate-400">{t("import.row.empty")}</div>
                     )}
                   </div>
                   <div className="md:w-56 md:text-right">
                     <button
                       className="btn btn-primary w-full md:w-auto"
                       disabled={!canGo}
-                      onClick={() => router.push(`${TAB_PATH[t]}?imported=1`)}
+                      onClick={() => router.push(`${TAB_PATH[tab]}?imported=1`)}
                     >
-                      前往{TAB_LABEL[t]}申請（{okCount}）
+                      {t("import.row.goto", { label: tabLabel, count: okCount })}
                     </button>
                   </div>
                 </div>
               );
             })}
             <div className="text-xs text-slate-500">
-              請在各申請頁檢視匯入內容後送出。錯誤列請修正 Excel 後重新上傳。
+              {t("import.footer.hint")}
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FloatingInput } from "@/components/FloatingField";
+import { useT } from "@/i18n/client";
 
 type Status = "idle" | "loading" | "ok" | "notfound" | "error";
 
@@ -25,6 +26,7 @@ export function AccLookupField({
   valid: boolean;
   onChange: (next: AccLookupValue) => void;
 }) {
+  const t = useT();
   const [status, setStatus] = useState<Status>(
     acc && userName && valid ? "ok" : "idle"
   );
@@ -84,17 +86,17 @@ export function AccLookupField({
 
   const namePlaceholder =
     status === "loading"
-      ? "查詢中…"
+      ? t("acc.placeholder.loading")
       : status === "notfound"
-      ? "查無此工號"
+      ? t("acc.placeholder.notfound")
       : status === "error"
-      ? "查詢失敗"
-      : "輸入工號後自動帶入";
+      ? t("acc.placeholder.error")
+      : t("acc.placeholder.idle");
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-[140px_minmax(160px,1fr)_180px] gap-2">
       <FloatingInput
-        label="工號 *"
+        label={t("acc.field.empNo")}
         value={acc}
         onChange={(v) => {
           setStatus("idle");
@@ -105,7 +107,7 @@ export function AccLookupField({
       />
       <div className="relative">
         <FloatingInput
-          label="使用人姓名 *"
+          label={t("acc.field.userName")}
           value={userName}
           disabled
           readOnly
@@ -117,18 +119,18 @@ export function AccLookupField({
           </span>
         )}
         {status === "notfound" && (
-          <div className="text-xs text-rose-600 mt-1">查無此工號</div>
+          <div className="text-xs text-rose-600 mt-1">{t("acc.error.notfound")}</div>
         )}
         {status === "error" && (
-          <div className="text-xs text-rose-600 mt-1">查詢失敗，請重試</div>
+          <div className="text-xs text-rose-600 mt-1">{t("acc.error.retry")}</div>
         )}
       </div>
       <FloatingInput
-        label="所屬工地／部門"
+        label={t("acc.field.userDept")}
         value={userDept}
         disabled
         readOnly
-        placeholder="自動帶入"
+        placeholder={t("acc.placeholder.dept")}
       />
     </div>
   );

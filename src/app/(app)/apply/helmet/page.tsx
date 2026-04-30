@@ -1,12 +1,14 @@
 import { requireUser } from "@/lib/auth-helpers";
 import { db } from "@/lib/db";
 import { getSettingJson, SettingKeys } from "@/lib/settings";
+import { getT } from "@/i18n/server";
 import { HelmetForm } from "./HelmetForm";
 
 export const dynamic = "force-dynamic";
 
 export default async function HelmetPage({ searchParams }: { searchParams: { from?: string } }) {
   const session = await requireUser();
+  const t = getT();
   const blood = await getSettingJson<string[]>(SettingKeys.BLOOD_TYPES, ["A", "B", "O", "AB"]);
 
   let initial:
@@ -32,10 +34,10 @@ export default async function HelmetPage({ searchParams }: { searchParams: { fro
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-bold">安全帽申請</h1>
+      <h1 className="text-xl font-bold">{t("apply.helmet.title")}</h1>
       {initial && (
         <div className="notice border-amber-300 bg-amber-50 text-amber-900">
-          已載入退件單資料，請修正後重新送出（將建立新申請單，原退件單保留稽核）。
+          {t("apply.notice.rejected")}
         </div>
       )}
       <HelmetForm bloodOptions={blood} initial={initial} />

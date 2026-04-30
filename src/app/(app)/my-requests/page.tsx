@@ -2,13 +2,14 @@ import Link from "next/link";
 import { requireUser } from "@/lib/auth-helpers";
 import { db } from "@/lib/db";
 import { STATUS_BADGE_CLASS } from "@/lib/labels";
-import { getT } from "@/i18n/server";
+import { getT, getLocale, formatDate } from "@/i18n/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function MyRequestsPage() {
   const session = await requireUser();
-  const t = getT();
+  const locale = getLocale();
+  const t = getT(locale);
   const list = await db.request.findMany({
     where: { requesterId: session.user.id },
     orderBy: { submittedAt: "desc" },
@@ -40,13 +41,13 @@ export default async function MyRequestsPage() {
             {list.map((r) => (
               <tr key={r.id}>
                 <td className="p-3 font-mono">{r.requestNo}</td>
-                <td className="p-3">{r.submittedAt.toLocaleDateString()}</td>
+                <td className="p-3">{formatDate(r.submittedAt, locale)}</td>
                 <td className="p-3">{t(`type.${r.type}` as const)}</td>
                 <td className="p-3">{r.items.map((i) => i.userName).join("、")}</td>
                 <td className="p-3">
                   <span className={`badge ${STATUS_BADGE_CLASS[r.status]}`}>{t(`status.${r.status}` as const)}</span>
                 </td>
-                <td className="p-3">{r.shippedAt ? r.shippedAt.toLocaleDateString() : "—"}</td>
+                <td className="p-3">{r.shippedAt ? formatDate(r.shippedAt, locale) : "—"}</td>
                 <td className="p-3 text-right">
                   <Link href={`/my-requests/${r.id}`} className="text-brand-600 hover:underline">
                     {t("my.col.detail")}

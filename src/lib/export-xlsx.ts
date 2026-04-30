@@ -3,7 +3,7 @@ import type { Request, RequestItem, User } from "@prisma/client";
 
 const TYPE_LABEL = { HELMET: "安全帽", SHOES: "安全鞋", UNIFORM: "制服" } as const;
 const STATUS_LABEL = {
-  SUBMITTED: "已送出",
+  APPLYING: "申請中",
   SHIPPED: "已出貨",
   REJECTED: "退件",
 } as const;

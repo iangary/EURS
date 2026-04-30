@@ -1,9 +1,12 @@
 import { db } from "@/lib/db";
 import { TYPE_LABEL, STATUS_LABEL } from "@/lib/labels";
+import { getT, getTEnum } from "@/i18n/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
+  const t = getT();
+  const tEnum = getTEnum();
   const [byDept, byType, byStatus] = await Promise.all([
     db.request.groupBy({ by: ["siteOrDept"], _count: { _all: true } }),
     db.request.groupBy({ by: ["type"], _count: { _all: true } }),
@@ -12,20 +15,20 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-bold">後台 · 儀表板</h1>
+      <h1 className="text-xl font-bold">{t("adminDash.title")}</h1>
 
       <div className="grid md:grid-cols-3 gap-4">
-        <Card title="依項目類型">
+        <Card title={t("adminDash.byType")}>
           {byType.map((x) => (
-            <Bar key={x.type} label={TYPE_LABEL[x.type]} value={x._count._all} max={Math.max(...byType.map((y) => y._count._all))} />
+            <Bar key={x.type} label={tEnum.type(x.type as keyof typeof TYPE_LABEL)} value={x._count._all} max={Math.max(...byType.map((y) => y._count._all))} />
           ))}
         </Card>
-        <Card title="依狀態">
+        <Card title={t("adminDash.byStatus")}>
           {byStatus.map((x) => (
-            <Bar key={x.status} label={STATUS_LABEL[x.status]} value={x._count._all} max={Math.max(...byStatus.map((y) => y._count._all))} />
+            <Bar key={x.status} label={tEnum.status(x.status as keyof typeof STATUS_LABEL)} value={x._count._all} max={Math.max(...byStatus.map((y) => y._count._all))} />
           ))}
         </Card>
-        <Card title="依工地／部門">
+        <Card title={t("adminDash.byDept")}>
           {byDept.map((x) => (
             <Bar key={x.siteOrDept} label={x.siteOrDept || "—"} value={x._count._all} max={Math.max(...byDept.map((y) => y._count._all))} />
           ))}

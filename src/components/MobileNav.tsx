@@ -4,6 +4,17 @@ import Link from "next/link";
 import { useEffect, useState, type ReactNode } from "react";
 import { useT } from "@/i18n/client";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import {
+  HelmetIcon,
+  ShoesIcon,
+  UniformIcon,
+  ImportIcon,
+  ListIcon,
+  InboxIcon,
+  ExportIcon,
+  ChartIcon,
+  SettingsIcon,
+} from "@/components/nav-icons";
 
 type NavItem = {
   href: string;
@@ -15,80 +26,6 @@ type Section = {
   title?: string;
   items: NavItem[];
 };
-
-const iconClass = "w-5 h-5 shrink-0";
-
-const HelmetIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 17h18v2H3z" />
-    <path d="M5 17a7 7 0 0 1 14 0" />
-    <path d="M12 6v4" />
-    <path d="M9 10h6" />
-  </svg>
-);
-
-const ShoesIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 17V8h4l2 3 4 1 5 2 3 1v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
-    <path d="M7 11v3" />
-  </svg>
-);
-
-const UniformIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M8 3l4 3 4-3 4 2-2 5h-2v11H6V10H4L2 5z" />
-  </svg>
-);
-
-const ImportIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 3v12" />
-    <path d="M7 8l5-5 5 5" />
-    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-  </svg>
-);
-
-const ListIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M8 6h13" />
-    <path d="M8 12h13" />
-    <path d="M8 18h13" />
-    <circle cx="4" cy="6" r="1" />
-    <circle cx="4" cy="12" r="1" />
-    <circle cx="4" cy="18" r="1" />
-  </svg>
-);
-
-const InboxIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 12h-6l-2 3h-4l-2-3H2" />
-    <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
-  </svg>
-);
-
-const ExportIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 15V3" />
-    <path d="M7 10l5 5 5-5" />
-    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-  </svg>
-);
-
-const ChartIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M3 3v18h18" />
-    <rect x="7" y="12" width="3" height="6" />
-    <rect x="12" y="8" width="3" height="10" />
-    <rect x="17" y="5" width="3" height="13" />
-  </svg>
-);
-
-const SettingsIcon = (
-  <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="3" />
-    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-  </svg>
-);
 
 const MenuIcon = (
   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

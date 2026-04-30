@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TYPE_LABEL, STATUS_LABEL, STATUS_BADGE_CLASS } from "@/lib/labels";
-import { useT } from "@/i18n/client";
+import { useT, useFormat } from "@/i18n/client";
 
 const TYPE_PATH: Record<string, string> = {
   HELMET: "helmet",
@@ -35,6 +35,7 @@ type Req = {
 export function RequestDetail({ request: r, viewerRole }: { request: Req; viewerRole: "ADMIN" | "REQUESTER" }) {
   const router = useRouter();
   const t = useT();
+  const fmt = useFormat();
   const [busy, setBusy] = useState(false);
   const [rejectReason, setRejectReason] = useState("");
   const [showReject, setShowReject] = useState(false);
@@ -82,8 +83,8 @@ export function RequestDetail({ request: r, viewerRole }: { request: Req; viewer
         <div className="card-body grid md:grid-cols-2 gap-3 text-sm">
           <Field label={t("detail.field.requester")}>{r.requesterName}</Field>
           <Field label={t("detail.field.siteOrDept")}>{r.siteOrDept}</Field>
-          <Field label={t("detail.field.submittedAt")}>{new Date(r.submittedAt).toLocaleString()}</Field>
-          <Field label={t("detail.field.shippedTime")}>{r.shippedAt ? new Date(r.shippedAt).toLocaleString() : "—"}</Field>
+          <Field label={t("detail.field.submittedAt")}>{fmt.dateTime(r.submittedAt)}</Field>
+          <Field label={t("detail.field.shippedTime")}>{r.shippedAt ? fmt.dateTime(r.shippedAt) : "—"}</Field>
           {r.rejectReason && <Field label={t("detail.field.rejectReason")}>{r.rejectReason}</Field>}
           {r.remark && <Field label={t("detail.field.remark")}>{r.remark}</Field>}
           {r.importNote && <Field label={t("detail.field.importNote")}>{r.importNote}</Field>}
@@ -106,7 +107,7 @@ export function RequestDetail({ request: r, viewerRole }: { request: Req; viewer
               </tr>
             </thead>
             <tbody className="divide-y">
-              {r.items.map((it) => itemRows(t, r.type, it, viewerRole))}
+              {r.items.map((it) => itemRows(t, fmt, r.type, it, viewerRole))}
             </tbody>
           </table>
         </div>
@@ -129,7 +130,7 @@ export function RequestDetail({ request: r, viewerRole }: { request: Req; viewer
           <ul className="space-y-1">
             {r.logs.map((l: any) => (
               <li key={l.id}>
-                {new Date(l.changedAt).toLocaleString()} ·
+                {fmt.dateTime(l.changedAt)} ·
                 {" "}{l.fromStatus ? t(`status.${l.fromStatus as keyof typeof STATUS_LABEL}`) : "—"} → {t(`status.${l.toStatus as keyof typeof STATUS_LABEL}`)}
                 {l.note ? ` · ${l.note}` : ""}
               </li>
@@ -197,8 +198,9 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 type TFn = ReturnType<typeof useT>;
+type Fmt = ReturnType<typeof useFormat>;
 
-function itemRows(t: TFn, type: keyof typeof TYPE_LABEL, it: any, viewerRole: "ADMIN" | "REQUESTER") {
+function itemRows(t: TFn, fmt: Fmt, type: keyof typeof TYPE_LABEL, it: any, viewerRole: "ADMIN" | "REQUESTER") {
   const deptCodeCell = <DeptCodeCell itemId={it.id} initial={it.deptCode ?? ""} editable={viewerRole === "ADMIN"} />;
   if (type === "HELMET") {
     return (
@@ -209,7 +211,7 @@ function itemRows(t: TFn, type: keyof typeof TYPE_LABEL, it: any, viewerRole: "A
         <td className="p-2">{t("detail.helmet.bloodType", { value: it.bloodType })}</td>
         <td className="p-2">1</td>
         <td className="p-2">—</td>
-        <td className="p-2">{it.shippedAt ? new Date(it.shippedAt).toLocaleDateString() : "—"}</td>
+        <td className="p-2">{it.shippedAt ? fmt.date(it.shippedAt) : "—"}</td>
       </tr>
     );
   }
@@ -222,7 +224,7 @@ function itemRows(t: TFn, type: keyof typeof TYPE_LABEL, it: any, viewerRole: "A
         <td className="p-2">{t("detail.shoes.size", { size: it.shoeSize, reason: it.reason })}</td>
         <td className="p-2">1</td>
         <td className="p-2">—</td>
-        <td className="p-2">{it.shippedAt ? new Date(it.shippedAt).toLocaleDateString() : "—"}</td>
+        <td className="p-2">{it.shippedAt ? fmt.date(it.shippedAt) : "—"}</td>
       </tr>
     );
   }
@@ -231,26 +233,26 @@ function itemRows(t: TFn, type: keyof typeof TYPE_LABEL, it: any, viewerRole: "A
   if (it.topSelected) {
     rows.push(
       <tr key={`${it.id}-top`}>
-        <td className="p-2">{it.userName}（{t(`gender.${it.gender as "MALE" | "FEMALE"}`)}）</td>
+        <td className="p-2">{t("detail.userWithGender", { name: it.userName, gender: t(`gender.${it.gender as "MALE" | "FEMALE"}`) })}</td>
         <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">{deptCodeCell}</td>
         <td className="p-2">{t("detail.uniform.top", { size: it.topSize })}</td>
         <td className="p-2">{it.topQty}</td>
         <td className="p-2">{t(`action.${it.topAction as "NEW" | "REPLACE" | "PURCHASE"}`)}</td>
-        <td className="p-2">{it.shippedAt ? new Date(it.shippedAt).toLocaleDateString() : "—"}</td>
+        <td className="p-2">{it.shippedAt ? fmt.date(it.shippedAt) : "—"}</td>
       </tr>
     );
   }
   if (it.pantsSelected) {
     rows.push(
       <tr key={`${it.id}-pants`}>
-        <td className="p-2">{it.userName}（{t(`gender.${it.gender as "MALE" | "FEMALE"}`)}）</td>
+        <td className="p-2">{t("detail.userWithGender", { name: it.userName, gender: t(`gender.${it.gender as "MALE" | "FEMALE"}`) })}</td>
         <td className="p-2">{it.userDept || "—"}</td>
         <td className="p-2">{deptCodeCell}</td>
         <td className="p-2">{t("detail.uniform.pants", { waist: it.pantsWaist, length: it.pantsLength })}</td>
         <td className="p-2">{it.pantsQty}</td>
         <td className="p-2">{t(`action.${it.pantsAction as "NEW" | "REPLACE" | "PURCHASE"}`)}</td>
-        <td className="p-2">{it.shippedAt ? new Date(it.shippedAt).toLocaleDateString() : "—"}</td>
+        <td className="p-2">{it.shippedAt ? fmt.date(it.shippedAt) : "—"}</td>
       </tr>
     );
   }

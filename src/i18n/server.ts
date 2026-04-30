@@ -26,3 +26,14 @@ export function getT(locale: Locale = getLocale()): TFn {
 }
 
 export { format };
+export { formatDate, formatDateTime } from "./format";
+
+export function getTEnum(locale: Locale = getLocale()) {
+  const t = getT(locale);
+  return {
+    type: (k: "HELMET" | "SHOES" | "UNIFORM") => t(`type.${k}`),
+    status: (k: "APPLYING" | "SHIPPED" | "REJECTED") => t(`status.${k}`),
+    action: (k: "NEW" | "REPLACE" | "PURCHASE") => t(`action.${k}`),
+    gender: (k: "MALE" | "FEMALE") => t(`gender.${k}`),
+  };
+}

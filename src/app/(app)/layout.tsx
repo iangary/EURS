@@ -1,8 +1,20 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { requireUser } from "@/lib/auth-helpers";
 import { UserMenu } from "@/components/UserMenu";
 import { MobileNav } from "@/components/MobileNav";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import {
+  HelmetIcon,
+  ShoesIcon,
+  UniformIcon,
+  ImportIcon,
+  ListIcon,
+  InboxIcon,
+  ExportIcon,
+  ChartIcon,
+  SettingsIcon,
+} from "@/components/nav-icons";
 import { getT } from "@/i18n/server";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
@@ -27,19 +39,19 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             <span>{t("brand.title")}</span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
-            <NavLink href="/apply/helmet">{t("nav.helmet")}</NavLink>
-            <NavLink href="/apply/shoes">{t("nav.shoes")}</NavLink>
-            <NavLink href="/apply/uniform">{t("nav.uniform")}</NavLink>
-            <NavLink href="/apply/import">{t("nav.import")}</NavLink>
+            <NavIcon href="/apply/helmet" label={t("nav.helmet")} icon={HelmetIcon} />
+            <NavIcon href="/apply/shoes" label={t("nav.shoes")} icon={ShoesIcon} />
+            <NavIcon href="/apply/uniform" label={t("nav.uniform")} icon={UniformIcon} />
+            <NavIcon href="/apply/import" label={t("nav.import")} icon={ImportIcon} />
             <span className="mx-2 h-5 w-px bg-slate-200" />
-            <NavLink href="/my-requests">{t("nav.myRequests")}</NavLink>
+            <NavIcon href="/my-requests" label={t("nav.myRequests")} icon={ListIcon} />
             {isAdmin && (
               <>
                 <span className="mx-2 h-5 w-px bg-slate-200" />
-                <NavLink href="/admin/requests">{t("nav.adminRequests")}</NavLink>
-                <NavLink href="/admin/export">{t("nav.adminExport")}</NavLink>
-                <NavLink href="/admin/dashboard">{t("nav.adminDashboard")}</NavLink>
-                <NavLink href="/admin/settings">{t("nav.adminSettings")}</NavLink>
+                <NavIcon href="/admin/requests" label={t("nav.adminRequests")} icon={InboxIcon} />
+                <NavIcon href="/admin/export" label={t("nav.adminExport")} icon={ExportIcon} />
+                <NavIcon href="/admin/dashboard" label={t("nav.adminDashboard")} icon={ChartIcon} />
+                <NavIcon href="/admin/settings" label={t("nav.adminSettings")} icon={SettingsIcon} />
               </>
             )}
           </nav>
@@ -79,10 +91,21 @@ function BrandIcon() {
   );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function NavIcon({ href, label, icon }: { href: string; label: string; icon: ReactNode }) {
   return (
-    <Link href={href} className="px-3 py-2 text-sm text-slate-700 hover:text-brand-700 hover:bg-slate-50 rounded">
-      {children}
+    <Link
+      href={href}
+      aria-label={label}
+      className="group relative w-9 h-9 inline-flex items-center justify-center rounded text-slate-600 hover:text-brand-700 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+    >
+      {icon}
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded bg-slate-900 px-2.5 py-1 text-white opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity z-50"
+        style={{ fontSize: "21px", lineHeight: 1.2 }}
+      >
+        {label}
+      </span>
     </Link>
   );
 }

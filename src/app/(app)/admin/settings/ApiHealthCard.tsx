@@ -1,17 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { useT, useFormat } from "@/i18n/client";
 
 type ErrRec = { status: number | null; message: string; at: string };
 type ErrMap = { emp?: ErrRec; mail?: ErrRec };
 type TestResult = { ok: boolean; message: string };
 
-const SOURCE_LABEL: Record<string, string> = { emp: "員工 API (EMP)", mail: "寄信 API (MAIL)" };
-
 export function ApiHealthCard({ initial }: { initial: ErrMap }) {
+  const t = useT();
+  const fmt = useFormat();
   const [errors, setErrors] = useState<ErrMap>(initial);
   const [testing, setTesting] = useState(false);
   const [result, setResult] = useState<{ emp: TestResult; mail: TestResult } | null>(null);
+
+  const sourceLabel = (s: keyof ErrMap) =>
+    s === "emp" ? t("apiHealth.source.emp") : t("apiHealth.source.mail");
 
   async function runTest() {
     setTesting(true);
@@ -34,30 +38,34 @@ export function ApiHealthCard({ initial }: { initial: ErrMap }) {
     <div className="card">
       <div className="px-5 py-3 border-b flex items-center justify-between gap-3">
         <div>
-          <div className="font-medium">外部 API 連線狀態</div>
+          <div className="font-medium">{t("apiHealth.title")}</div>
           <div className="text-xs text-slate-400">
-            申請流程使用的 EMP / MAIL API 共用 <code className="font-mono">SSO_API_KEY</code>，金鑰錯誤會在此顯示。
+            {t("apiHealth.subtitle")}
           </div>
         </div>
         <button className="btn btn-primary" disabled={testing} onClick={runTest}>
-          {testing ? "測試中…" : "測試連線"}
+          {testing ? t("apiHealth.btn.testing") : t("apiHealth.btn.test")}
         </button>
       </div>
       <div className="card-body space-y-3">
         {!hasError && !result && (
           <div className="text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded p-2">
-            目前無記錄到的 API 錯誤。
+            {t("apiHealth.noErrors")}
           </div>
         )}
         {sources.map((s) =>
           errors[s] ? (
             <div key={s} className="text-sm text-rose-800 bg-rose-50 border border-rose-200 rounded p-2">
-              <div className="font-medium">{SOURCE_LABEL[s]} 最後一次失敗</div>
+              <div className="font-medium">{sourceLabel(s)} {t("apiHealth.lastFailure")}</div>
               <div className="font-mono text-xs mt-1">
-                狀態：{errors[s]!.status ?? "無回應/逾時"} · 時間：
-                {new Date(errors[s]!.at).toLocaleString("zh-TW")}
+                {t("apiHealth.field.status", {
+                  status: errors[s]!.status ?? t("apiHealth.field.statusEmpty"),
+                  time: fmt.dateTime(errors[s]!.at),
+                })}
               </div>
-              <div className="font-mono text-xs mt-1 break-all">訊息：{errors[s]!.message}</div>
+              <div className="font-mono text-xs mt-1 break-all">
+                {t("apiHealth.field.message", { message: errors[s]!.message })}
+              </div>
             </div>
           ) : null,
         )}
@@ -73,7 +81,10 @@ export function ApiHealthCard({ initial }: { initial: ErrMap }) {
                 }`}
               >
                 <div className="font-medium">
-                  {SOURCE_LABEL[s]}：{result[s].ok ? "✓ 通過" : "✗ 失敗"}
+                  {t("apiHealth.test.label", {
+                    source: sourceLabel(s),
+                    result: result[s].ok ? t("apiHealth.test.pass") : t("apiHealth.test.fail"),
+                  })}
                 </div>
                 <div className="font-mono text-xs mt-1 break-all">{result[s].message}</div>
               </div>

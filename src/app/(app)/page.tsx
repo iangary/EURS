@@ -2,13 +2,16 @@ import Link from "next/link";
 import { requireUser } from "@/lib/auth-helpers";
 import { db } from "@/lib/db";
 import { STATUS_BADGE_CLASS } from "@/lib/labels";
-import { getT } from "@/i18n/server";
+import { getT, formatDate } from "@/i18n/server";
+import { getLocale } from "@/i18n/server";
+import { pluralKey } from "@/i18n/format";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const session = await requireUser();
-  const t = getT();
+  const locale = getLocale();
+  const t = getT(locale);
   const recent = await db.request.findMany({
     where: { requesterId: session.user.id },
     orderBy: { submittedAt: "desc" },
@@ -55,7 +58,7 @@ export default async function HomePage() {
                 <div>
                   <div className="font-medium">{r.requestNo}</div>
                   <div className="text-xs text-slate-500">
-                    {r.submittedAt.toLocaleDateString()} · {t("home.recent.userCount", { count: r.items.length })}
+                    {formatDate(r.submittedAt, locale)} · {t(`home.recent.userCount.${pluralKey(r.items.length)}`, { count: r.items.length })}
                   </div>
                 </div>
               </div>

@@ -17,7 +17,7 @@ enum RequestType {
 }
 
 enum RequestStatus {
-  SUBMITTED
+  APPLYING
   SHIPPED
   REJECTED
 }
@@ -63,7 +63,7 @@ model Request {
   requester     User          @relation(fields: [requesterId], references: [id])
   requesterName String
   siteOrDept    String
-  status        RequestStatus @default(SUBMITTED)
+  status        RequestStatus @default(APPLYING)
   remark        String?
   rejectReason  String?
   submittedAt   DateTime      @default(now())

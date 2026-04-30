@@ -107,7 +107,7 @@ async function main() {
   const rejectReasons = ["附件不齊", "尺寸資訊有誤", "重複申請", "已超過年度配額"];
 
   let seq = 0;
-  let stats = { total: 0, SUBMITTED: 0, SHIPPED: 0, REJECTED: 0, items: 0 };
+  let stats = { total: 0, APPLYING: 0, SHIPPED: 0, REJECTED: 0, items: 0 };
 
   for (const u of allUsers) {
     const count = 8 + rand(8); // 8-15
@@ -115,7 +115,7 @@ async function main() {
       seq++;
       const type = pick(types);
       const status = weightedPick<RequestStatus>([
-        { item: RequestStatus.SUBMITTED, w: 60 },
+        { item: RequestStatus.APPLYING, w: 60 },
         { item: RequestStatus.SHIPPED, w: 30 },
         { item: RequestStatus.REJECTED, w: 10 },
       ]);
@@ -183,7 +183,7 @@ async function main() {
         data: {
           requestId: created.id,
           fromStatus: null,
-          toStatus: RequestStatus.SUBMITTED,
+          toStatus: RequestStatus.APPLYING,
           changedById: u.id,
           changedAt: submittedAt,
         },
@@ -192,7 +192,7 @@ async function main() {
         await db.statusLog.create({
           data: {
             requestId: created.id,
-            fromStatus: RequestStatus.SUBMITTED,
+            fromStatus: RequestStatus.APPLYING,
             toStatus: RequestStatus.SHIPPED,
             changedById: adminId,
             changedAt: shippedAt,
@@ -202,7 +202,7 @@ async function main() {
         await db.statusLog.create({
           data: {
             requestId: created.id,
-            fromStatus: RequestStatus.SUBMITTED,
+            fromStatus: RequestStatus.APPLYING,
             toStatus: RequestStatus.REJECTED,
             changedById: adminId,
             changedAt: new Date(submittedAt.getTime() + 86400000),
