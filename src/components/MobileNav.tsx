@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState, type ReactNode } from "react";
+import { useT } from "@/i18n/client";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 type NavItem = {
   href: string;
@@ -111,6 +113,7 @@ export function MobileNav({
   user: { name: string; role: string; dept: string };
 }) {
   const [open, setOpen] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     if (!open) return;
@@ -127,27 +130,27 @@ export function MobileNav({
 
   const sections: Section[] = [
     {
-      title: "申請",
+      title: t("mobileNav.section.apply"),
       items: [
-        { href: "/apply/helmet", label: "安全帽", icon: HelmetIcon },
-        { href: "/apply/shoes", label: "安全鞋", icon: ShoesIcon },
-        { href: "/apply/uniform", label: "制服", icon: UniformIcon },
-        { href: "/apply/import", label: "批量匯入", icon: ImportIcon },
+        { href: "/apply/helmet", label: t("nav.helmet"), icon: HelmetIcon },
+        { href: "/apply/shoes", label: t("nav.shoes"), icon: ShoesIcon },
+        { href: "/apply/uniform", label: t("nav.uniform"), icon: UniformIcon },
+        { href: "/apply/import", label: t("nav.import"), icon: ImportIcon },
       ],
     },
     {
-      items: [{ href: "/my-requests", label: "我的申請", icon: ListIcon }],
+      items: [{ href: "/my-requests", label: t("nav.myRequests"), icon: ListIcon }],
     },
   ];
 
   if (isAdmin) {
     sections.push({
-      title: "管理",
+      title: t("mobileNav.section.admin"),
       items: [
-        { href: "/admin/requests", label: "申請單管理", icon: InboxIcon },
-        { href: "/admin/export", label: "匯出", icon: ExportIcon },
-        { href: "/admin/dashboard", label: "儀表板", icon: ChartIcon },
-        { href: "/admin/settings", label: "參數", icon: SettingsIcon },
+        { href: "/admin/requests", label: t("nav.adminRequests"), icon: InboxIcon },
+        { href: "/admin/export", label: t("nav.adminExport"), icon: ExportIcon },
+        { href: "/admin/dashboard", label: t("nav.adminDashboard"), icon: ChartIcon },
+        { href: "/admin/settings", label: t("nav.adminSettings"), icon: SettingsIcon },
       ],
     });
   }
@@ -156,7 +159,7 @@ export function MobileNav({
     <>
       <button
         type="button"
-        aria-label="開啟選單"
+        aria-label={t("mobileNav.openMenu")}
         className="md:hidden p-2 -ml-2 rounded text-slate-700 hover:bg-slate-100"
         onClick={() => setOpen(true)}
       >
@@ -172,10 +175,10 @@ export function MobileNav({
           />
           <aside className="absolute inset-y-0 left-0 w-72 max-w-[85%] bg-white shadow-xl flex flex-col">
             <div className="flex items-center justify-between px-4 h-14 border-b border-slate-200">
-              <span className="font-bold text-brand-700">EURS</span>
+              <span className="font-bold text-brand-700">{t("brand.title")}</span>
               <button
                 type="button"
-                aria-label="關閉選單"
+                aria-label={t("mobileNav.closeMenu")}
                 className="p-2 -mr-2 rounded text-slate-700 hover:bg-slate-100"
                 onClick={() => setOpen(false)}
               >
@@ -186,7 +189,7 @@ export function MobileNav({
             <div className="px-4 py-3 border-b border-slate-200">
               <div className="font-medium text-sm">{user.name}</div>
               <div className="text-xs text-slate-500">
-                {user.dept} · {user.role === "ADMIN" ? "總務" : "申請人"}
+                {user.dept} · {user.role === "ADMIN" ? t("user.role.admin") : t("user.role.requester")}
               </div>
             </div>
 
@@ -212,6 +215,10 @@ export function MobileNav({
                 </div>
               ))}
             </nav>
+            <div className="border-t border-slate-200 px-4 py-3 flex items-center justify-between">
+              <span className="text-xs text-slate-500">{t("lang.switch")}</span>
+              <LanguageSwitcher />
+            </div>
           </aside>
         </div>
       )}

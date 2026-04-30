@@ -271,17 +271,17 @@ export function UniformForm({
               >
                 <div>
                   <label className="label">尺寸 *</label>
-                  <div className="flex flex-wrap gap-2">
+                  <select
+                    className="select"
+                    value={it.topSize ?? topOptions[0]}
+                    onChange={(e) => update(i, { topSize: e.target.value })}
+                  >
                     {topOptions.map((s) => (
-                      <button
-                        key={s}
-                        className={cn("size-pill", it.topSize === s && "size-pill-active")}
-                        onClick={() => update(i, { topSize: s })}
-                      >
+                      <option key={s} value={s}>
                         {s}
-                      </button>
+                      </option>
                     ))}
-                  </div>
+                  </select>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div>

@@ -37,6 +37,44 @@ export async function POST(req: Request) {
   }
   const data = parsed.data;
 
+  // 安全鞋 90 天冷卻：同一位使用人 (wearerAcc) 90 天內已申請過（且非退件）即擋下；管理員不受限
+  if (type === "SHOES" && r.user.role !== "ADMIN") {
+    const accs = (data.items as Array<{ wearerAcc: string }>)
+      .map((it) => it.wearerAcc)
+      .filter((a) => a && a.trim().length > 0);
+    if (accs.length > 0) {
+      const since = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000);
+      const conflict = await db.requestItem.findMany({
+        where: {
+          wearerAcc: { in: accs },
+          request: {
+            type: "SHOES",
+            submittedAt: { gte: since },
+            status: { not: "REJECTED" },
+          },
+        },
+        select: {
+          wearerAcc: true,
+          userName: true,
+          request: { select: { submittedAt: true, requestNo: true } },
+        },
+        orderBy: { request: { submittedAt: "desc" } },
+      });
+      if (conflict.length > 0) {
+        const blocked = conflict.map((c) => ({
+          wearerAcc: c.wearerAcc,
+          userName: c.userName,
+          lastSubmittedAt: c.request.submittedAt,
+          requestNo: c.request.requestNo,
+        }));
+        return NextResponse.json(
+          { error: "下列使用人 90 天內已申請過安全鞋，請等待冷卻期結束後再申請", blocked },
+          { status: 409 }
+        );
+      }
+    }
+  }
+
   // 制服「更換」需要附件
   if (type === "UNIFORM") {
     const hasReplace = data.items.some(

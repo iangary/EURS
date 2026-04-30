@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
+import { getLocale, getT } from "@/i18n/server";
 
-export const metadata: Metadata = {
-  title: "EURS 設備／制服領取系統",
-  description: "總務部設備／制服線上領取系統",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = getT();
+  return {
+    title: t("brand.title"),
+    description: t("brand.description"),
+  };
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = getLocale();
+  const htmlLang = locale === "en" ? "en" : "zh-Hant";
   return (
-    <html lang="zh-Hant">
+    <html lang={htmlLang}>
       <body className="min-h-screen font-sans">
-        <Providers>{children}</Providers>
+        <Providers initialLocale={locale}>{children}</Providers>
       </body>
     </html>
   );

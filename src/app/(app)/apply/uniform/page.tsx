@@ -2,12 +2,13 @@ import { requireUser } from "@/lib/auth-helpers";
 import { db } from "@/lib/db";
 import { getSetting, getSettingJson, SettingKeys } from "@/lib/settings";
 import { UniformForm } from "./UniformForm";
+import { defaultTopSizes } from "@/lib/uniform-options";
 
 export const dynamic = "force-dynamic";
 
 export default async function UniformPage({ searchParams }: { searchParams: { from?: string } }) {
   const session = await requireUser();
-  const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, ["S", "M", "L", "XL", "2XL", "3XL"]);
+  const tops = await getSettingJson<string[]>(SettingKeys.TOP_SIZES, defaultTopSizes());
   const waists = await getSettingJson<number[]>(SettingKeys.PANTS_WAIST, [28, 30, 32, 34, 36, 38, 40, 42]);
   const lengths = await getSettingJson<number[]>(SettingKeys.PANTS_LENGTH, [28, 30, 32, 34, 36]);
   const bankBranch = await getSetting(SettingKeys.BANK_BRANCH, "中崙分行");

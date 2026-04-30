@@ -17,6 +17,8 @@ export const HEADER = [
   "申請日期",
   "申請人",
   "工地／部門",
+  "使用人工地/部門",
+  "部門代號",
   "項目類型",
   "使用人",
   "規格",
@@ -47,6 +49,8 @@ export function flattenRows(rows: Row[]): (string | number | Date | null)[][] {
         baseDate,
         r.requesterName,
         r.siteOrDept,
+        it.userDept ?? "",
+        it.deptCode ?? "",
         TYPE_LABEL[r.type],
       ];
       if (r.type === "HELMET") {

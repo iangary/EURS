@@ -40,6 +40,7 @@ export function ShoesForm({
   );
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [blocked, setBlocked] = useState<Array<{ wearerAcc: string; userName: string; lastSubmittedAt: string; requestNo: string }>>([]);
   const [importedCount, setImportedCount] = useState(0);
 
   useEffect(() => {
@@ -87,6 +88,7 @@ export function ShoesForm({
 
   async function submit() {
     setError(null);
+    setBlocked([]);
     if (!items.every((it) => it.valid && it.wearerAcc && it.userName)) {
       setError("請確認所有使用人工號皆已查詢成功");
       return;
@@ -111,6 +113,7 @@ export function ShoesForm({
     if (!res.ok) {
       const d = await res.json().catch(() => ({}));
       setError(d.error ?? "送出失敗");
+      if (res.status === 409 && Array.isArray(d.blocked)) setBlocked(d.blocked);
       return;
     }
     clearImportedData("shoes");
@@ -182,6 +185,18 @@ export function ShoesForm({
       </div>
 
       {error && <div className="text-sm text-rose-600">{error}</div>}
+      {blocked.length > 0 && (
+        <div className="notice border-rose-300 bg-rose-50 text-rose-900">
+          <div className="font-medium mb-1">90 天冷卻期限制：</div>
+          <ul className="text-sm list-disc pl-5 space-y-0.5">
+            {blocked.map((b, idx) => (
+              <li key={idx}>
+                {b.userName}（{b.wearerAcc}）— 上次申請 {new Date(b.lastSubmittedAt).toLocaleDateString("zh-TW")}（{b.requestNo}）
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="flex justify-end">
         <button className="btn btn-primary" disabled={submitting} onClick={submit}>
